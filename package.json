@@ -1,0 +1,56 @@
+{
+  "name": "@ka/api-client",
+  "version": "1.3.2",
+  "description": "KA API Specification",
+  "main": "dist/index.js",
+  "author": "KA Team",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "update-nswag-file": "ts-node nswag/update-nswag.ts",
+    "clean-nswag-file": "ts-node nswag/clean-nswag.ts",
+    "generate-api-client": "yarn update-nswag-file && nswag run nswag/KAApiClient.nswag && yarn clean-nswag-file",
+    "build": "yarn generate-api-client && tsc",
+    "prepublish": "yarn build",
+    "convert": "node converter",
+    "lint": "make lint",
+    "routine": "yarn generate-api-client && yarn convert"
+  },
+  "devDependencies": {
+    "@stoplight/spectral": "^5.9.0",
+    "@types/axios": "^0.14.0",
+    "@types/node": "^14.11.2",
+    "axios": "0.21.1",
+    "cross-env": "^7.0.3",
+    "husky": "^4.2.4",
+    "lint-staged": "^10.5.3",
+    "nswag": "^13.10.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "peerDependencies": {
+    "axios": "^0.21.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "js-yaml": "^4.0.0",
+    "openapi-to-postmanv2": "^2.3.0",
+    "request": "^2.88.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|json|yml)": [
+      "yarn lint",
+      "git add"
+    ],
+    "./**/*.{yml}": [
+      "yarn lint"
+    ]
+  }
+}

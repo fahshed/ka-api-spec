@@ -1,0 +1,145 @@
+{
+  "collection": {
+    "item": [
+      {
+        "id": "d28230ce-60fb-4095-b3ed-ba5b3cefabe2",
+        "name": "Get post by Id",
+        "request": {
+          "name": "Get post by Id",
+          "description": {
+            "content": "Get post by id and comments sorted by query parameters",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "post",
+              ":postId"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [
+              {
+                "disabled": false,
+                "key": "commentsSortedBy",
+                "value": "<string>"
+              }
+            ],
+            "variable": [
+              {
+                "disabled": false,
+                "type": "any",
+                "value": "<string>",
+                "key": "postId",
+                "description": "(Required) "
+              }
+            ]
+          },
+          "method": "GET",
+          "auth": null
+        },
+        "response": [
+          {
+            "id": "e53c4a53-6fc4-4ba7-b39a-876d836d1458",
+            "name": "OK",
+            "originalRequest": {
+              "url": {
+                "path": [
+                  "post",
+                  ":postId"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [
+                  {
+                    "key": "commentsSortedBy",
+                    "value": "<string>"
+                  }
+                ],
+                "variable": [
+                  {
+                    "type": "any",
+                    "key": "postId"
+                  }
+                ]
+              },
+              "method": "GET",
+              "body": {}
+            },
+            "status": "OK",
+            "code": 200,
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": "{\n \"_id\": \"et culpa dolore aliqua mollit\",\n \"title\": \"sint nostrud\",\n \"content\": \"enim\",\n \"tags\": [\n  \"reprehenderit voluptate et proident\",\n  \"dolore nostrud pariatur\"\n ],\n \"voteCount\": 31883006.043013975,\n \"commentCount\": 82674095.11000317,\n \"createdAt\": \"1958-09-18T03:42:18.509Z\",\n \"community\": {\n  \"_id\": \"anim in officia\",\n  \"name\": \"consectetur \"\n },\n \"postedBy\": {\n  \"_id\": \"cupidatat ad in ex\",\n  \"username\": \"ea nostrud dolor qui\",\n  \"avatar\": \"velit voluptate sunt\"\n },\n \"comments\": [\n  {\n   \"_id\": \"cupidatat\",\n   \"content\": \"Excepteur laborum tempor ut\",\n   \"voteCount\": \"ipsum et\",\n   \"replyCount\": -74055211.2777657,\n   \"createdAt\": \"2015-06-04T16:20:24.302Z\",\n   \"postedBy\": {\n    \"_id\": \"est deserunt sed magna adipisicing\",\n    \"username\": \"culpa Duis do\",\n    \"avatar\": \"adipisicing ut Lorem pariatur dolor\",\n    \"rank\": -36261496.291329995\n   }\n  },\n  {\n   \"_id\": \"dolore nulla sunt\",\n   \"content\": \"cillum commodo ullamco ea elit\",\n   \"voteCount\": \"aute do\",\n   \"replyCount\": -67078549.37101652,\n   \"createdAt\": \"1949-05-07T15:52:13.751Z\",\n   \"postedBy\": {\n    \"_id\": \"officia veniam\",\n    \"username\": \"elit do sunt\",\n    \"avatar\": \"exercitation dolor voluptate adipisicing\",\n    \"rank\": 46761676.32150507\n   }\n  }\n ]\n}",
+            "cookie": [],
+            "_postman_previewlanguage": "json"
+          },
+          {
+            "id": "79d44ddd-b8ed-41a3-b625-2b4e053f6ad5",
+            "name": "Bad Request",
+            "originalRequest": {
+              "url": {
+                "path": [
+                  "post",
+                  ":postId"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [
+                  {
+                    "key": "commentsSortedBy",
+                    "value": "<string>"
+                  }
+                ],
+                "variable": [
+                  {
+                    "type": "any",
+                    "key": "postId"
+                  }
+                ]
+              },
+              "method": "GET",
+              "body": {}
+            },
+            "status": "Internal Server Error",
+            "code": 500,
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": "{\n \"message\": \"ea ut\"\n}",
+            "cookie": [],
+            "_postman_previewlanguage": "json"
+          }
+        ],
+        "event": []
+      }
+    ],
+    "event": [],
+    "variable": [
+      {
+        "type": "string",
+        "value": "http://localhost:8000",
+        "key": "baseUrl"
+      }
+    ],
+    "info": {
+      "_postman_id": "ef8c99d0-0708-4d7e-ad7f-dd410ed3b797",
+      "name": "KA API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "description": {
+        "content": "API spec for Kemon Achen API v1\n\nContact Support:\n Name: Kemon Achen\n Email: 1605077@ugrad.cse.buet.ac.bd",
+        "type": "text/plain"
+      },
+      "id": "ef8c99d0-0708-4d7e-ad7f-dd410ed3b797"
+    }
+  }
+}

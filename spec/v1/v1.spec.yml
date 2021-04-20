@@ -1,0 +1,141 @@
+openapi: 3.0.3
+
+info:
+  title: KA API
+  description: >-
+    API spec for Kemon Achen API v1
+  contact:
+    email: 1605077@ugrad.cse.buet.ac.bd
+    name: Kemon Achen
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8000
+    description: DEVELOPMENT
+
+tags:
+  - name: user
+    description: Operations about user
+  - name: post
+    description: Operations about post
+
+paths:
+  /post/{postId}:
+    get:
+      tags:
+        - post
+      summary: Get post by Id
+      description: Get post by id and comments sorted by query parameters
+      operationId: getPostById
+      parameters:
+        - $ref: "#/components/parameters/postId"
+        - $ref: "#/components/parameters/commentsSortedBy"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKPost"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+components:
+  schemas:
+    Post:
+      type: object
+      properties:
+        _id:
+          type: string
+        title:
+          type: string
+        content:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        voteCount:
+          type: number
+        commentCount:
+          type: number
+        createdAt:
+          type: string
+          format: date-time
+        community:
+          type: object
+          properties:
+            _id:
+              type: string
+            name:
+              type: string
+        postedBy:
+          type: object
+          properties:
+            _id:
+              type: string
+            username:
+              type: string
+            avatar:
+              type: string
+        comments:
+          type: array
+          items:
+            $ref: "#/components/schemas/Comment"
+
+    Comment:
+      type: object
+      properties:
+        _id:
+          type: string
+        content:
+          type: string
+        voteCount:
+          type: string
+        replyCount:
+          type: number
+        createdAt:
+          type: string
+          format: date-time
+        postedBy:
+          type: object
+          properties:
+            _id:
+              type: string
+            username:
+              type: string
+            avatar:
+              type: string
+            rank:
+              type: number
+
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+
+  parameters:
+    postId:
+      in: path
+      name: postId
+      required: true
+      schema:
+        type: string
+
+    commentsSortedBy:
+      in: query
+      name: commentsSortedBy
+      schema:
+        type: string
+        enum: ["time", "votes", "professional"]
+
+  responses:
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorMessage"
+    OKPost:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Post"

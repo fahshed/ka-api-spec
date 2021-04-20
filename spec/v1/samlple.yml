@@ -1,0 +1,944 @@
+openapi: 3.0.3
+info:
+  title: OS API
+  description: "API spec for OS API v1 for INTERNAL development team only. You can find out more about OS at [https://mainframelabs.ltd](https://mainframelabs.ltd)."
+  contact:
+    email: info@mainframelabs.ltd
+    name: OS
+    url: mainframelabs.ltd
+  version: 3.0.0
+externalDocs:
+  description: Find out more about OS
+  url: "https://doc.mainframelabs.ltd"
+servers:
+  - url: "http://localhost:80"
+    description: STAGING
+  - url: "http://localhost:80"
+    description: PRODUCTION
+tags:
+  - name: user
+    description: Operations about user
+  - name: course
+    description: Operations about course
+paths:
+  # ********** Course service ***************
+  /course/{courseId}:
+    get:
+      tags:
+        - course
+      summary: Get course details by id
+      description: Returns a specific course
+      operationId: getCourseById
+      parameters:
+        - $ref: "#/components/parameters/courseId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCourse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKCourse"
+
+  # /course/create: -> create course [POST] later in v3.5
+  /course/{courseId}/batches:
+    get:
+      tags:
+        - course
+      summary: Returns all batches of a specific course
+      description: Pagination is available.
+      operationId: getBatchesByCourse
+      parameters:
+        - $ref: "#/components/parameters/courseId"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/limit"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKBatches"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKBatches"
+
+  /course/{courseId}/reviews:
+    get:
+      tags:
+        - course
+      summary: Returns all reviews of a specific course
+      description: Pagination is available.
+      operationId: getReviewsByCourse
+      parameters:
+        - $ref: "#/components/parameters/courseId"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/limit"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKReviews"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKReviews"
+
+  /course/mentor/lecture/recent:
+    get:
+      tags:
+        - course
+      summary: Get recent lecture
+      description: Get recent lecture for mentor
+      operationId: getRecentLecture
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          $ref: "#/components/responses/OKLecture"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /course/mentor/{mentorId}/lectures:
+    get:
+      tags:
+        - course
+      summary: Returns all lectures of a specific mentor (sorted by date)
+      description: Pagination is available.
+      operationId: getLecturesByMentor
+      parameters:
+        - $ref: "#/components/parameters/mentorId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKLectures"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /course/mentor/{mentorId}:
+    get:
+      tags:
+        - course
+      summary: Get all courses by mentor
+      description: Returns all courses taken by a mentor
+      operationId: getCoursesByMentor
+      parameters:
+        - $ref: "#/components/parameters/mentorId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCourses"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKCourses"
+
+  /course/mentor/{mentorId}/batches/small:
+    get:
+      tags:
+        - course
+      summary: Get small batches of mentor
+      description: Get all 1-1/mini batches of a specific mentor
+      operationId: getSmallBatchesByMentorId
+      parameters:
+        - $ref: "#/components/parameters/mentorId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKBatches"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKBatches"
+
+  /course/mentor/{mentorId}/batches/large:
+    get:
+      tags:
+        - course
+      summary: Get large batches of mentor
+      description: Get all large batches of a specific mentor (courseId no null) - Pagination available.
+      operationId: getLargeBatchesByMentorId
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: "#/components/parameters/mentorId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKBatches"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKBatches"
+
+  /course/batch/{batchId}/discussions:
+    get:
+      tags:
+        - course
+      summary: Get Discussions By batch
+      description: Returns all discussion threads of a specific batch. Pagination is available.
+      operationId: getDiscussionsByBatch
+      parameters:
+        - $ref: "#/components/parameters/batchId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKDiscussionThreads"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /course/batch/{batchId}/students:
+    get:
+      tags:
+        - course
+      summary: Returns all students of a batch
+      description: Returns all students of a batch
+      operationId: getStudentsByBatch
+      parameters:
+        - $ref: "#/components/parameters/batchId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKStudents"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKStudents"
+
+  /course/batch/{batchId}/mentors:
+    get:
+      tags:
+        - course
+      summary: Returns all mentors of a batch
+      description: Pagination is available.
+      operationId: getMentorsByBatch
+      parameters:
+        - $ref: "#/components/parameters/batchId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKMentors"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKMentors"
+
+  /course/batch/{batchId}/lectures:
+    get:
+      tags:
+        - course
+      summary: Returns all lectures of a batch
+      description: we will get all the lectures of a batch, then render the upcoming and completed lectures in the UI, based on the classTiming. The mobile uI should also schedule notifications once the lectures are fetched, so the teachers can be notified accordingly.
+      operationId: getLecturesByBatch
+      parameters:
+        - $ref: "#/components/parameters/batchId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKLectures"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKLectures"
+
+  /course/batch/{batchId}/reviews:
+    get:
+      tags:
+        - course
+      summary: Returns all reviews of a specific batch
+      description: Pagination is available.
+      operationId: getReviewsByBatch
+      parameters:
+        - $ref: "#/components/parameters/batchId"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/limit"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKReviews"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKReviews"
+
+  /course/lecture/{lectureId}:
+    get:
+      tags:
+        - course
+      summary: Get lecture by Id
+      description: Returns a lecture details
+      operationId: getLectureById
+      parameters:
+        - $ref: "#/components/parameters/lectureId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKLecture"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKLecture"
+
+  /course/discussion/{discussionId}:
+    get:
+      security:
+        - bearerAuth: []
+      tags:
+        - course
+      summary: Get discussionThread
+      description: Returns a discussion thread
+      operationId: getDiscussionThreadById
+      parameters:
+        - $ref: "#/components/parameters/discussionId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKDiscussionThread"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /course/batch/{batchId}/members:
+    get:
+      security:
+        - bearerAuth: []
+      tags:
+        - course
+      summary: Get members
+      description: Returns all members of a batch
+      operationId: getMembersByBatchId
+      parameters:
+        - $ref: "#/components/parameters/batchId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKMembers"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /course/discussion/create:
+    post:
+      tags:
+        - course
+      summary: Create a discussion
+      description: Creates a discussion thread in a course
+      operationId: createDiscussion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DiscussionThread"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKDiscussionThread"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /course/discussion/{discussionId}/pin:
+    get:
+      tags:
+        - course
+      summary: Pins a discussion
+      description: Pins a discussion thread in a course
+      operationId: pinDiscussionThread
+      parameters:
+        - $ref: "#/components/parameters/discussionId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKMessage"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKMessage"
+
+  /course/discussion/{discussionId}/comment:
+    post:
+      tags:
+        - course
+      summary: Create a comment
+      description: Creates a comment in a discussion thread
+      operationId: createComment
+      parameters:
+        - $ref: "#/components/parameters/discussionId"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Comment"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKComment"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/OKComment"
+
+  /course/lecture/create:
+    post:
+      security:
+        - bearerAuth: []
+      tags:
+        - course
+      summary: Post lecture in a specific batch
+      operationId: postLectureByBatchId
+      description: Creates a lecture under a specific batch
+      requestBody:
+        $ref: "#/components/responses/OKLecture"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKLecture"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /course/lecture/edit:
+    post:
+      security:
+        - bearerAuth: []
+      tags:
+        - course
+      summary: Edit a lecture
+      description: Update Lecture in a course
+      operationId: updateLectureById
+      requestBody:
+        $ref: "#/components/responses/RequestEditLecture"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKLecture"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /course/lecture/{lectureId}/reviews:
+    get:
+      security:
+        - bearerAuth: []
+      tags:
+        - course
+      summary: Returns all reviews of a specific lecture
+      description: Pagination is available.
+      operationId: getReviewsByLecture
+      parameters:
+        - $ref: "#/components/parameters/lectureId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKReviews"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+# ********** Components **********
+components:
+  securitySchemes:
+    bearerAuth: # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT # optional, arbitrary value for documentation purposes
+
+  schemas:
+    ErrorMessage:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          description: The error message
+          type: string
+
+    Course:
+      type: object
+      required:
+        - name
+        - duration
+        - startTime
+        - capacity
+        - enrolled
+      properties:
+        name:
+          type: string
+        details:
+          type: string
+        coverImage:
+          type: string
+        duration:
+          type: number
+        startTime:
+          type: string
+          format: date
+        endTime:
+          type: string
+          format: date
+        mentors:
+          type: array
+          items:
+            type: string
+            description: Ids of mentors.
+        capacity:
+          type: integer
+        enrolled:
+          type: integer
+        isPublic:
+          type: boolean
+        isVerified:
+          type: boolean
+        subjects:
+          type: array
+          items:
+            type: string
+        tags:
+          type: array
+          items:
+            type: string
+    Courses:
+      type: array
+      items:
+        $ref: "#/components/schemas/Course"
+
+    Mentor:
+      type: object
+      required:
+        - name
+        - institution
+        - subjects
+      properties:
+        name:
+          type: string
+        avatar:
+          type: string
+          description: Profile picture of the mentor.
+        institution:
+          type: string
+        subjects:
+          type: array
+          items:
+            type: string
+
+    Mentors:
+      type: array
+      items:
+        $ref: "#/components/schemas/Mentor"
+
+    Student:
+      type: object
+      required:
+        - name
+        - education
+      properties:
+        name:
+          type: string
+        avatar:
+          type: string
+        education:
+          type: string
+
+    Students:
+      type: array
+      items:
+        $ref: "#/components/schemas/Student"
+
+    Member:
+      type: object
+      required:
+        - _id
+        - username
+        - avatar
+      properties:
+        _id:
+          type: string
+        username:
+          type: string
+        avatar:
+          type: string
+
+    Members:
+      type: object
+      properties:
+        mentors:
+          type: array
+          items:
+            $ref: "#/components/schemas/Member"
+        students:
+          type: array
+          items:
+            $ref: "#/components/schemas/Member"
+
+    Review:
+      type: object
+      required:
+        - _id
+        - reviewerId
+        - rating
+        - createdAt
+      properties:
+        _id:
+          type: string
+        reviewerId:
+          type: string
+        rating:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        description:
+          type: string
+
+    Reviews:
+      type: array
+      items:
+        $ref: "#/components/schemas/Review"
+
+    # PartialLecture:
+    #   type: object
+    #   properties:
+    #     batchId:
+    #       type: string
+    #     title:
+    #       type: string
+    #     description:
+    #       type: string
+    #     cover:
+    #       type: string
+    #     duration:
+    #       type: number
+    #     classTiming:
+    #       type: string
+    #       format: date-time
+    #     meetingLink:
+    #       type: string
+    #     resourceId:
+    #       type: number
+
+    EditLecture:
+      type: object
+      required:
+        - lectureId
+        - batchId
+        - title
+        - duration
+        - classTiming
+      properties:
+        lectureId:
+          type: string
+        batchId:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        cover:
+          type: string
+        duration:
+          type: number
+        classTiming:
+          type: string
+          format: date-time
+        meetingLink:
+          type: string
+        resourceId:
+          type: number
+
+    Lecture:
+      type: object
+      required:
+        - batchId
+        - title
+        - duration
+        - classTiming
+      properties:
+        _id:
+          type: string
+        batchId:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        cover:
+          type: string
+        duration:
+          type: number
+        classTiming:
+          type: string
+          format: date-time
+        meetingLink:
+          type: string
+        resourceId:
+          type: number
+        reviews:
+          $ref: "#/components/schemas/Reviews"
+
+    Lectures:
+      type: array
+      items:
+        $ref: "#/components/schemas/Lecture"
+
+    DiscussionThread:
+      type: object
+      required:
+        - postedBy
+        - createdAt
+        - batchId
+      properties:
+        _id:
+          type: string
+        batchId:
+          type: string
+        postedBy:
+          type: string
+          description: Id of the user.
+        createdAt:
+          type: string
+          format: date-time
+        isPinned:
+          type: boolean
+        content:
+          type: string
+          description: The actual text.
+        image:
+          type: string
+        postTag:
+          type: string
+        comments:
+          $ref: "#/components/schemas/Comments"
+
+    DiscussionThreads:
+      type: array
+      items:
+        $ref: "#/components/schemas/DiscussionThread"
+
+    Comment:
+      type: object
+      required:
+        - postedBy
+        - createdAt
+        - content
+      properties:
+        _id:
+          type: string
+        postedBy:
+          type: string
+          description: Id of the user.
+        createdAt:
+          type: string
+          format: date-time
+        content:
+          type: string
+          description: The actual text.
+        postTag:
+          type: string
+
+    Comments:
+      type: array
+      items:
+        $ref: "#/components/schemas/Comment"
+
+    Batch:
+      type: object
+      required:
+        - _id
+        - createdAt
+        - batchName
+      properties:
+        _id:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        batchName:
+          type: string
+        numberOfLectures:
+          type: integer
+        courseId:
+          type: string
+        resources:
+          type: array
+          items:
+            type: string
+
+    Batches:
+      type: array
+      items:
+        $ref: "#/components/schemas/Batch"
+
+  parameters:
+    page:
+      in: query
+      name: page
+      schema:
+        type: integer
+        minimum: 0
+        description: Number of the page we're fetching.
+      required: false
+    limit:
+      in: query
+      name: limit
+      schema:
+        type: integer
+        minimum: 0
+        description: Maximum items allowed for a page.
+      required: false
+    tags:
+      in: query
+      name: tags
+      schema:
+        type: array
+        items:
+          type: string
+      required: false
+    mentors:
+      in: query
+      name: mentors
+      schema:
+        type: array
+        items:
+          type: string
+        description: Ids of mentors.
+      required: false
+    searchTerm:
+      in: query
+      name: searchTerm
+      schema:
+        type: string
+        description: The string that the user searched.
+      required: false
+    subjects:
+      in: query
+      name: subjects
+      schema:
+        type: array
+        items:
+          type: string
+        description: Ids of subjects.
+      required: false
+    recommended:
+      in: query
+      name: recommended
+      schema:
+        type: boolean
+        description: Whether to show recommended courses or not.
+      required: false
+    courseId:
+      in: path
+      name: courseId
+      schema:
+        type: string
+      required: true
+    batchId:
+      in: path
+      name: batchId
+      schema:
+        type: string
+      required: true
+    lectureId:
+      in: path
+      name: lectureId
+      schema:
+        type: string
+      required: true
+    discussionId:
+      in: path
+      name: discussionId
+      schema:
+        type: string
+      required: true
+    userId:
+      in: path
+      name: userId
+      schema:
+        type: string
+      required: true
+    mentorId:
+      in: path
+      name: mentorId
+      schema:
+        type: string
+      required: true
+    lectureType:
+      in: query
+      name: lectureType
+      schema:
+        type: string
+        enum: ["Upcoming", "Completed", "All"]
+        description: Whether we want upcoming, completed or
+          all lectures.
+
+  responses:
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorMessage"
+    OKCourse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Course"
+    OKCourses:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Courses"
+    OKStudents:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Students"
+    OKMentors:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Mentors"
+    OKMembers:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Members"
+    OKReviews:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Reviews"
+    OKLecture:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Lecture"
+    OKLectures:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Lectures"
+    RequestEditLecture:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/EditLecture"
+    OKDiscussionThread:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/DiscussionThread"
+    OKDiscussionThreads:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/DiscussionThreads"
+    OKBatches:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Batches"
+    OKComment:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Comment"
+    OKMessage:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - message
+            properties:
+              message:
+                type: string
