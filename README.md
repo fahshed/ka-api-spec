@@ -1,6 +1,6 @@
 ![Lint](add lint badge here)
 
-# OpenAPI Specification for the OS API
+# OpenAPI Specification for the Kemon Achen API
 
 The OpenAPI Specification referenced [here](https://github.com/OAI/OpenAPI-Specification)is a community-driven open specification within the [OpenAPI Initiative](https://www.openapis.org/), a Linux Foundation Collaborative Project.
 
