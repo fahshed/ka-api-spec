@@ -40,6 +40,18 @@ export interface IKAApiClent {
      * @return OK
      */
     getPostById(postId: string, commentsSortedBy?: CommentsSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post>;
+    /**
+     * Create a regular user
+     * @param body (optional) 
+     * @return OK
+     */
+    signupRegularUser(body?: RegularUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SignupResponse>;
+    /**
+     * Create a professional user
+     * @param body (optional) 
+     * @return OK
+     */
+    signupProfessionalUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SignupResponse>;
 }
 
 export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
@@ -116,6 +128,130 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
             return throwException("Bad Request", status, _responseText, _headers, resultdefault);
         }
     }
+
+    /**
+     * Create a regular user
+     * @param body (optional) 
+     * @return OK
+     */
+    signupRegularUser(body?: RegularUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SignupResponse> {
+        let url_ = this.baseUrl + "/user/regular/signup";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ = <AxiosRequestConfig>{
+            data: content_,
+            method: "POST",
+            url: url_,
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+            onUploadProgress
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processSignupRegularUser(_response);
+        });
+    }
+
+    protected processSignupRegularUser(response: AxiosResponse): Promise<SignupResponse> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Create a professional user
+     * @param body (optional) 
+     * @return OK
+     */
+    signupProfessionalUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SignupResponse> {
+        let url_ = this.baseUrl + "/user/professional/signup";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ = <AxiosRequestConfig>{
+            data: content_,
+            method: "POST",
+            url: url_,
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+            onUploadProgress
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processSignupProfessionalUser(_response);
+        });
+    }
+
+    protected processSignupProfessionalUser(response: AxiosResponse): Promise<SignupResponse> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
 }
 
 export interface Post {
@@ -140,8 +276,32 @@ export interface Comment {
     postedBy?: PostedBy2;
 }
 
+export interface RegularUserCredentials {
+    _id?: string;
+    role?: string;
+    email?: string;
+    password?: string;
+}
+
+export interface ProfessionalUserCredentials {
+    _id?: string;
+    role?: string;
+    email?: string;
+    password?: string;
+    verified?: boolean;
+    license?: string;
+    licenseIssued?: Date;
+    specialization?: string[];
+}
+
 export interface ErrorMessage {
     message?: string;
+}
+
+export interface SignupResponse {
+    message?: string;
+    jwtToken?: string;
+    role?: string;
 }
 
 export type CommentsSortedBy = "time" | "votes" | "professional";

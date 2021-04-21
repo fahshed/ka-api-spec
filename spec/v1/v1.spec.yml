@@ -36,6 +36,45 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/regular/signup:
+    post:
+      tags:
+        - user
+      summary: Create a regular user
+      description: Creates a regular user in the database with credentials
+      operationId: signupRegularUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegularUserCredentials"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKRegularUserSignup"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/professional/signup:
+    post:
+      tags:
+        - user
+      summary: Create a professional user
+      description: Creates a professional user in the database with credentials
+      operationId: signupProfessionalUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProfessionalUserCredentials"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKProfessionalUserSignup"
+        default:
+          $ref: "#/components/responses/BadRequest"
+          
+  
+  
+
 components:
   schemas:
     Post:
@@ -105,10 +144,55 @@ components:
             rank:
               type: number
 
+    RegularUserCredentials:
+      type: object
+      properties:
+        _id:
+          type: string
+        role:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+    
+    ProfessionalUserCredentials:
+      type: object
+      properties:
+        _id:
+          type: string
+        role:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        verified:
+          type: boolean
+        license:
+          type: string
+        licenseIssued:
+          type: string
+          format: date-time
+        specialization:
+          type: array
+          items:
+            type: string
+
     ErrorMessage:
       type: object
       properties:
         message:
+          type: string
+    
+    SignupResponse:
+      type: object
+      properties:
+        message:
+          type: string
+        jwtToken:
+          type: string
+        role:
           type: string
 
   parameters:
@@ -139,3 +223,16 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Post"
+    OKRegularUserSignup:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/SignupResponse"
+    OKProfessionalUserSignup:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/SignupResponse"
+    
