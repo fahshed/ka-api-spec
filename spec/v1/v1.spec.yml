@@ -50,7 +50,7 @@ paths:
               $ref: "#/components/schemas/RegularUserCredentials"
       responses:
         "200":
-          $ref: "#/components/responses/OKRegularUserSignup"
+          $ref: "#/components/responses/OKAuthentication"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -68,7 +68,7 @@ paths:
               $ref: "#/components/schemas/ProfessionalUserCredentials"
       responses:
         "200":
-          $ref: "#/components/responses/OKProfessionalUserSignup"
+          $ref: "#/components/responses/OKAuthentication"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -83,12 +83,71 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ProfessionalUserCredentials"
+              $ref: "#/components/schemas/UserLoginCredentials"
       responses:
         "200":
-          $ref: "#/components/responses/OKProfessionalUserSignup"
+          $ref: "#/components/responses/OKAuthentication"
         default:
           $ref: "#/components/responses/BadRequest"
+  
+  /user/communities:
+    get:
+      tags:
+        - user
+      summary: Get communities of a user
+      description: Get communities of a logged in user
+      operationId: getCommunities
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunities"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/communities/suggested :
+    get:
+      tags:
+        - user
+      summary: Get suggested communities of a user
+      description: Get suggested communities of a logged in user
+      operationId: getSuggestedCommunities
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunities"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/{userId}/posts:
+    get:
+      tags:
+        - user
+      summary: Get posts by UserId
+      description: Get Array of posts by UserId
+      operationId: getPostsByUserId
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKUserPosts"
+        default:
+          $ref: "#/components/responses/BadRequest"
+  
+
+  /user/{userId}/comments:
+    get:
+      tags:
+        - user
+      summary: Get comments by UserId
+      description: Get Array of comments by UserId
+      operationId: getCommentsByUserId
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKUserComments"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  
           
   
   
@@ -165,8 +224,6 @@ components:
     RegularUserCredentials:
       type: object
       properties:
-        _id:
-          type: string
         role:
           type: string
         email:
@@ -177,8 +234,6 @@ components:
     ProfessionalUserCredentials:
       type: object
       properties:
-        _id:
-          type: string
         role:
           type: string
         email:
@@ -196,6 +251,14 @@ components:
           type: array
           items:
             type: string
+    
+    UserLoginCredentials:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
 
     ErrorMessage:
       type: object
@@ -212,11 +275,44 @@ components:
           type: string
         role:
           type: string
+    
+    CommunityList:
+      type: array
+      items:
+        $ref: "#/components/schemas/CommunityListElement"
+
+    CommunityListElement:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        avatar:
+          type: string
+
+
+    UserPosts:
+      type: array
+      items:
+        $ref: "#/components/schemas/Post"
+    
+    UserComments:
+      type: array
+      items:
+        $ref: "#/components/schemas/Comment"
 
   parameters:
     postId:
       in: path
       name: postId
+      required: true
+      schema:
+        type: string
+    
+    userId:
+      in: path
+      name: userId
       required: true
       schema:
         type: string
@@ -241,16 +337,28 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Post"
-    OKRegularUserSignup:
+    OKAuthentication:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/AuthResponse"
-    OKProfessionalUserSignup:
+    OKCommunities:
       description: OK
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/AuthResponse"
+            $ref: "#/components/schemas/CommunityList"
+    OKUserPosts:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/UserPosts"
+    OKUserComments:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/UserComments"
     

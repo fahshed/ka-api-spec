@@ -57,7 +57,27 @@ export interface IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    loginUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse>;
+    loginUser(body?: UserLoginCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse>;
+    /**
+     * Get communities of a user
+     * @return OK
+     */
+    getCommunities(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityListElement[]>;
+    /**
+     * Get suggested communities of a user
+     * @return OK
+     */
+    getSuggestedCommunities(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityListElement[]>;
+    /**
+     * Get posts by UserId
+     * @return OK
+     */
+    getPostsByUserId(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]>;
+    /**
+     * Get comments by UserId
+     * @return OK
+     */
+    getCommentsByUserId(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Comment[]>;
 }
 
 export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
@@ -264,7 +284,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    loginUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse> {
+    loginUser(body?: UserLoginCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse> {
         let url_ = this.baseUrl + "/user/login";
         url_ = url_.replace(/[?&]$/, "");
 
@@ -320,6 +340,236 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
             return throwException("Bad Request", status, _responseText, _headers, resultdefault);
         }
     }
+
+    /**
+     * Get communities of a user
+     * @return OK
+     */
+    getCommunities(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityListElement[]> {
+        let url_ = this.baseUrl + "/user/communities";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetCommunities(_response);
+        });
+    }
+
+    protected processGetCommunities(response: AxiosResponse): Promise<CommunityListElement[]> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Get suggested communities of a user
+     * @return OK
+     */
+    getSuggestedCommunities(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityListElement[]> {
+        let url_ = this.baseUrl + "/user/communities/suggested";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetSuggestedCommunities(_response);
+        });
+    }
+
+    protected processGetSuggestedCommunities(response: AxiosResponse): Promise<CommunityListElement[]> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Get posts by UserId
+     * @return OK
+     */
+    getPostsByUserId(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]> {
+        let url_ = this.baseUrl + "/user/{userId}/posts";
+        if (userId === undefined || userId === null)
+            throw new Error("The parameter 'userId' must be defined.");
+        url_ = url_.replace("{userId}", encodeURIComponent("" + userId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetPostsByUserId(_response);
+        });
+    }
+
+    protected processGetPostsByUserId(response: AxiosResponse): Promise<Post[]> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Get comments by UserId
+     * @return OK
+     */
+    getCommentsByUserId(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Comment[]> {
+        let url_ = this.baseUrl + "/user/{userId}/comments";
+        if (userId === undefined || userId === null)
+            throw new Error("The parameter 'userId' must be defined.");
+        url_ = url_.replace("{userId}", encodeURIComponent("" + userId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetCommentsByUserId(_response);
+        });
+    }
+
+    protected processGetCommentsByUserId(response: AxiosResponse): Promise<Comment[]> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
 }
 
 export interface Post {
@@ -345,14 +595,12 @@ export interface Comment {
 }
 
 export interface RegularUserCredentials {
-    _id?: string;
     role?: string;
     email?: string;
     password?: string;
 }
 
 export interface ProfessionalUserCredentials {
-    _id?: string;
     role?: string;
     email?: string;
     password?: string;
@@ -360,6 +608,11 @@ export interface ProfessionalUserCredentials {
     license?: string;
     licenseIssued?: Date;
     specialization?: string[];
+}
+
+export interface UserLoginCredentials {
+    email?: string;
+    password?: string;
 }
 
 export interface ErrorMessage {
@@ -370,6 +623,12 @@ export interface AuthResponse {
     message?: string;
     jwt?: string;
     role?: string;
+}
+
+export interface CommunityListElement {
+    _id?: string;
+    name?: string;
+    avatar?: string;
 }
 
 export type CommentsSortedBy = "time" | "votes" | "professional";
