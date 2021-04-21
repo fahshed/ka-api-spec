@@ -71,6 +71,24 @@ paths:
           $ref: "#/components/responses/OKProfessionalUserSignup"
         default:
           $ref: "#/components/responses/BadRequest"
+
+  /user/login:
+    post:
+      tags:
+        - user
+      summary: Logs in a user
+      description: Logs in a user(regular/professional) in the database with credentials
+      operationId: loginUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProfessionalUserCredentials"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKProfessionalUserSignup"
+        default:
+          $ref: "#/components/responses/BadRequest"
           
   
   
@@ -185,12 +203,12 @@ components:
         message:
           type: string
     
-    SignupResponse:
+    AuthResponse:
       type: object
       properties:
         message:
           type: string
-        jwtToken:
+        jwt:
           type: string
         role:
           type: string
@@ -228,11 +246,11 @@ components:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/SignupResponse"
+            $ref: "#/components/schemas/AuthResponse"
     OKProfessionalUserSignup:
       description: OK
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/SignupResponse"
+            $ref: "#/components/schemas/AuthResponse"
     

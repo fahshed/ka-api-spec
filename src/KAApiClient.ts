@@ -45,13 +45,19 @@ export interface IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    signupRegularUser(body?: RegularUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SignupResponse>;
+    signupRegularUser(body?: RegularUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse>;
     /**
      * Create a professional user
      * @param body (optional) 
      * @return OK
      */
-    signupProfessionalUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SignupResponse>;
+    signupProfessionalUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse>;
+    /**
+     * Logs in a user
+     * @param body (optional) 
+     * @return OK
+     */
+    loginUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse>;
 }
 
 export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
@@ -134,7 +140,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    signupRegularUser(body?: RegularUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SignupResponse> {
+    signupRegularUser(body?: RegularUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse> {
         let url_ = this.baseUrl + "/user/regular/signup";
         url_ = url_.replace(/[?&]$/, "");
 
@@ -166,7 +172,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
         });
     }
 
-    protected processSignupRegularUser(response: AxiosResponse): Promise<SignupResponse> {
+    protected processSignupRegularUser(response: AxiosResponse): Promise<AuthResponse> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -196,7 +202,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    signupProfessionalUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SignupResponse> {
+    signupProfessionalUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse> {
         let url_ = this.baseUrl + "/user/professional/signup";
         url_ = url_.replace(/[?&]$/, "");
 
@@ -228,7 +234,69 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
         });
     }
 
-    protected processSignupProfessionalUser(response: AxiosResponse): Promise<SignupResponse> {
+    protected processSignupProfessionalUser(response: AxiosResponse): Promise<AuthResponse> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Logs in a user
+     * @param body (optional) 
+     * @return OK
+     */
+    loginUser(body?: ProfessionalUserCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse> {
+        let url_ = this.baseUrl + "/user/login";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ = <AxiosRequestConfig>{
+            data: content_,
+            method: "POST",
+            url: url_,
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+            onUploadProgress
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processLoginUser(_response);
+        });
+    }
+
+    protected processLoginUser(response: AxiosResponse): Promise<AuthResponse> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -298,9 +366,9 @@ export interface ErrorMessage {
     message?: string;
 }
 
-export interface SignupResponse {
+export interface AuthResponse {
     message?: string;
-    jwtToken?: string;
+    jwt?: string;
     role?: string;
 }
 

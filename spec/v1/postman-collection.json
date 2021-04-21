@@ -2,7 +2,7 @@
   "collection": {
     "item": [
       {
-        "id": "114d9ec6-54ba-4d18-a660-6c8a2f4d261e",
+        "id": "ad62bc82-7cb9-4022-b65a-47e8cd19ecb0",
         "name": "Get post by Id",
         "request": {
           "name": "Get post by Id",
@@ -40,7 +40,7 @@
         },
         "response": [
           {
-            "id": "559fcb17-5124-4889-bd84-c214d0770bf5",
+            "id": "38e4566d-3588-4114-ae2a-f809852fda23",
             "name": "OK",
             "originalRequest": {
               "url": {
@@ -75,12 +75,12 @@
                 "value": "application/json"
               }
             ],
-            "body": "{\n \"_id\": \"sed\",\n \"title\": \"elit in ex et cillum\",\n \"content\": \"consequat ex dolor\",\n \"tags\": [\n  \"sed ea non Lorem\",\n  \"sint do aute culpa\"\n ],\n \"voteCount\": 88027103.13621768,\n \"commentCount\": 69920593.23590332,\n \"createdAt\": \"2007-07-31T16:41:58.583Z\",\n \"community\": {\n  \"_id\": \"mollit adipisicing ullamco pariatur in\",\n  \"name\": \"elit dolor\"\n },\n \"postedBy\": {\n  \"_id\": \"Ut cillum magna culpa\",\n  \"username\": \"labore deserunt eu laborum eiusmod\",\n  \"avatar\": \"ut\"\n },\n \"comments\": [\n  {\n   \"_id\": \"Excepteur tempor\",\n   \"content\": \"tempor labore ex ut\",\n   \"voteCount\": \"occaecat culpa\",\n   \"replyCount\": 16997901.043075636,\n   \"createdAt\": \"1976-06-09T01:56:05.646Z\",\n   \"postedBy\": {\n    \"_id\": \"qui consectetur amet tempor\",\n    \"username\": \"consequat laborum\",\n    \"avatar\": \"Ut et\",\n    \"rank\": -32040108.965361908\n   }\n  },\n  {\n   \"_id\": \"labore laboris nulla\",\n   \"content\": \"consectet\",\n   \"voteCount\": \"qui laborum pariatur est eiusmod\",\n   \"replyCount\": 39422064.30220634,\n   \"createdAt\": \"1984-01-10T14:08:56.858Z\",\n   \"postedBy\": {\n    \"_id\": \"culpa conse\",\n    \"username\": \"cillum et\",\n    \"avatar\": \"irure consectetur culpa\",\n    \"rank\": -60605751.25187859\n   }\n  }\n ]\n}",
+            "body": "{\n \"_id\": \"dolore velit\",\n \"title\": \"in\",\n \"content\": \"exercitati\",\n \"tags\": [\n  \"sit deserunt aliqua\",\n  \"pariatur ad sed\"\n ],\n \"voteCount\": -3864149.804328814,\n \"commentCount\": 46748214.43120861,\n \"createdAt\": \"1943-02-03T08:05:25.548Z\",\n \"community\": {\n  \"_id\": \"velit pariatur in\",\n  \"name\": \"id dolor\"\n },\n \"postedBy\": {\n  \"_id\": \"in et nulla\",\n  \"username\": \"sunt consectetur eiusmod\",\n  \"avatar\": \"quis anim\"\n },\n \"comments\": [\n  {\n   \"_id\": \"est non Ut ipsum\",\n   \"content\": \"deserunt et\",\n   \"voteCount\": \"labore aute adipisicing eu\",\n   \"replyCount\": -99504285.84608528,\n   \"createdAt\": \"1950-07-29T19:09:10.456Z\",\n   \"postedBy\": {\n    \"_id\": \"velit incididu\",\n    \"username\": \"in\",\n    \"avatar\": \"nulla non laboris voluptate\",\n    \"rank\": -40089659.51546499\n   }\n  },\n  {\n   \"_id\": \"esse in incididunt irure\",\n   \"content\": \"amet aliquip reprehenderit\",\n   \"voteCount\": \"ullamco mollit ad minim occaecat\",\n   \"replyCount\": 21288287.70729831,\n   \"createdAt\": \"1959-08-05T07:38:38.778Z\",\n   \"postedBy\": {\n    \"_id\": \"aute cillum consectetur quis\",\n    \"username\": \"occaecat velit cillum laborum ex\",\n    \"avatar\": \"do\",\n    \"rank\": 96431864.94792762\n   }\n  }\n ]\n}",
             "cookie": [],
             "_postman_previewlanguage": "json"
           },
           {
-            "id": "92eb9876-907b-439e-9e4f-5bd8eb749ecc",
+            "id": "b4b7fb46-64ee-43e5-adbf-8e82438812b8",
             "name": "Bad Request",
             "originalRequest": {
               "url": {
@@ -115,7 +115,7 @@
                 "value": "application/json"
               }
             ],
-            "body": "{\n \"message\": \"deserunt id dolor aliquip\"\n}",
+            "body": "{\n \"message\": \"do incididunt\"\n}",
             "cookie": [],
             "_postman_previewlanguage": "json"
           }
@@ -123,11 +123,11 @@
         "event": []
       },
       {
-        "id": "0cec7f5d-a070-4714-be85-6202fc325714",
+        "id": "f1b3e566-d23a-43f0-ac01-270c643f794a",
         "name": "user",
         "item": [
           {
-            "id": "b3751bb2-82fc-42c3-9a0d-476d779693cf",
+            "id": "72a2c203-9fd0-4baa-9c3c-9bb588f17720",
             "name": "Create a regular user",
             "request": {
               "name": "Create a regular user",
@@ -162,7 +162,7 @@
             },
             "response": [
               {
-                "id": "651ae708-260f-4ec3-824a-c4311c1bc34b",
+                "id": "2aa8ee0e-2c3c-4f78-8dec-87360768e26b",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -191,12 +191,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"laboris in\",\n \"jwtToken\": \"veniam non Duis Lorem\",\n \"role\": \"non ut officia\"\n}",
+                "body": "{\n \"message\": \"non labore consectetur\",\n \"jwt\": \"aliquip proident occaecat\",\n \"role\": \"ipsum magna\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "d7746367-1804-4d6b-a2fc-3b299256f97e",
+                "id": "361c9d26-95b5-4d75-989e-5908279aa39d",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -225,7 +225,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"deserunt id dolor aliquip\"\n}",
+                "body": "{\n \"message\": \"do incididunt\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -233,7 +233,7 @@
             "event": []
           },
           {
-            "id": "a011cb54-2261-4889-a1ff-d600e3df1b19",
+            "id": "c7bac120-02d5-4c54-a4bf-b7cffd67ae7c",
             "name": "Create a professional user",
             "request": {
               "name": "Create a professional user",
@@ -268,7 +268,7 @@
             },
             "response": [
               {
-                "id": "eda23697-b2b1-463b-92ef-701838376a08",
+                "id": "54ae21d5-22e6-4cba-87ba-e59dc0fd7b2d",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -297,12 +297,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"laboris in\",\n \"jwtToken\": \"veniam non Duis Lorem\",\n \"role\": \"non ut officia\"\n}",
+                "body": "{\n \"message\": \"non labore consectetur\",\n \"jwt\": \"aliquip proident occaecat\",\n \"role\": \"ipsum magna\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "ff85dbc5-d6b2-448c-847e-7ea7ba532eb5",
+                "id": "5e68470f-30fb-45af-ac92-ce7150f1f2c2",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -331,7 +331,110 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"deserunt id dolor aliquip\"\n}",
+                "body": "{\n \"message\": \"do incididunt\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "9fc98b8c-c331-4a1b-bfe9-66180c79c7ed",
+            "name": "Logs in a user",
+            "request": {
+              "name": "Logs in a user",
+              "description": {
+                "content": "Creates a professional user in the database with credentials",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "user",
+                  "login"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "auth": null,
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"_id\": \"<string>\",\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specialization\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+              }
+            },
+            "response": [
+              {
+                "id": "0f8c1691-092e-4bbe-bfb1-64cabf6136b5",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "login"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"_id\": \"<string>\",\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specialization\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"non labore consectetur\",\n \"jwt\": \"aliquip proident occaecat\",\n \"role\": \"ipsum magna\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "6bd9ebe5-29ef-487e-9b6e-17d5b53e5cde",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "login"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"_id\": \"<string>\",\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specialization\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+                  }
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"do incididunt\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -351,12 +454,14 @@
       }
     ],
     "info": {
+      "_postman_id": "ef8c99d0-0708-4d7e-ad7f-dd410ed3b797",
       "name": "KA API",
       "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
       "description": {
         "content": "API spec for Kemon Achen API v1\n\nContact Support:\n Name: Kemon Achen\n Email: 1605077@ugrad.cse.buet.ac.bd",
         "type": "text/plain"
-      }
+      },
+      "id": "ef8c99d0-0708-4d7e-ad7f-dd410ed3b797"
     }
   }
 }
