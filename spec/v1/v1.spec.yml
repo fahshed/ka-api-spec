@@ -10,7 +10,7 @@ info:
   version: 1.0.0
 
 servers:
-  - url: http://localhost:8000
+  - url: http://localhost:8000/api/v1
     description: DEVELOPMENT
 
 tags:
@@ -181,6 +181,8 @@ components:
               type: string
             name:
               type: string
+            image:
+              type: string
         postedBy:
           type: object
           properties:
@@ -188,7 +190,7 @@ components:
               type: string
             username:
               type: string
-            avatar:
+            image:
               type: string
         comments:
           type: array
@@ -220,6 +222,13 @@ components:
               type: string
             rank:
               type: number
+        parentPost:
+          type: object
+          properties:
+            _id:
+              type: string
+            title:
+              type: string
 
     RegularUserCredentials:
       type: object
@@ -247,7 +256,7 @@ components:
         licenseIssued:
           type: string
           format: date-time
-        specialization:
+        specializations:
           type: array
           items:
             type: string
@@ -269,11 +278,17 @@ components:
     AuthResponse:
       type: object
       properties:
+        _id:
+          type: string
+        name:
+          type: string
         message:
           type: string
         jwt:
           type: string
         role:
+          type: string
+        image:
           type: string
     
     CommunityList:
@@ -288,7 +303,7 @@ components:
           type: string
         name:
           type: string
-        avatar:
+        image:
           type: string
 
 

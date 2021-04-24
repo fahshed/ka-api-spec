@@ -88,7 +88,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     constructor(configuration: IConfig, baseUrl?: string, instance?: AxiosInstance) {
         super(configuration);
         this.instance = instance ? instance : axios.create();
-        this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "http://localhost:8000";
+        this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "http://localhost:8000/api/v1";
     }
 
     /**
@@ -592,6 +592,7 @@ export interface Comment {
     replyCount?: number;
     createdAt?: Date;
     postedBy?: PostedBy2;
+    parentPost?: ParentPost;
 }
 
 export interface RegularUserCredentials {
@@ -607,7 +608,7 @@ export interface ProfessionalUserCredentials {
     verified?: boolean;
     license?: string;
     licenseIssued?: Date;
-    specialization?: string[];
+    specializations?: string[];
 }
 
 export interface UserLoginCredentials {
@@ -620,15 +621,18 @@ export interface ErrorMessage {
 }
 
 export interface AuthResponse {
+    _id?: string;
+    name?: string;
     message?: string;
     jwt?: string;
     role?: string;
+    image?: string;
 }
 
 export interface CommunityListElement {
     _id?: string;
     name?: string;
-    avatar?: string;
+    image?: string;
 }
 
 export type CommentsSortedBy = "time" | "votes" | "professional";
@@ -636,12 +640,13 @@ export type CommentsSortedBy = "time" | "votes" | "professional";
 export interface Community {
     _id?: string;
     name?: string;
+    image?: string;
 }
 
 export interface PostedBy {
     _id?: string;
     username?: string;
-    avatar?: string;
+    image?: string;
 }
 
 export interface PostedBy2 {
@@ -649,6 +654,11 @@ export interface PostedBy2 {
     username?: string;
     avatar?: string;
     rank?: number;
+}
+
+export interface ParentPost {
+    _id?: string;
+    title?: string;
 }
 
 export class KAApiException extends Error {
