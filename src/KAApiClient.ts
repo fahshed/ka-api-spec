@@ -78,6 +78,11 @@ export interface IKAApiClent {
      * @return OK
      */
     getCommentsByUserId(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Comment[]>;
+    /**
+     * Join a user to a community
+     * @return OK
+     */
+    joinCommunity(communityId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<JoinCommunityMessage>;
 }
 
 export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
@@ -570,6 +575,65 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
             return throwException("Bad Request", status, _responseText, _headers, resultdefault);
         }
     }
+
+    /**
+     * Join a user to a community
+     * @return OK
+     */
+    joinCommunity(communityId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<JoinCommunityMessage> {
+        let url_ = this.baseUrl + "/user/community/{communityId}/join";
+        if (communityId === undefined || communityId === null)
+            throw new Error("The parameter 'communityId' must be defined.");
+        url_ = url_.replace("{communityId}", encodeURIComponent("" + communityId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processJoinCommunity(_response);
+        });
+    }
+
+    protected processJoinCommunity(response: AxiosResponse): Promise<JoinCommunityMessage> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
 }
 
 export interface Post {
@@ -633,6 +697,10 @@ export interface CommunityListElement {
     _id?: string;
     name?: string;
     image?: string;
+}
+
+export interface JoinCommunityMessage {
+    message?: string;
 }
 
 export type CommentsSortedBy = "time" | "votes" | "professional";

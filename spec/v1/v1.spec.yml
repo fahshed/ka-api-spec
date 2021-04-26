@@ -147,6 +147,21 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/community/{communityId}/join:
+    get:
+      tags:
+        - user
+      summary: Join a user to a community
+      description: Join a user to a community given the community id
+      operationId: joinCommunity
+      parameters:
+        - $ref: "#/components/parameters/communityId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKJoinCommunity"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   
           
   
@@ -316,11 +331,24 @@ components:
       type: array
       items:
         $ref: "#/components/schemas/Comment"
+    
+    JoinCommunityMessage:
+      type: object
+      properties:
+        message:
+          type: string
 
   parameters:
     postId:
       in: path
       name: postId
+      required: true
+      schema:
+        type: string
+    
+    communityId:
+      in: path
+      name: communityId
       required: true
       schema:
         type: string
@@ -376,4 +404,11 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/UserComments"
+
+    OKJoinCommunity:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/JoinCommunityMessage"
     
