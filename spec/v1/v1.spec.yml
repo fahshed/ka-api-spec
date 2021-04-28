@@ -55,8 +55,8 @@ paths:
     get:
       tags:
         - post
-      summary: Save a post by user
-      description: Save a post by a logged-in user
+      summary: Like a post by user
+      description: Like a post by a logged-in user
       operationId: likePost
       parameters:
         - $ref: "#/components/parameters/postId"
