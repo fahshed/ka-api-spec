@@ -41,16 +41,6 @@ export interface IKAApiClent {
      */
     getPostById(postId: string, commentsSortedBy?: CommentsSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post>;
     /**
-     * Save a post by user
-     * @return OK
-     */
-    savePost(postId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SavePostMessage>;
-    /**
-     * Save a post by user
-     * @return OK
-     */
-    likePost(postId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<LikePostMessage>;
-    /**
      * Create a regular user
      * @param body (optional) 
      * @return OK
@@ -93,6 +83,18 @@ export interface IKAApiClent {
      * @return OK
      */
     joinCommunity(communityId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<JoinCommunityMessage>;
+    /**
+     * Save a post by user
+     * @param saveOptions (optional) 
+     * @return OK
+     */
+    savePost(postId: string, saveOptions?: SaveOptions | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SavePostMessage>;
+    /**
+     * Like a post by user
+     * @param likeOptions (optional) 
+     * @return OK
+     */
+    likePost(postId: string, likeOptions?: LikeOptions | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<LikePostMessage>;
 }
 
 export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
@@ -146,124 +148,6 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     protected processGetPostById(response: AxiosResponse): Promise<Post> {
-        const status = response.status;
-        let _headers: any = {};
-        if (response.headers && typeof response.headers === "object") {
-            for (let k in response.headers) {
-                if (response.headers.hasOwnProperty(k)) {
-                    _headers[k] = response.headers[k];
-                }
-            }
-        }
-        if (status === 200) {
-            const _responseText = response.data;
-            let result200: any = null;
-            let resultData200  = _responseText;
-            result200 = resultData200
-            return result200;
-        } else {
-            const _responseText = response.data;
-            let resultdefault: any = null;
-            let resultDatadefault  = _responseText;
-            resultdefault = resultDatadefault
-            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
-        }
-    }
-
-    /**
-     * Save a post by user
-     * @return OK
-     */
-    savePost(postId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SavePostMessage> {
-        let url_ = this.baseUrl + "/post/{postId}/save";
-        if (postId === undefined || postId === null)
-            throw new Error("The parameter 'postId' must be defined.");
-        url_ = url_.replace("{postId}", encodeURIComponent("" + postId));
-        url_ = url_.replace(/[?&]$/, "");
-
-        let options_ = <AxiosRequestConfig>{
-            method: "GET",
-            url: url_,
-            headers: {
-                "Accept": "application/json"
-            },
-            cancelToken,
-            onDownloadProgress,
-        };
-
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.instance.request(transformedOptions_);
-        }).catch((_error: any) => {
-            if (isAxiosError(_error) && _error.response) {
-                return _error.response;
-            } else {
-                throw _error;
-            }
-        }).then((_response: AxiosResponse) => {
-            return this.processSavePost(_response);
-        });
-    }
-
-    protected processSavePost(response: AxiosResponse): Promise<SavePostMessage> {
-        const status = response.status;
-        let _headers: any = {};
-        if (response.headers && typeof response.headers === "object") {
-            for (let k in response.headers) {
-                if (response.headers.hasOwnProperty(k)) {
-                    _headers[k] = response.headers[k];
-                }
-            }
-        }
-        if (status === 200) {
-            const _responseText = response.data;
-            let result200: any = null;
-            let resultData200  = _responseText;
-            result200 = resultData200
-            return result200;
-        } else {
-            const _responseText = response.data;
-            let resultdefault: any = null;
-            let resultDatadefault  = _responseText;
-            resultdefault = resultDatadefault
-            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
-        }
-    }
-
-    /**
-     * Save a post by user
-     * @return OK
-     */
-    likePost(postId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<LikePostMessage> {
-        let url_ = this.baseUrl + "/post/{postId}/like";
-        if (postId === undefined || postId === null)
-            throw new Error("The parameter 'postId' must be defined.");
-        url_ = url_.replace("{postId}", encodeURIComponent("" + postId));
-        url_ = url_.replace(/[?&]$/, "");
-
-        let options_ = <AxiosRequestConfig>{
-            method: "GET",
-            url: url_,
-            headers: {
-                "Accept": "application/json"
-            },
-            cancelToken,
-            onDownloadProgress,
-        };
-
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.instance.request(transformedOptions_);
-        }).catch((_error: any) => {
-            if (isAxiosError(_error) && _error.response) {
-                return _error.response;
-            } else {
-                throw _error;
-            }
-        }).then((_response: AxiosResponse) => {
-            return this.processLikePost(_response);
-        });
-    }
-
-    protected processLikePost(response: AxiosResponse): Promise<LikePostMessage> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -762,6 +646,134 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
             return throwException("Bad Request", status, _responseText, _headers, resultdefault);
         }
     }
+
+    /**
+     * Save a post by user
+     * @param saveOptions (optional) 
+     * @return OK
+     */
+    savePost(postId: string, saveOptions?: SaveOptions | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SavePostMessage> {
+        let url_ = this.baseUrl + "/post/{postId}/save?";
+        if (postId === undefined || postId === null)
+            throw new Error("The parameter 'postId' must be defined.");
+        url_ = url_.replace("{postId}", encodeURIComponent("" + postId));
+        if (saveOptions === null)
+            throw new Error("The parameter 'saveOptions' cannot be null.");
+        else if (saveOptions !== undefined)
+            url_ += "saveOptions=" + encodeURIComponent("" + saveOptions) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processSavePost(_response);
+        });
+    }
+
+    protected processSavePost(response: AxiosResponse): Promise<SavePostMessage> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Like a post by user
+     * @param likeOptions (optional) 
+     * @return OK
+     */
+    likePost(postId: string, likeOptions?: LikeOptions | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<LikePostMessage> {
+        let url_ = this.baseUrl + "/post/{postId}/like?";
+        if (postId === undefined || postId === null)
+            throw new Error("The parameter 'postId' must be defined.");
+        url_ = url_.replace("{postId}", encodeURIComponent("" + postId));
+        if (likeOptions === null)
+            throw new Error("The parameter 'likeOptions' cannot be null.");
+        else if (likeOptions !== undefined)
+            url_ += "likeOptions=" + encodeURIComponent("" + likeOptions) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processLikePost(_response);
+        });
+    }
+
+    protected processLikePost(response: AxiosResponse): Promise<LikePostMessage> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
 }
 
 export interface Post {
@@ -840,6 +852,10 @@ export interface LikePostMessage {
 }
 
 export type CommentsSortedBy = "time" | "votes" | "professional";
+
+export type SaveOptions = "save" | "unsave";
+
+export type LikeOptions = "like" | "unlike";
 
 export interface Community {
     _id?: string;
