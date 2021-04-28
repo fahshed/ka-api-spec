@@ -41,6 +41,16 @@ export interface IKAApiClent {
      */
     getPostById(postId: string, commentsSortedBy?: CommentsSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post>;
     /**
+     * Save a post by user
+     * @return OK
+     */
+    savePost(postId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SavePostMessage>;
+    /**
+     * Save a post by user
+     * @return OK
+     */
+    likePost(postId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<LikePostMessage>;
+    /**
      * Create a regular user
      * @param body (optional) 
      * @return OK
@@ -136,6 +146,124 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     protected processGetPostById(response: AxiosResponse): Promise<Post> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Save a post by user
+     * @return OK
+     */
+    savePost(postId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SavePostMessage> {
+        let url_ = this.baseUrl + "/post/{postId}/save";
+        if (postId === undefined || postId === null)
+            throw new Error("The parameter 'postId' must be defined.");
+        url_ = url_.replace("{postId}", encodeURIComponent("" + postId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processSavePost(_response);
+        });
+    }
+
+    protected processSavePost(response: AxiosResponse): Promise<SavePostMessage> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Save a post by user
+     * @return OK
+     */
+    likePost(postId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<LikePostMessage> {
+        let url_ = this.baseUrl + "/post/{postId}/like";
+        if (postId === undefined || postId === null)
+            throw new Error("The parameter 'postId' must be defined.");
+        url_ = url_.replace("{postId}", encodeURIComponent("" + postId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processLikePost(_response);
+        });
+    }
+
+    protected processLikePost(response: AxiosResponse): Promise<LikePostMessage> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -700,6 +828,14 @@ export interface CommunityListElement {
 }
 
 export interface JoinCommunityMessage {
+    message?: string;
+}
+
+export interface SavePostMessage {
+    message?: string;
+}
+
+export interface LikePostMessage {
     message?: string;
 }
 
