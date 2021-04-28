@@ -46,7 +46,7 @@ function updatePostman(newFile, collectionUid) {
     },
     headers: {
       "Cache-Control": "no-cache",
-      "X-Api-Key": key,
+      "x-api-key": key,
       "Content-Type": "application/json",
     },
     body: newFile,

@@ -10,7 +10,7 @@ info:
   version: 1.0.0
 
 servers:
-  - url: http://localhost:8000
+  - url: http://localhost:8000/api/v1
     description: DEVELOPMENT
 
 tags:
@@ -35,6 +35,137 @@ paths:
           $ref: "#/components/responses/OKPost"
         default:
           $ref: "#/components/responses/BadRequest"
+
+  /user/regular/signup:
+    post:
+      tags:
+        - user
+      summary: Create a regular user
+      description: Creates a regular user in the database with credentials
+      operationId: signupRegularUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegularUserCredentials"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKAuthentication"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/professional/signup:
+    post:
+      tags:
+        - user
+      summary: Create a professional user
+      description: Creates a professional user in the database with credentials
+      operationId: signupProfessionalUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProfessionalUserCredentials"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKAuthentication"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/login:
+    post:
+      tags:
+        - user
+      summary: Logs in a user
+      description: Logs in a user(regular/professional) in the database with credentials
+      operationId: loginUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserLoginCredentials"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKAuthentication"
+        default:
+          $ref: "#/components/responses/BadRequest"
+  
+  /user/communities:
+    get:
+      tags:
+        - user
+      summary: Get communities of a user
+      description: Get communities of a logged in user
+      operationId: getCommunities
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunities"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/communities/suggested :
+    get:
+      tags:
+        - user
+      summary: Get suggested communities of a user
+      description: Get suggested communities of a logged in user
+      operationId: getSuggestedCommunities
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunities"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/{userId}/posts:
+    get:
+      tags:
+        - user
+      summary: Get posts by UserId
+      description: Get Array of posts by UserId
+      operationId: getPostsByUserId
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKUserPosts"
+        default:
+          $ref: "#/components/responses/BadRequest"
+  
+
+  /user/{userId}/comments:
+    get:
+      tags:
+        - user
+      summary: Get comments by UserId
+      description: Get Array of comments by UserId
+      operationId: getCommentsByUserId
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKUserComments"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/community/{communityId}/join:
+    get:
+      tags:
+        - user
+      summary: Join a user to a community
+      description: Join a user to a community given the community id
+      operationId: joinCommunity
+      parameters:
+        - $ref: "#/components/parameters/communityId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKJoinCommunity"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  
+          
+  
+  
 
 components:
   schemas:
@@ -65,6 +196,8 @@ components:
               type: string
             name:
               type: string
+            image:
+              type: string
         postedBy:
           type: object
           properties:
@@ -72,7 +205,7 @@ components:
               type: string
             username:
               type: string
-            avatar:
+            image:
               type: string
         comments:
           type: array
@@ -104,8 +237,102 @@ components:
               type: string
             rank:
               type: number
+        parentPost:
+          type: object
+          properties:
+            _id:
+              type: string
+            title:
+              type: string
+
+    RegularUserCredentials:
+      type: object
+      properties:
+        role:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+    
+    ProfessionalUserCredentials:
+      type: object
+      properties:
+        role:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        verified:
+          type: boolean
+        license:
+          type: string
+        licenseIssued:
+          type: string
+          format: date-time
+        specializations:
+          type: array
+          items:
+            type: string
+    
+    UserLoginCredentials:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
 
     ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+    
+    AuthResponse:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        message:
+          type: string
+        jwt:
+          type: string
+        role:
+          type: string
+        image:
+          type: string
+    
+    CommunityList:
+      type: array
+      items:
+        $ref: "#/components/schemas/CommunityListElement"
+
+    CommunityListElement:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        image:
+          type: string
+
+
+    UserPosts:
+      type: array
+      items:
+        $ref: "#/components/schemas/Post"
+    
+    UserComments:
+      type: array
+      items:
+        $ref: "#/components/schemas/Comment"
+    
+    JoinCommunityMessage:
       type: object
       properties:
         message:
@@ -115,6 +342,20 @@ components:
     postId:
       in: path
       name: postId
+      required: true
+      schema:
+        type: string
+    
+    communityId:
+      in: path
+      name: communityId
+      required: true
+      schema:
+        type: string
+    
+    userId:
+      in: path
+      name: userId
       required: true
       schema:
         type: string
@@ -139,3 +380,35 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Post"
+    OKAuthentication:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/AuthResponse"
+    OKCommunities:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CommunityList"
+    OKUserPosts:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/UserPosts"
+    OKUserComments:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/UserComments"
+
+    OKJoinCommunity:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/JoinCommunityMessage"
+    
