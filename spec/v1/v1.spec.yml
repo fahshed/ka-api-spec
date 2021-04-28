@@ -36,6 +36,36 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /post/{postId}/save:
+    get:
+      tags:
+        - post
+      summary: Save a post by user
+      description: Save a post by a logged-in user
+      operationId: savePost
+      parameters:
+        - $ref: "#/components/parameters/postId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKSavePost"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /post/{postId}/like:
+    get:
+      tags:
+        - post
+      summary: Save a post by user
+      description: Save a post by a logged-in user
+      operationId: likePost
+      parameters:
+        - $ref: "#/components/parameters/postId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKLikePost"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /user/regular/signup:
     post:
       tags:
@@ -163,10 +193,6 @@ paths:
           $ref: "#/components/responses/BadRequest"
 
   
-          
-  
-  
-
 components:
   schemas:
     Post:
@@ -337,6 +363,18 @@ components:
       properties:
         message:
           type: string
+    
+    SavePostMessage:
+      type: object
+      properties:
+        message:
+          type: string
+    
+    LikePostMessage:
+      type: object
+      properties:
+        message:
+          type: string
 
   parameters:
     postId:
@@ -404,11 +442,21 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/UserComments"
-
     OKJoinCommunity:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/JoinCommunityMessage"
-    
+    OKSavePost:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/SavePostMessage"
+    OKLikePost:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/LikePostMessage"
