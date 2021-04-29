@@ -193,6 +193,67 @@ paths:
           $ref: "#/components/responses/OKLikePost"
         default:
           $ref: "#/components/responses/BadRequest"
+  
+  /post/create:
+    post:
+      tags:
+        - post
+      summary: Create a post
+      description: Creates a post by a logged-in user
+      operationId: createPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Post"
+      responses:
+        "200":
+          $ref: "#/components/responses/OkPostCreated"
+        default:
+          $ref: "#/components/responses/BadRequest"
+  
+  /post/{postId}/comment/create:
+    post:
+      tags:
+        - post
+      summary: Create a comment
+      description: Creates a comment of a post by a logged-in user
+      operationId: createComment
+      parameters:
+        - $ref: "#/components/parameters/postId"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Comment"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKComment"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /post/{postId}/comment/{commentId}/reply/create:
+    post:
+      tags:
+        - post
+      summary: Create a reply
+      description: Creates a reply of a comment by a logged-in user
+      operationId: createReply
+      parameters:
+        - $ref: "#/components/parameters/postId"
+        - $ref: "#/components/parameters/commentId"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Comment"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKComment"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+
 
 components:
   schemas:
@@ -205,6 +266,8 @@ components:
           type: string
         content:
           type: string
+        asPseudo:
+          type: boolean
         tags:
           type: array
           items:
@@ -246,6 +309,8 @@ components:
           type: string
         content:
           type: string
+        asPseudo:
+          type: boolean
         voteCount:
           type: string
         replyCount:
@@ -376,6 +441,12 @@ components:
         message:
           type: string
 
+    PostCreatedMessage:
+      type: object
+      properties:
+        message:
+          type: string
+
   parameters:
     postId:
       in: path
@@ -418,6 +489,15 @@ components:
       schema:
         type: string
         enum: ["save", "unsave"]
+    
+    commentId:
+      in: path
+      name: commentId
+      required: true
+      schema:
+        type: string
+
+    
 
   responses:
     BadRequest:
@@ -474,3 +554,15 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/LikePostMessage"
+    OkPostCreated:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PostCreatedMessage"
+    OKComment:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Comment"
