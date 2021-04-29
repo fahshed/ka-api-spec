@@ -71,14 +71,16 @@ function updateCollection(newFileName) {
   const newFile = {};
   newFile.collection = file; // wrap JSON object in new "collection" property
 
-  // let newArr = newFile.collection.item[0].item;
-  // for (let i = 0; i < newArr.length; i++) {
-  //   const req = newArr[i];
-  //   if (req.name === "User Login") {
-  //     console.log(`Token script added to request - ${req.name}`);
-  //     newFile.collection.item[0].item[i].event = token;
-  //   }
-  // }
+  let newArr = newFile.collection.item[1].item;
+  for (let i = 0; i < newArr.length; i++) {
+    console.log('sex');
+    const req = newArr[i];
+    console.log(req.name);
+    if (req.name === "Logs in a user") {
+      console.log(`Token script added to request - ${req.name}`);
+      newFile.collection.item[1].item[i].event = token;
+    }
+  }
   // call function to update the local collection file
   updateLocalCollection(newFileName, newFile);
 
