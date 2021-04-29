@@ -4,8 +4,8 @@
     "script": {
       "exec": [
         "var jsonData = JSON.parse(responseBody);",
-        "pm.environment.set(\"token\", jsonData.token.accessToken);",
-        "pm.globals.set(\"token\", jsonData.token.accessToken);"
+        "pm.environment.set(\"token\", jsonData.jwt);",
+        "pm.globals.set(\"token\", jsonData.jwt);"
       ],
       "type": "text/javascript"
     }
