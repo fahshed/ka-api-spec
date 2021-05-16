@@ -113,6 +113,17 @@ export interface IKAApiClent {
      * @return OK
      */
     createReply(postId: string, commentId: string, body?: Comment | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Comment>;
+    /**
+     * Get replies of a comment
+     * @return OK
+     */
+    getRepliesofComment(postId: string, commentId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Comment[]>;
+    /**
+     * Get feed of an user
+     * @param feedSortedBy (optional) 
+     * @return OK
+     */
+    getFeed(feedSortedBy?: FeedSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]>;
 }
 
 export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
@@ -987,6 +998,129 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
             return throwException("Bad Request", status, _responseText, _headers, resultdefault);
         }
     }
+
+    /**
+     * Get replies of a comment
+     * @return OK
+     */
+    getRepliesofComment(postId: string, commentId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Comment[]> {
+        let url_ = this.baseUrl + "/post/{postId}/comment/{commentId}/replies";
+        if (postId === undefined || postId === null)
+            throw new Error("The parameter 'postId' must be defined.");
+        url_ = url_.replace("{postId}", encodeURIComponent("" + postId));
+        if (commentId === undefined || commentId === null)
+            throw new Error("The parameter 'commentId' must be defined.");
+        url_ = url_.replace("{commentId}", encodeURIComponent("" + commentId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetRepliesofComment(_response);
+        });
+    }
+
+    protected processGetRepliesofComment(response: AxiosResponse): Promise<Comment[]> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Get feed of an user
+     * @param feedSortedBy (optional) 
+     * @return OK
+     */
+    getFeed(feedSortedBy?: FeedSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]> {
+        let url_ = this.baseUrl + "/post/feed?";
+        if (feedSortedBy === null)
+            throw new Error("The parameter 'feedSortedBy' cannot be null.");
+        else if (feedSortedBy !== undefined)
+            url_ += "feedSortedBy=" + encodeURIComponent("" + feedSortedBy) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetFeed(_response);
+        });
+    }
+
+    protected processGetFeed(response: AxiosResponse): Promise<Post[]> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
 }
 
 export interface Post {
@@ -1012,6 +1146,7 @@ export interface Comment {
     createdAt?: Date;
     postedBy?: PostedBy2;
     parentPost?: ParentPost;
+    repliedTo?: string;
 }
 
 export interface RegularUserCredentials {
@@ -1075,6 +1210,8 @@ export type CommentsSortedBy = "time" | "votes" | "professional";
 export type SaveOptions = "save" | "unsave";
 
 export type LikeOptions = "like" | "unlike";
+
+export type FeedSortedBy = "time" | "votes" | "professional" | "commentCount";
 
 export interface Community {
     _id?: string;
