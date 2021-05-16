@@ -253,6 +253,36 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /post/{postId}/comment/{commentId}/replies:
+    get:
+      tags:
+        - post
+      summary: Get replies of a comment
+      description: Gets all the replies of a comment of a post by a logged-in user
+      operationId: getRepliesofComment
+      parameters:
+        - $ref: "#/components/parameters/postId"
+        - $ref: "#/components/parameters/commentId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKReplies"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /post/feed:
+    get:
+      tags:
+        - post
+      summary: Get feed of an user
+      description: Get the main feed of an user sorted by query parameters
+      operationId: getFeed
+      parameters:
+        - $ref: "#/components/parameters/feedSortedBy"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKFeed"
+        default:
+          $ref: "#/components/responses/BadRequest"
 
 
 components:
@@ -336,6 +366,8 @@ components:
               type: string
             title:
               type: string
+        repliedTo:
+          type: string
 
     RegularUserCredentials:
       type: object
@@ -446,6 +478,16 @@ components:
       properties:
         message:
           type: string
+    
+    Replies:
+      type: array
+      items:
+        $ref: "#/components/schemas/Comment"
+    
+    Feed:
+      type: array
+      items:
+        $ref: "#/components/schemas/Post"
 
   parameters:
     postId:
@@ -496,6 +538,13 @@ components:
       required: true
       schema:
         type: string
+    
+    feedSortedBy:
+      in: query
+      name: feedSortedBy
+      schema:
+        type: string
+        enum: ["time", "votes", "professional", "commentCount"]
 
     
 
@@ -566,3 +615,15 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Comment"
+    OKReplies:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Replies"
+    OKFeed:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Feed"
