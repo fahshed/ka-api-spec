@@ -36,7 +36,6 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
-  
   /user/regular/signup:
     post:
       tags:
@@ -193,7 +192,7 @@ paths:
           $ref: "#/components/responses/OKLikePost"
         default:
           $ref: "#/components/responses/BadRequest"
-  
+
   /post/create:
     post:
       tags:
@@ -211,7 +210,7 @@ paths:
           $ref: "#/components/responses/OkPostCreated"
         default:
           $ref: "#/components/responses/BadRequest"
-  
+
   /post/{postId}/comment/create:
     post:
       tags:
@@ -283,7 +282,6 @@ paths:
           $ref: "#/components/responses/OKFeed"
         default:
           $ref: "#/components/responses/BadRequest"
-
 
 components:
   schemas:
@@ -478,12 +476,12 @@ components:
       properties:
         message:
           type: string
-    
+
     Replies:
       type: array
       items:
         $ref: "#/components/schemas/Comment"
-    
+
     Feed:
       type: array
       items:
@@ -521,6 +519,7 @@ components:
     likeOptions:
       in: query
       name: likeOptions
+      required: true
       schema:
         type: string
         enum: ["like", "unlike"]
@@ -531,22 +530,20 @@ components:
       schema:
         type: string
         enum: ["save", "unsave"]
-    
+
     commentId:
       in: path
       name: commentId
       required: true
       schema:
         type: string
-    
+
     feedSortedBy:
       in: query
       name: feedSortedBy
       schema:
         type: string
         enum: ["time", "votes", "professional", "commentCount"]
-
-    
 
   responses:
     BadRequest:
