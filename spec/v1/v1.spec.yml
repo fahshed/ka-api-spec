@@ -10,7 +10,7 @@ info:
   version: 1.0.0
 
 servers:
-  - url: http://localhost:8000/api/v1
+  - url: http://localhost:9000/api/v1
     description: DEVELOPMENT
 
 tags:
@@ -321,7 +321,7 @@ components:
           properties:
             _id:
               type: string
-            username:
+            name:
               type: string
             image:
               type: string
@@ -329,6 +329,12 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Comment"
+        likedByUsersId:
+          type: array
+          items:
+            type: string
+        isLikedByCurrentUser:
+          type: boolean
 
     Comment:
       type: object
@@ -351,7 +357,7 @@ components:
           properties:
             _id:
               type: string
-            username:
+            name:
               type: string
             avatar:
               type: string
