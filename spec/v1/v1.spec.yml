@@ -18,6 +18,8 @@ tags:
     description: Operations about user
   - name: post
     description: Operations about post
+  - name: community
+    description: Operations about community
 
 paths:
   /post/{postId}:
@@ -283,6 +285,65 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/savedPosts:
+    get:
+      tags:
+        - user
+      summary: Get saved posts of an user
+      description: Get the saved posts of a logged in user
+      operationId: getSavedPosts
+      responses:
+        "200":
+          $ref: "#/components/responses/OKSavedPosts"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /community/{communityId}/information:
+    get:
+      tags:
+        - community
+      summary: Get community information
+      description: Gets information about a community
+      operationId: getCommunityInfo
+      parameters:
+        - $ref: "#/components/parameters/communityId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunityInfo"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /community/{communityId}/feed:
+    get:
+      tags:
+        - community
+      summary: Get feed of a community
+      description: Get the feed of a community sorted by query parameters
+      operationId: getCommunityFeed
+      parameters:
+        - $ref: "#/components/parameters/communityId"
+        - $ref: "#/components/parameters/feedSortedBy"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunityFeed"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /community/{communityId}/about:
+    get:
+      tags:
+        - community
+      summary: Get community information
+      description: Gets information about a community
+      operationId: getCommunityAbout
+      parameters:
+        - $ref: "#/components/parameters/communityId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunityAbout"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
 components:
   schemas:
     Post:
@@ -426,6 +487,48 @@ components:
         role:
           type: string
         image:
+          type: string
+
+    CommunityInfo:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        members:
+          type: number
+        hasJoined:
+          type: boolean
+        tags:
+          type: array
+          items:
+            type: string
+
+    CommunityAbout:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        detailedDescription:
+          type: string
+        links:
+          type: array
+          items:
+            $ref: "#/components/schemas/Links"
+
+    Links:
+      type: object
+      properties:
+        link:
+          type: string
+        title:
           type: string
 
     CommunityList:
@@ -624,3 +727,31 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Feed"
+
+    OKSavedPosts:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Feed"
+
+    OKCommunityInfo:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CommunityInfo"
+
+    OKCommunityFeed:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Feed"
+
+    OKCommunityAbout:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CommunityAbout"
