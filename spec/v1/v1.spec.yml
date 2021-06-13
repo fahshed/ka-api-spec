@@ -10,7 +10,7 @@ info:
   version: 1.0.0
 
 servers:
-  - url: http://localhost:8000/api/v1
+  - url: http://localhost:9000/api/v1
     description: DEVELOPMENT
 
 tags:
@@ -20,24 +20,10 @@ tags:
     description: Operations about post
   - name: community
     description: Operations about community
+  - name: test
+    description: Operations about test
 
 paths:
-  /post/{postId}:
-    get:
-      tags:
-        - post
-      summary: Get post by Id
-      description: Get post by id and comments sorted by query parameters
-      operationId: getPostById
-      parameters:
-        - $ref: "#/components/parameters/postId"
-        - $ref: "#/components/parameters/commentsSortedBy"
-      responses:
-        "200":
-          $ref: "#/components/responses/OKPost"
-        default:
-          $ref: "#/components/responses/BadRequest"
-
   /user/regular/signup:
     post:
       tags:
@@ -163,6 +149,19 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/savedPosts:
+    get:
+      tags:
+        - user
+      summary: Get saved posts of an user
+      description: Get the saved posts of a logged in user
+      operationId: getSavedPosts
+      responses:
+        "200":
+          $ref: "#/components/responses/OKSavedPosts"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /post/{postId}/save:
     get:
       tags:
@@ -285,16 +284,19 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
-  /user/savedPosts:
+  /post/{postId}:
     get:
       tags:
-        - user
-      summary: Get saved posts of an user
-      description: Get the saved posts of a logged in user
-      operationId: getSavedPosts
+        - post
+      summary: Get post by Id
+      description: Get post by id and comments sorted by query parameters
+      operationId: getPostById
+      parameters:
+        - $ref: "#/components/parameters/postId"
+        - $ref: "#/components/parameters/commentsSortedBy"
       responses:
         "200":
-          $ref: "#/components/responses/OKSavedPosts"
+          $ref: "#/components/responses/OKPost"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -341,6 +343,92 @@ paths:
       responses:
         "200":
           $ref: "#/components/responses/OKCommunityAbout"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /test/create:
+    post:
+      tags:
+        - test
+      summary: Create a Test
+      description: N/A
+      operationId: createTest
+      requestBody:
+        $ref: "#/components/responses/OKCreateTest"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKTest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /test/{testId}:
+    get:
+      tags:
+        - test
+      summary: Get a Test
+      description: N/A
+      operationId: getTestById
+      parameters:
+        - $ref: "#/components/parameters/testId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKTest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /test/random:
+    get:
+      tags:
+        - test
+      summary: Get a random Test
+      description: N/A
+      operationId: getTestRandomly
+      responses:
+        "200":
+          $ref: "#/components/responses/OKTest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /test/{testId}/submit:
+    post:
+      tags:
+        - test
+      summary: Submit a test
+      description: N/A
+      operationId: submitTest
+      parameters:
+        - $ref: "#/components/parameters/testId"
+      requestBody:
+        $ref: "#/components/responses/OKScore"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKSubmitTest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /test/advice/communities/suggested:
+    get:
+      tags:
+        - test
+      summary: Get suggested commmunities
+      description: Get suggested commmunities based on test score
+      operationId: getCommunitiesByScore
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunityInfo"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /test/advice/create:
+    post:
+      tags:
+        - test
+      summary: Create an advice
+      description: N/A
+      operationId: createAdvice
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCreateAdvice"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -590,10 +678,94 @@ components:
       items:
         $ref: "#/components/schemas/Post"
 
+    CreateTest:
+      type: object
+      properties:
+        name:
+          type: string
+        anxietyQuestions:
+          type: array
+          items:
+            type: string
+        depressionQuestions:
+          type: array
+          items:
+            type: string
+        stressQuestions:
+          type: array
+          items:
+            type: string
+
+    Test:
+      allOf:
+        - $ref: "#/components/schemas/CreateTest"
+        - type: object
+          required:
+            - _id
+          properties:
+            _id:
+              type: string
+
+    CreateAdvice:
+      type: object
+      properties:
+        testId:
+          type: string
+        disease:
+          type: string
+          enum:
+            - anxiety
+            - depression
+            - stress
+        messages:
+          type: array
+          items:
+            type: string
+        advice:
+          type: array
+          items:
+            type: string
+        range:
+          type: object
+          properties:
+            min:
+              type: number
+            max:
+              type: number
+
+    SubmitTestResponse:
+      type: object
+      properties:
+        _id:
+          type: string
+        anxietyAdvice:
+          $ref: "#/components/schemas/CreateAdvice"
+        depressionAdvice:
+          $ref: "#/components/schemas/CreateAdvice"
+        stressAdvice:
+          $ref: "#/components/schemas/CreateAdvice"
+
+    Score:
+      type: object
+      properties:
+        anxiety:
+          type: number
+        depression:
+          type: number
+        stress:
+          type: number
+
   parameters:
     postId:
       in: path
       name: postId
+      required: true
+      schema:
+        type: string
+
+    testId:
+      in: path
+      name: testId
       required: true
       schema:
         type: string
@@ -655,72 +827,84 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/ErrorMessage"
+
     OKPost:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Post"
+
     OKAuthentication:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/AuthResponse"
+
     OKCommunities:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/CommunityList"
+
     OKUserPosts:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/UserPosts"
+
     OKUserComments:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/UserComments"
+
     OKJoinCommunity:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/JoinCommunityMessage"
+
     OKSavePost:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/SavePostMessage"
+
     OKLikePost:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/LikePostMessage"
+
     OkPostCreated:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/PostCreatedMessage"
+
     OKComment:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Comment"
+
     OKReplies:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Replies"
+
     OKFeed:
       description: OK
       content:
@@ -755,3 +939,38 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/CommunityAbout"
+
+    OKTest:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Test"
+
+    OKSubmitTest:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/SubmitTestResponse"
+
+    OKCreateTest:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreateTest"
+
+    OKCreateAdvice:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreateAdvice"
+
+    OKScore:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Score"
