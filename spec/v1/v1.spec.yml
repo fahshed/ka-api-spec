@@ -389,19 +389,6 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
-  /test/advice/communities/suggested:
-    get:
-      tags:
-        - test
-      summary: Get suggested commmunities
-      description: Get suggested commmunities based on test score
-      operationId: getCommunitiesByScore
-      responses:
-        "200":
-          $ref: "#/components/responses/OKCommunityInfo"
-        default:
-          $ref: "#/components/responses/BadRequest"
-
   /test/{testId}/submit:
     post:
       tags:
@@ -419,7 +406,20 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
-  /advice/create:
+  /test/advice/communities/suggested:
+    get:
+      tags:
+        - test
+      summary: Get suggested commmunities
+      description: Get suggested commmunities based on test score
+      operationId: getCommunitiesByScore
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunityInfo"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /test/advice/create:
     post:
       tags:
         - test

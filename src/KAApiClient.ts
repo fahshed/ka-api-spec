@@ -161,16 +161,16 @@ export interface IKAApiClent {
      */
     getTestRandomly(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Test>;
     /**
-     * Get suggested commmunities
-     * @return OK
-     */
-    getCommunitiesByScore(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityInfo>;
-    /**
      * Submit a test
      * @param body (optional) 
      * @return OK
      */
     submitTest(testId: string, body?: any | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SubmitTestResponse>;
+    /**
+     * Get suggested commmunities
+     * @return OK
+     */
+    getCommunitiesByScore(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityInfo>;
     /**
      * Create an advice
      * @return OK
@@ -1589,62 +1589,6 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     /**
-     * Get suggested commmunities
-     * @return OK
-     */
-    getCommunitiesByScore(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityInfo> {
-        let url_ = this.baseUrl + "/test/advice/communities/suggested";
-        url_ = url_.replace(/[?&]$/, "");
-
-        let options_ = <AxiosRequestConfig>{
-            method: "GET",
-            url: url_,
-            headers: {
-                "Accept": "application/json"
-            },
-            cancelToken,
-            onDownloadProgress,
-        };
-
-        return this.transformOptions(options_).then(transformedOptions_ => {
-            return this.instance.request(transformedOptions_);
-        }).catch((_error: any) => {
-            if (isAxiosError(_error) && _error.response) {
-                return _error.response;
-            } else {
-                throw _error;
-            }
-        }).then((_response: AxiosResponse) => {
-            return this.processGetCommunitiesByScore(_response);
-        });
-    }
-
-    protected processGetCommunitiesByScore(response: AxiosResponse): Promise<CommunityInfo> {
-        const status = response.status;
-        let _headers: any = {};
-        if (response.headers && typeof response.headers === "object") {
-            for (let k in response.headers) {
-                if (response.headers.hasOwnProperty(k)) {
-                    _headers[k] = response.headers[k];
-                }
-            }
-        }
-        if (status === 200) {
-            const _responseText = response.data;
-            let result200: any = null;
-            let resultData200  = _responseText;
-            result200 = resultData200
-            return result200;
-        } else {
-            const _responseText = response.data;
-            let resultdefault: any = null;
-            let resultDatadefault  = _responseText;
-            resultdefault = resultDatadefault
-            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
-        }
-    }
-
-    /**
      * Submit a test
      * @param body (optional) 
      * @return OK
@@ -1710,11 +1654,67 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     /**
+     * Get suggested commmunities
+     * @return OK
+     */
+    getCommunitiesByScore(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityInfo> {
+        let url_ = this.baseUrl + "/test/advice/communities/suggested";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetCommunitiesByScore(_response);
+        });
+    }
+
+    protected processGetCommunitiesByScore(response: AxiosResponse): Promise<CommunityInfo> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
      * Create an advice
      * @return OK
      */
     createAdvice(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CreateAdvice> {
-        let url_ = this.baseUrl + "/advice/create";
+        let url_ = this.baseUrl + "/test/advice/create";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ = <AxiosRequestConfig>{
