@@ -333,8 +333,8 @@ paths:
     get:
       tags:
         - community
-      summary: Get community information
-      description: Gets information about a community
+      summary: Get detailed community information
+      description: Gets detailed information about a community and the disease it is trying to tackle
       operationId: getCommunityAbout
       parameters:
         - $ref: "#/components/parameters/communityId"
