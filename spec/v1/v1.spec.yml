@@ -552,72 +552,84 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/ErrorMessage"
+
     OKPost:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Post"
+
     OKAuthentication:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/AuthResponse"
+
     OKCommunities:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/CommunityList"
+
     OKUserPosts:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/UserPosts"
+
     OKUserComments:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/UserComments"
+
     OKJoinCommunity:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/JoinCommunityMessage"
+
     OKSavePost:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/SavePostMessage"
+
     OKLikePost:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/LikePostMessage"
+
     OkPostCreated:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/PostCreatedMessage"
+
     OKComment:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Comment"
+
     OKReplies:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Replies"
+
     OKFeed:
       description: OK
       content:
