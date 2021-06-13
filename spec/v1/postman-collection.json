@@ -2,15 +2,942 @@
   "collection": {
     "item": [
       {
-        "id": "5c47a84b-a206-40aa-ab44-dbb0e0a3a393",
+        "id": "fb435fe4-0241-4f7f-be6c-76b0a1b66368",
+        "name": "user",
+        "item": [
+          {
+            "id": "4bd83965-b4bf-41c5-ae81-4ffda03b18af",
+            "name": "Create a regular user",
+            "request": {
+              "name": "Create a regular user",
+              "description": {
+                "content": "Creates a regular user in the database with credentials",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "user",
+                  "regular",
+                  "signup"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "auth": null,
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+              }
+            },
+            "response": [
+              {
+                "id": "518c357b-35fd-4b49-9907-0a9deaa23273",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "regular",
+                      "signup"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"_id\": \"in reprehenderit\",\n \"name\": \"ea\",\n \"message\": \"consequat enim sunt magna\",\n \"jwt\": \"adipisicing eiusmod laboris\",\n \"role\": \"officia ut voluptate fugiat nostrud\",\n \"image\": \"sunt elit ea ipsum\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "2de67d55-1626-4226-ab0f-f921a43424f0",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "regular",
+                      "signup"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+                  }
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "ffa5f275-152d-45d2-ab53-376ef6115662",
+            "name": "Create a professional user",
+            "request": {
+              "name": "Create a professional user",
+              "description": {
+                "content": "Creates a professional user in the database with credentials",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "user",
+                  "professional",
+                  "signup"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "auth": null,
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specializations\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+              }
+            },
+            "response": [
+              {
+                "id": "1efe5264-4de9-4e79-bddf-78e970f8d5d1",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "professional",
+                      "signup"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specializations\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"_id\": \"in reprehenderit\",\n \"name\": \"ea\",\n \"message\": \"consequat enim sunt magna\",\n \"jwt\": \"adipisicing eiusmod laboris\",\n \"role\": \"officia ut voluptate fugiat nostrud\",\n \"image\": \"sunt elit ea ipsum\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "a7a254ec-ee45-40b6-87fe-4e3c4a3eb058",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "professional",
+                      "signup"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specializations\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+                  }
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "e0ed4aab-2add-4ffd-9c15-10517af4e3fa",
+            "name": "Logs in a user",
+            "request": {
+              "name": "Logs in a user",
+              "description": {
+                "content": "Logs in a user(regular/professional) in the database with credentials",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "user",
+                  "login"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "auth": null,
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+              }
+            },
+            "response": [
+              {
+                "id": "d2b234d3-db3d-42f7-8d94-7838781c7167",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "login"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"_id\": \"in reprehenderit\",\n \"name\": \"ea\",\n \"message\": \"consequat enim sunt magna\",\n \"jwt\": \"adipisicing eiusmod laboris\",\n \"role\": \"officia ut voluptate fugiat nostrud\",\n \"image\": \"sunt elit ea ipsum\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "92863738-77ca-433d-9f49-f1c5051186c9",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "login"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+                  }
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "5372b669-56d1-4d74-8b36-c6d64a604857",
+            "name": "communities",
+            "item": [
+              {
+                "id": "972789fd-a456-48df-a113-99ee360becf2",
+                "name": "Get communities of a user",
+                "request": {
+                  "name": "Get communities of a user",
+                  "description": {
+                    "content": "Get communities of a logged in user",
+                    "type": "text/plain"
+                  },
+                  "url": {
+                    "path": [
+                      "user",
+                      "communities"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "GET",
+                  "auth": null
+                },
+                "response": [
+                  {
+                    "id": "5c52cfff-1494-4e20-a1a6-b940fb7dc860",
+                    "name": "OK",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "user",
+                          "communities"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": []
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "[\n {\n  \"_id\": \"sunt ut\",\n  \"name\": \"cillum\",\n  \"image\": \"in non eu cupidatat\"\n },\n {\n  \"_id\": \"aute pariatur culpa\",\n  \"name\": \"sint ad\",\n  \"image\": \"est esse ea\"\n }\n]",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  },
+                  {
+                    "id": "ac40026a-e483-4813-8963-7f1a5a799261",
+                    "name": "Bad Request",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "user",
+                          "communities"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": []
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "{\n \"message\": \"conseq\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  }
+                ],
+                "event": []
+              },
+              {
+                "id": "c3f0d7c3-3ccd-4c89-9435-0e9b0e175659",
+                "name": "Get suggested communities of a user",
+                "request": {
+                  "name": "Get suggested communities of a user",
+                  "description": {
+                    "content": "Get suggested communities of a logged in user",
+                    "type": "text/plain"
+                  },
+                  "url": {
+                    "path": [
+                      "user",
+                      "communities",
+                      "suggested"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "GET",
+                  "auth": null
+                },
+                "response": [
+                  {
+                    "id": "7a6344e9-34da-4d83-91fe-807ba0b96abd",
+                    "name": "OK",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "user",
+                          "communities",
+                          "suggested"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": []
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "[\n {\n  \"_id\": \"et ex\",\n  \"name\": \"do id\",\n  \"image\": \"sit ullamco sun\"\n },\n {\n  \"_id\": \"quis culpa Ut velit \",\n  \"name\": \"nostrud proident\",\n  \"image\": \"cupidatat est irure Ut\"\n }\n]",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  },
+                  {
+                    "id": "9a31ada1-60b1-4381-93cf-f4582aa37624",
+                    "name": "Bad Request",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "user",
+                          "communities",
+                          "suggested"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": []
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "{\n \"message\": \"conseq\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  }
+                ],
+                "event": []
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "f5a782b5-8979-4ba3-8cea-d412b52a4cf7",
+            "name": "{user Id}",
+            "item": [
+              {
+                "id": "738814c8-5230-48d9-9400-fcfbd88372f2",
+                "name": "Get posts by UserId",
+                "request": {
+                  "name": "Get posts by UserId",
+                  "description": {
+                    "content": "Get Array of posts by UserId",
+                    "type": "text/plain"
+                  },
+                  "url": {
+                    "path": [
+                      "user",
+                      ":userId",
+                      "posts"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                      {
+                        "disabled": false,
+                        "type": "any",
+                        "value": "<string>",
+                        "key": "userId",
+                        "description": "(Required) "
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "auth": null
+                },
+                "response": [
+                  {
+                    "id": "632d0b25-6b11-4101-a56d-4b5ccb5f6052",
+                    "name": "OK",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "user",
+                          ":userId",
+                          "posts"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": [
+                          {
+                            "type": "any",
+                            "key": "userId"
+                          }
+                        ]
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "[\n {\n  \"_id\": \"aliquip\",\n  \"title\": \"id ullamco\",\n  \"content\": \"ad non tempor elit\",\n  \"asPseudo\": false,\n  \"tags\": [\n   \"pariatur ut\",\n   \"aliqua irure reprehende\"\n  ],\n  \"voteCount\": -8644920.491184622,\n  \"commentCount\": -38013376.08205318,\n  \"createdAt\": \"2013-02-17T13:54:04.626Z\",\n  \"community\": {\n   \"_id\": \"commodo\",\n   \"name\": \"aute esse cillum ut\",\n   \"image\": \"eu consequat ad exercitation\"\n  },\n  \"postedBy\": {\n   \"_id\": \"dolor et\",\n   \"username\": \"ex ut cupidatat irure exercitation\",\n   \"image\": \"laborum cupidatat magna\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"nostrud reprehenderit consequat adipisicing ex\",\n    \"content\": \"ullamco id eiusmod\",\n    \"asPseudo\": false,\n    \"voteCount\": \"ullamco ea dolor nulla\",\n    \"replyCount\": 57897835.99442199,\n    \"createdAt\": \"2003-04-11T20:41:58.734Z\",\n    \"postedBy\": {\n     \"_id\": \"reprehenderit ad dolor\",\n     \"username\": \"proident elit Excepteur veniam cillum\",\n     \"avatar\": \"ea consectetur occaecat nisi\",\n     \"rank\": -22060330.117329836\n    },\n    \"parentPost\": {\n     \"_id\": \"dolor velit cillum Ut\",\n     \"title\": \"sint reprehenderit\"\n    },\n    \"repliedTo\": \"nulla anim adipisicing irure\"\n   },\n   {\n    \"_id\": \"mollit veniam minim\",\n    \"content\": \"ut quis elit\",\n    \"asPseudo\": false,\n    \"voteCount\": \"ea\",\n    \"replyCount\": -17382298.612207457,\n    \"createdAt\": \"1941-06-24T18:52:57.322Z\",\n    \"postedBy\": {\n     \"_id\": \"par\",\n     \"username\": \"occaecat veniam non cupidatat\",\n     \"avatar\": \"dolore anim\",\n     \"rank\": 24947151.742404923\n    },\n    \"parentPost\": {\n     \"_id\": \"aliqua consectetur eu\",\n     \"title\": \"qui\"\n    },\n    \"repliedTo\": \"aliqua ut\"\n   }\n  ]\n },\n {\n  \"_id\": \"anim sint\",\n  \"title\": \"dolor fugiat\",\n  \"content\": \"exercitation ea do\",\n  \"asPseudo\": true,\n  \"tags\": [\n   \"nisi ad ut\",\n   \"Excepteur dolor Ut\"\n  ],\n  \"voteCount\": -12144414.68958518,\n  \"commentCount\": -93415174.51851638,\n  \"createdAt\": \"2011-05-22T03:21:33.147Z\",\n  \"community\": {\n   \"_id\": \"irure Duis\",\n   \"name\": \"cillum elit sint\",\n   \"image\": \"adipisicing sed esse nisi nostrud\"\n  },\n  \"postedBy\": {\n   \"_id\": \"officia eiusmod nostrud enim in\",\n   \"username\": \"q\",\n   \"image\": \"ullamco dolor elit\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"quis Duis\",\n    \"content\": \"irure magna esse sit\",\n    \"asPseudo\": false,\n    \"voteCount\": \"eu sed dolore\",\n    \"replyCount\": 79210521.48253152,\n    \"createdAt\": \"1960-05-31T08:16:11.573Z\",\n    \"postedBy\": {\n     \"_id\": \"in quis Ut\",\n     \"username\": \"elit nis\",\n     \"avatar\": \"in officia id ea commodo\",\n     \"rank\": -86164246.84269273\n    },\n    \"parentPost\": {\n     \"_id\": \"enim eiusmod\",\n     \"title\": \"voluptate ullamco\"\n    },\n    \"repliedTo\": \"voluptate in\"\n   },\n   {\n    \"_id\": \"pariatur proident incididunt id veniam\",\n    \"content\": \"dolor est Excepteur eiusmod\",\n    \"asPseudo\": false,\n    \"voteCount\": \"esse et\",\n    \"replyCount\": -47907420.362422615,\n    \"createdAt\": \"1952-01-24T19:57:57.033Z\",\n    \"postedBy\": {\n     \"_id\": \"non in adipisicing cupidatat \",\n     \"username\": \"elit Du\",\n     \"avatar\": \"pariatur et cupidatat dolor\",\n     \"rank\": 26023934.792377144\n    },\n    \"parentPost\": {\n     \"_id\": \"dolor ut\",\n     \"title\": \"voluptate in aliqua cillum dolore\"\n    },\n    \"repliedTo\": \"mollit ad anim\"\n   }\n  ]\n }\n]",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  },
+                  {
+                    "id": "0017f84d-1220-45b9-aa34-aeacedf87feb",
+                    "name": "Bad Request",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "user",
+                          ":userId",
+                          "posts"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": [
+                          {
+                            "type": "any",
+                            "key": "userId"
+                          }
+                        ]
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "{\n \"message\": \"conseq\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  }
+                ],
+                "event": []
+              },
+              {
+                "id": "7d0f1868-78d4-4b72-ab34-688c8af6e465",
+                "name": "Get comments by UserId",
+                "request": {
+                  "name": "Get comments by UserId",
+                  "description": {
+                    "content": "Get Array of comments by UserId",
+                    "type": "text/plain"
+                  },
+                  "url": {
+                    "path": [
+                      "user",
+                      ":userId",
+                      "comments"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                      {
+                        "disabled": false,
+                        "type": "any",
+                        "value": "<string>",
+                        "key": "userId",
+                        "description": "(Required) "
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "auth": null
+                },
+                "response": [
+                  {
+                    "id": "5b58f212-8705-4449-904d-d840a2855482",
+                    "name": "OK",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "user",
+                          ":userId",
+                          "comments"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": [
+                          {
+                            "type": "any",
+                            "key": "userId"
+                          }
+                        ]
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "[\n {\n  \"_id\": \"exercitation deserunt Lorem\",\n  \"content\": \"sit est elit\",\n  \"asPseudo\": true,\n  \"voteCount\": \"dolor aliquip id fugiat dolore\",\n  \"replyCount\": -20181628.800244853,\n  \"createdAt\": \"1981-01-25T01:04:10.202Z\",\n  \"postedBy\": {\n   \"_id\": \"Lorem enim\",\n   \"username\": \"nulla velit\",\n   \"avatar\": \"esse proident\",\n   \"rank\": 28474805.662937224\n  },\n  \"parentPost\": {\n   \"_id\": \"reprehenderit magna et ea\",\n   \"title\": \"pariatur eiusmod\"\n  },\n  \"repliedTo\": \"laboris Duis cillum\"\n },\n {\n  \"_id\": \"non qui magna\",\n  \"content\": \"culpa ut adipisicing nisi exercitation\",\n  \"asPseudo\": true,\n  \"voteCount\": \"quis Du\",\n  \"replyCount\": -49468500.79182563,\n  \"createdAt\": \"1971-12-21T15:58:40.807Z\",\n  \"postedBy\": {\n   \"_id\": \"ut non amet\",\n   \"username\": \"voluptate\",\n   \"avatar\": \"elit\",\n   \"rank\": -28487386.32823822\n  },\n  \"parentPost\": {\n   \"_id\": \"adipisicing dolor aute\",\n   \"title\": \"aliquip proident esse deserunt\"\n  },\n  \"repliedTo\": \"sint\"\n }\n]",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  },
+                  {
+                    "id": "17c640da-9c32-4057-b189-26a8cc2f6d10",
+                    "name": "Bad Request",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "user",
+                          ":userId",
+                          "comments"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": [
+                          {
+                            "type": "any",
+                            "key": "userId"
+                          }
+                        ]
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "{\n \"message\": \"conseq\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  }
+                ],
+                "event": []
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "bacde4ec-a7e2-4058-a0f7-432c9dc16c9e",
+            "name": "Join a user to a community",
+            "request": {
+              "name": "Join a user to a community",
+              "description": {
+                "content": "Join a user to a community given the community id",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "user",
+                  "community",
+                  ":communityId",
+                  "join"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": [
+                  {
+                    "disabled": false,
+                    "type": "any",
+                    "value": "<string>",
+                    "key": "communityId",
+                    "description": "(Required) "
+                  }
+                ]
+              },
+              "method": "GET",
+              "auth": null
+            },
+            "response": [
+              {
+                "id": "10fa9c65-3ae2-4c92-86e2-1119eb5ffaa2",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "community",
+                      ":communityId",
+                      "join"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                      {
+                        "type": "any",
+                        "key": "communityId"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "body": {}
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "f92ada43-6180-46d0-bf7e-6f134a9eefa0",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "community",
+                      ":communityId",
+                      "join"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                      {
+                        "type": "any",
+                        "key": "communityId"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "body": {}
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "ab224deb-1298-489a-a10d-ea21233d7863",
+            "name": "Get saved posts of an user",
+            "request": {
+              "name": "Get saved posts of an user",
+              "description": {
+                "content": "Get the saved posts of a logged in user",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "user",
+                  "savedPosts"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET",
+              "auth": null
+            },
+            "response": [
+              {
+                "id": "09316fdc-cb00-4d05-9f6b-d94b20c7ca1b",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "savedPosts"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "GET",
+                  "body": {}
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "[\n {\n  \"_id\": \"aliquip\",\n  \"title\": \"id ullamco\",\n  \"content\": \"ad non tempor elit\",\n  \"asPseudo\": false,\n  \"tags\": [\n   \"pariatur ut\",\n   \"aliqua irure reprehende\"\n  ],\n  \"voteCount\": -8644920.491184622,\n  \"commentCount\": -38013376.08205318,\n  \"createdAt\": \"2013-02-17T13:54:04.626Z\",\n  \"community\": {\n   \"_id\": \"commodo\",\n   \"name\": \"aute esse cillum ut\",\n   \"image\": \"eu consequat ad exercitation\"\n  },\n  \"postedBy\": {\n   \"_id\": \"dolor et\",\n   \"username\": \"ex ut cupidatat irure exercitation\",\n   \"image\": \"laborum cupidatat magna\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"nostrud reprehenderit consequat adipisicing ex\",\n    \"content\": \"ullamco id eiusmod\",\n    \"asPseudo\": false,\n    \"voteCount\": \"ullamco ea dolor nulla\",\n    \"replyCount\": 57897835.99442199,\n    \"createdAt\": \"2003-04-11T20:41:58.734Z\",\n    \"postedBy\": {\n     \"_id\": \"reprehenderit ad dolor\",\n     \"username\": \"proident elit Excepteur veniam cillum\",\n     \"avatar\": \"ea consectetur occaecat nisi\",\n     \"rank\": -22060330.117329836\n    },\n    \"parentPost\": {\n     \"_id\": \"dolor velit cillum Ut\",\n     \"title\": \"sint reprehenderit\"\n    },\n    \"repliedTo\": \"nulla anim adipisicing irure\"\n   },\n   {\n    \"_id\": \"mollit veniam minim\",\n    \"content\": \"ut quis elit\",\n    \"asPseudo\": false,\n    \"voteCount\": \"ea\",\n    \"replyCount\": -17382298.612207457,\n    \"createdAt\": \"1941-06-24T18:52:57.322Z\",\n    \"postedBy\": {\n     \"_id\": \"par\",\n     \"username\": \"occaecat veniam non cupidatat\",\n     \"avatar\": \"dolore anim\",\n     \"rank\": 24947151.742404923\n    },\n    \"parentPost\": {\n     \"_id\": \"aliqua consectetur eu\",\n     \"title\": \"qui\"\n    },\n    \"repliedTo\": \"aliqua ut\"\n   }\n  ]\n },\n {\n  \"_id\": \"anim sint\",\n  \"title\": \"dolor fugiat\",\n  \"content\": \"exercitation ea do\",\n  \"asPseudo\": true,\n  \"tags\": [\n   \"nisi ad ut\",\n   \"Excepteur dolor Ut\"\n  ],\n  \"voteCount\": -12144414.68958518,\n  \"commentCount\": -93415174.51851638,\n  \"createdAt\": \"2011-05-22T03:21:33.147Z\",\n  \"community\": {\n   \"_id\": \"irure Duis\",\n   \"name\": \"cillum elit sint\",\n   \"image\": \"adipisicing sed esse nisi nostrud\"\n  },\n  \"postedBy\": {\n   \"_id\": \"officia eiusmod nostrud enim in\",\n   \"username\": \"q\",\n   \"image\": \"ullamco dolor elit\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"quis Duis\",\n    \"content\": \"irure magna esse sit\",\n    \"asPseudo\": false,\n    \"voteCount\": \"eu sed dolore\",\n    \"replyCount\": 79210521.48253152,\n    \"createdAt\": \"1960-05-31T08:16:11.573Z\",\n    \"postedBy\": {\n     \"_id\": \"in quis Ut\",\n     \"username\": \"elit nis\",\n     \"avatar\": \"in officia id ea commodo\",\n     \"rank\": -86164246.84269273\n    },\n    \"parentPost\": {\n     \"_id\": \"enim eiusmod\",\n     \"title\": \"voluptate ullamco\"\n    },\n    \"repliedTo\": \"voluptate in\"\n   },\n   {\n    \"_id\": \"pariatur proident incididunt id veniam\",\n    \"content\": \"dolor est Excepteur eiusmod\",\n    \"asPseudo\": false,\n    \"voteCount\": \"esse et\",\n    \"replyCount\": -47907420.362422615,\n    \"createdAt\": \"1952-01-24T19:57:57.033Z\",\n    \"postedBy\": {\n     \"_id\": \"non in adipisicing cupidatat \",\n     \"username\": \"elit Du\",\n     \"avatar\": \"pariatur et cupidatat dolor\",\n     \"rank\": 26023934.792377144\n    },\n    \"parentPost\": {\n     \"_id\": \"dolor ut\",\n     \"title\": \"voluptate in aliqua cillum dolore\"\n    },\n    \"repliedTo\": \"mollit ad anim\"\n   }\n  ]\n }\n]",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "bc03f68c-3851-4988-a272-4a54e605032b",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "user",
+                      "savedPosts"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "GET",
+                  "body": {}
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          }
+        ],
+        "event": []
+      },
+      {
+        "id": "ef042dbc-e1a7-455e-b996-fef51b5cfdb7",
         "name": "post",
         "item": [
           {
-            "id": "3ac7ec4c-9a8e-4fd1-a7fa-6c13ee7b9e56",
+            "id": "6d7b075c-c7b5-4a9d-9753-c0546c0773cb",
             "name": "{post Id}",
             "item": [
               {
-                "id": "324287ad-6aa0-4bec-a3a2-64df6c68065d",
+                "id": "fa537076-04b4-449f-9ad9-fd1f119fa11b",
                 "name": "Get post by Id",
                 "request": {
                   "name": "Get post by Id",
@@ -48,7 +975,7 @@
                 },
                 "response": [
                   {
-                    "id": "aee8fa85-b1bb-4082-8f11-803c16701995",
+                    "id": "952d39e6-ea4f-4f97-a6fb-845fc4131acc",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -83,12 +1010,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"_id\": \"eiusmod incididunt quis sint\",\n \"title\": \"do qui nulla dolor\",\n \"content\": \"voluptat\",\n \"asPseudo\": true,\n \"tags\": [\n  \"nisi consectetur\",\n  \"eu\"\n ],\n \"voteCount\": 79721728.1243355,\n \"commentCount\": -26099723.60551071,\n \"createdAt\": \"1980-04-05T20:29:09.350Z\",\n \"community\": {\n  \"_id\": \"in reprehenderit amet ea\",\n  \"name\": \"pariatur\",\n  \"image\": \"co\"\n },\n \"postedBy\": {\n  \"_id\": \"dolor reprehenderit\",\n  \"username\": \"minim\",\n  \"image\": \"deserunt elit\"\n },\n \"comments\": [\n  {\n   \"_id\": \"eu nostrud fugiat laboris\",\n   \"content\": \"do enim\",\n   \"asPseudo\": false,\n   \"voteCount\": \"veniam\",\n   \"replyCount\": -53340081.67728088,\n   \"createdAt\": \"1948-06-10T01:14:53.651Z\",\n   \"postedBy\": {\n    \"_id\": \"conse\",\n    \"username\": \"aliqui\",\n    \"avatar\": \"est voluptate proident do dolor\",\n    \"rank\": -80222506.03512883\n   },\n   \"parentPost\": {\n    \"_id\": \"ut\",\n    \"title\": \"et voluptate enim\"\n   },\n   \"repliedTo\": \"Excepteur occaecat minim do\"\n  },\n  {\n   \"_id\": \"Ut in irure\",\n   \"content\": \"dolore deserunt occaecat reprehenderit\",\n   \"asPseudo\": true,\n   \"voteCount\": \"exercitation\",\n   \"replyCount\": 10117597.064012334,\n   \"createdAt\": \"2014-05-31T11:27:49.135Z\",\n   \"postedBy\": {\n    \"_id\": \"occaecat non\",\n    \"username\": \"in nisi adipisicing reprehenderit\",\n    \"avatar\": \"eiusmod in tempor\",\n    \"rank\": -94864074.68727548\n   },\n   \"parentPost\": {\n    \"_id\": \"in laboris exercitation\",\n    \"title\": \"ut non quis\"\n   },\n   \"repliedTo\": \"cillum dolor\"\n  }\n ]\n}",
+                    "body": "{\n \"_id\": \"e\",\n \"title\": \"aliqua est reprehenderit enim in\",\n \"content\": \"mollit exercitation\",\n \"asPseudo\": false,\n \"tags\": [\n  \"esse\",\n  \"enim tempor ipsum voluptate\"\n ],\n \"voteCount\": 32204716.59301105,\n \"commentCount\": -41353028.063548036,\n \"createdAt\": \"1999-12-27T06:54:00.018Z\",\n \"community\": {\n  \"_id\": \"consequat\",\n  \"name\": \"ut Ut aliqua eu Duis\",\n  \"image\": \"Ut esse laboris qui\"\n },\n \"postedBy\": {\n  \"_id\": \"exercitation incididunt nisi tempor\",\n  \"username\": \"consequat in est\",\n  \"image\": \"ad\"\n },\n \"comments\": [\n  {\n   \"_id\": \"Excepteur enim nostrud irure\",\n   \"content\": \"non ullamco aliqua \",\n   \"asPseudo\": false,\n   \"voteCount\": \"in adipisicing Lorem\",\n   \"replyCount\": -76732125.66726315,\n   \"createdAt\": \"1961-06-14T23:29:01.962Z\",\n   \"postedBy\": {\n    \"_id\": \"in labore ipsum\",\n    \"username\": \"nisi esse\",\n    \"avatar\": \"Excepteur cillum consequat\",\n    \"rank\": -7727076.20299533\n   },\n   \"parentPost\": {\n    \"_id\": \"culpa occaecat laboris\",\n    \"title\": \"sint\"\n   },\n   \"repliedTo\": \"ullamco sunt\"\n  },\n  {\n   \"_id\": \"dolore id Lorem sint\",\n   \"content\": \"magna dolore fugiat\",\n   \"asPseudo\": true,\n   \"voteCount\": \"magna officia\",\n   \"replyCount\": -71869187.87340404,\n   \"createdAt\": \"1954-12-08T15:42:58.283Z\",\n   \"postedBy\": {\n    \"_id\": \"voluptate esse labore\",\n    \"username\": \"non magna Lor\",\n    \"avatar\": \"elit ullamco aliquip ea in\",\n    \"rank\": -83936363.92337033\n   },\n   \"parentPost\": {\n    \"_id\": \"deserunt\",\n    \"title\": \"laboris tempor do ex\"\n   },\n   \"repliedTo\": \"ipsum fugiat commodo aute\"\n  }\n ]\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "2d162a9c-cf85-4c04-82ea-c3bad0910ea4",
+                    "id": "a1bdde9a-7667-4c74-99a7-defcfe1c125f",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -123,7 +1050,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                    "body": "{\n \"message\": \"conseq\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -131,7 +1058,7 @@
                 "event": []
               },
               {
-                "id": "55e601dd-456b-4a2c-aabf-fbbc2e862eb9",
+                "id": "23cc209a-ba89-428a-a70b-28f0a381e214",
                 "name": "Save a post by user",
                 "request": {
                   "name": "Save a post by user",
@@ -170,7 +1097,7 @@
                 },
                 "response": [
                   {
-                    "id": "e5675360-c9b6-477b-9448-094fc5104727",
+                    "id": "6cab8145-a862-487f-a769-839a0aef0212",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -206,12 +1133,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                    "body": "{\n \"message\": \"conseq\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "a2a0bd59-3020-4b4c-8673-0746a3e75003",
+                    "id": "6a16dcc2-92fb-4b40-9533-0b36ba78c82e",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -247,7 +1174,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                    "body": "{\n \"message\": \"conseq\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -255,7 +1182,7 @@
                 "event": []
               },
               {
-                "id": "bbf66bf4-5569-41a2-9aba-5f6c5020b6a8",
+                "id": "8c228c41-f47b-4702-afde-63f90dd44e4e",
                 "name": "Like a post by user",
                 "request": {
                   "name": "Like a post by user",
@@ -295,7 +1222,7 @@
                 },
                 "response": [
                   {
-                    "id": "a7b4a774-4061-4f6f-9eca-ebd1549e3aa0",
+                    "id": "e67dfbdd-6be3-47bc-b486-2df97afb2815",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -331,12 +1258,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                    "body": "{\n \"message\": \"conseq\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "45c67d16-e967-41a0-a604-30fed3e0cbb3",
+                    "id": "03b02909-f46f-43b4-a9f5-9b75610d673b",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -372,7 +1299,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                    "body": "{\n \"message\": \"conseq\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -380,11 +1307,11 @@
                 "event": []
               },
               {
-                "id": "1b7c38c7-05b2-4205-962c-68b10b1335c8",
+                "id": "d6e097cb-063d-402b-8a07-1a04ef6ba81b",
                 "name": "comment",
                 "item": [
                   {
-                    "id": "3e5a93dd-273e-4a48-9298-b355421256c3",
+                    "id": "e8185d88-27aa-4319-8af3-80ff44f91fa7",
                     "name": "Create a comment",
                     "request": {
                       "name": "Create a comment",
@@ -428,7 +1355,7 @@
                     },
                     "response": [
                       {
-                        "id": "dc703592-dfe4-4a30-ad27-0335888a1984",
+                        "id": "e0802664-d127-4946-beba-26b189545809",
                         "name": "OK",
                         "originalRequest": {
                           "url": {
@@ -468,7 +1395,7 @@
                         "_postman_previewlanguage": "json"
                       },
                       {
-                        "id": "b5ed7e72-8d9c-4413-baed-671f02415625",
+                        "id": "8dbd439d-6b3c-4514-ab70-b49f956284e4",
                         "name": "Bad Request",
                         "originalRequest": {
                           "url": {
@@ -503,7 +1430,7 @@
                             "value": "application/json"
                           }
                         ],
-                        "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                        "body": "{\n \"message\": \"conseq\"\n}",
                         "cookie": [],
                         "_postman_previewlanguage": "json"
                       }
@@ -511,11 +1438,11 @@
                     "event": []
                   },
                   {
-                    "id": "a4ff6ab3-5285-4041-a56a-d3ee1bde4b04",
+                    "id": "99fc2fd4-4d34-4586-b674-1c585ae53e35",
                     "name": "{comment Id}",
                     "item": [
                       {
-                        "id": "acdf1aad-c8d1-4045-ad3a-716afa096e61",
+                        "id": "c54c979a-36a9-4f45-a7a0-fb770279377e",
                         "name": "Create a reply",
                         "request": {
                           "name": "Create a reply",
@@ -568,7 +1495,7 @@
                         },
                         "response": [
                           {
-                            "id": "45e031e9-d8cc-461d-9c5d-13b6881931f5",
+                            "id": "913a3138-a220-4324-ab91-a5c3530ba534",
                             "name": "OK",
                             "originalRequest": {
                               "url": {
@@ -614,7 +1541,7 @@
                             "_postman_previewlanguage": "json"
                           },
                           {
-                            "id": "8680be72-59c2-4412-ac6d-2df95c34db83",
+                            "id": "af42a403-e835-4eb7-9a96-3d62de0152dd",
                             "name": "Bad Request",
                             "originalRequest": {
                               "url": {
@@ -655,7 +1582,7 @@
                                 "value": "application/json"
                               }
                             ],
-                            "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                            "body": "{\n \"message\": \"conseq\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                           }
@@ -663,7 +1590,7 @@
                         "event": []
                       },
                       {
-                        "id": "ab68b410-dc62-41cc-a1c0-ec5d64da7fc2",
+                        "id": "a829b35f-58e0-4cdb-9a19-ccdcae6d7a71",
                         "name": "Get replies of a comment",
                         "request": {
                           "name": "Get replies of a comment",
@@ -705,7 +1632,7 @@
                         },
                         "response": [
                           {
-                            "id": "64596f2b-1a58-44c9-a810-cbe4acaa500b",
+                            "id": "1010bb6b-29c3-4890-94b1-443b33a800bb",
                             "name": "OK",
                             "originalRequest": {
                               "url": {
@@ -747,7 +1674,7 @@
                             "_postman_previewlanguage": "json"
                           },
                           {
-                            "id": "3a8307b8-dbae-44da-ac19-27f15b288250",
+                            "id": "6afde967-40ab-4ee7-b213-9def4b54e6dd",
                             "name": "Bad Request",
                             "originalRequest": {
                               "url": {
@@ -784,7 +1711,7 @@
                                 "value": "application/json"
                               }
                             ],
-                            "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                            "body": "{\n \"message\": \"conseq\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                           }
@@ -801,7 +1728,7 @@
             "event": []
           },
           {
-            "id": "6e80cef0-be8c-4762-aff1-18866f0ed479",
+            "id": "78894ecd-0c01-43ba-8f50-85b3a7140375",
             "name": "Create a post",
             "request": {
               "name": "Create a post",
@@ -835,7 +1762,7 @@
             },
             "response": [
               {
-                "id": "80c82527-1292-4dc9-a605-dc2e64e71a77",
+                "id": "f7174446-ea99-498e-9361-f8515be51192",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -863,12 +1790,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                "body": "{\n \"message\": \"conseq\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "82e35677-7eac-4360-8dd6-7e88cc9b94c2",
+                "id": "3c191251-e002-4bad-9bf3-b6d5926da8cb",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -896,7 +1823,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                "body": "{\n \"message\": \"conseq\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -904,7 +1831,7 @@
             "event": []
           },
           {
-            "id": "25502973-1569-40f1-8cbc-fc5e0804e22b",
+            "id": "c0e22946-67ae-4bf7-9994-be9fec5413ef",
             "name": "Get feed of an user",
             "request": {
               "name": "Get feed of an user",
@@ -934,7 +1861,7 @@
             },
             "response": [
               {
-                "id": "17c4c56e-eb2e-4eb6-a5e2-8975781ae9b8",
+                "id": "01c321be-1d05-4f5d-b3c4-18187b67350e",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -969,7 +1896,7 @@
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "bfc90de7-a638-4236-bb65-69f44b0dde98",
+                "id": "b550cc15-aed9-4e52-a796-312ad3932de2",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -999,7 +1926,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                "body": "{\n \"message\": \"conseq\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -1010,950 +1937,11 @@
         "event": []
       },
       {
-        "id": "b5c95704-0a4c-4946-b9ff-a9e32f94a5b6",
-        "name": "user",
-        "item": [
-          {
-            "id": "80980207-cdd7-4084-9b4f-d8a7f3abb4ac",
-            "name": "Create a regular user",
-            "request": {
-              "name": "Create a regular user",
-              "description": {
-                "content": "Creates a regular user in the database with credentials",
-                "type": "text/plain"
-              },
-              "url": {
-                "path": [
-                  "user",
-                  "regular",
-                  "signup"
-                ],
-                "host": [
-                  "{{baseUrl}}"
-                ],
-                "query": [],
-                "variable": []
-              },
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "method": "POST",
-              "auth": null,
-              "body": {
-                "mode": "raw",
-                "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
-              }
-            },
-            "response": [
-              {
-                "id": "b8fb2113-4d38-4060-aeb6-5da96755a0c4",
-                "name": "OK",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "regular",
-                      "signup"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "POST",
-                  "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
-                  }
-                },
-                "status": "OK",
-                "code": 200,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"_id\": \"eu sit in deserunt\",\n \"name\": \"occaecat sed commodo officia\",\n \"message\": \"laborum amet in ipsum\",\n \"jwt\": \"aliqua aliquip sed\",\n \"role\": \"cupidatat Excepteur ut aliquip\",\n \"image\": \"enim cupidatat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              },
-              {
-                "id": "016213e8-7c04-4729-b337-8e345fc4cb98",
-                "name": "Bad Request",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "regular",
-                      "signup"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "POST",
-                  "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
-                  }
-                },
-                "status": "Internal Server Error",
-                "code": 500,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              }
-            ],
-            "event": []
-          },
-          {
-            "id": "95fd75cb-b089-40c6-bc02-e619195dbd9e",
-            "name": "Create a professional user",
-            "request": {
-              "name": "Create a professional user",
-              "description": {
-                "content": "Creates a professional user in the database with credentials",
-                "type": "text/plain"
-              },
-              "url": {
-                "path": [
-                  "user",
-                  "professional",
-                  "signup"
-                ],
-                "host": [
-                  "{{baseUrl}}"
-                ],
-                "query": [],
-                "variable": []
-              },
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "method": "POST",
-              "auth": null,
-              "body": {
-                "mode": "raw",
-                "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specializations\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
-              }
-            },
-            "response": [
-              {
-                "id": "cf277fa2-fc90-4a0d-a0cb-9208b1d92ff9",
-                "name": "OK",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "professional",
-                      "signup"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "POST",
-                  "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specializations\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
-                  }
-                },
-                "status": "OK",
-                "code": 200,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"_id\": \"eu sit in deserunt\",\n \"name\": \"occaecat sed commodo officia\",\n \"message\": \"laborum amet in ipsum\",\n \"jwt\": \"aliqua aliquip sed\",\n \"role\": \"cupidatat Excepteur ut aliquip\",\n \"image\": \"enim cupidatat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              },
-              {
-                "id": "e0dd8290-2602-4e88-a103-0b584d36a509",
-                "name": "Bad Request",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "professional",
-                      "signup"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "POST",
-                  "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"role\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"verified\": \"<boolean>\",\n    \"license\": \"<string>\",\n    \"licenseIssued\": \"<dateTime>\",\n    \"specializations\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
-                  }
-                },
-                "status": "Internal Server Error",
-                "code": 500,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              }
-            ],
-            "event": []
-          },
-          {
-            "id": "ecd4a304-0a5f-46d5-9b40-2e527d586208",
-            "name": "Logs in a user",
-            "request": {
-              "name": "Logs in a user",
-              "description": {
-                "content": "Logs in a user(regular/professional) in the database with credentials",
-                "type": "text/plain"
-              },
-              "url": {
-                "path": [
-                  "user",
-                  "login"
-                ],
-                "host": [
-                  "{{baseUrl}}"
-                ],
-                "query": [],
-                "variable": []
-              },
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "method": "POST",
-              "auth": null,
-              "body": {
-                "mode": "raw",
-                "raw": "{\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
-              }
-            },
-            "response": [
-              {
-                "id": "c8a5d905-9556-4338-92ae-7273d40d9477",
-                "name": "OK",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "login"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "POST",
-                  "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
-                  }
-                },
-                "status": "OK",
-                "code": 200,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"_id\": \"eu sit in deserunt\",\n \"name\": \"occaecat sed commodo officia\",\n \"message\": \"laborum amet in ipsum\",\n \"jwt\": \"aliqua aliquip sed\",\n \"role\": \"cupidatat Excepteur ut aliquip\",\n \"image\": \"enim cupidatat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              },
-              {
-                "id": "c489e5a2-b81b-4485-89a2-d22d20c49f09",
-                "name": "Bad Request",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "login"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "POST",
-                  "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n}"
-                  }
-                },
-                "status": "Internal Server Error",
-                "code": 500,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              }
-            ],
-            "event": [
-              {
-                "listen": "test",
-                "script": {
-                  "exec": [
-                    "var jsonData = JSON.parse(responseBody);",
-                    "pm.environment.set(\"token\", jsonData.jwt);",
-                    "pm.globals.set(\"token\", jsonData.jwt);"
-                  ],
-                  "type": "text/javascript"
-                }
-              }
-            ]
-          },
-          {
-            "id": "829b007d-fd95-47b2-94ec-baf3cc58fb5c",
-            "name": "communities",
-            "item": [
-              {
-                "id": "b864995e-1c89-4b90-af6b-6dd35493bda6",
-                "name": "Get communities of a user",
-                "request": {
-                  "name": "Get communities of a user",
-                  "description": {
-                    "content": "Get communities of a logged in user",
-                    "type": "text/plain"
-                  },
-                  "url": {
-                    "path": [
-                      "user",
-                      "communities"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "GET",
-                  "auth": null
-                },
-                "response": [
-                  {
-                    "id": "792f0082-e092-471f-955c-7d896305c385",
-                    "name": "OK",
-                    "originalRequest": {
-                      "url": {
-                        "path": [
-                          "user",
-                          "communities"
-                        ],
-                        "host": [
-                          "{{baseUrl}}"
-                        ],
-                        "query": [],
-                        "variable": []
-                      },
-                      "method": "GET",
-                      "body": {}
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": "[\n {\n  \"_id\": \"exercitation\",\n  \"name\": \"dolore anim\",\n  \"image\": \"ullamco sed\"\n },\n {\n  \"_id\": \"magna nulla consectetur pariatur officia\",\n  \"name\": \"dolor dolore minim\",\n  \"image\": \"aliqua cupidatat\"\n }\n]",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                  },
-                  {
-                    "id": "4c98acad-bd9f-480a-8bb7-e06f8f7ea9a2",
-                    "name": "Bad Request",
-                    "originalRequest": {
-                      "url": {
-                        "path": [
-                          "user",
-                          "communities"
-                        ],
-                        "host": [
-                          "{{baseUrl}}"
-                        ],
-                        "query": [],
-                        "variable": []
-                      },
-                      "method": "GET",
-                      "body": {}
-                    },
-                    "status": "Internal Server Error",
-                    "code": 500,
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                  }
-                ],
-                "event": []
-              },
-              {
-                "id": "aa6774b7-b48f-4679-b845-7470047ef971",
-                "name": "Get suggested communities of a user",
-                "request": {
-                  "name": "Get suggested communities of a user",
-                  "description": {
-                    "content": "Get suggested communities of a logged in user",
-                    "type": "text/plain"
-                  },
-                  "url": {
-                    "path": [
-                      "user",
-                      "communities",
-                      "suggested"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "GET",
-                  "auth": null
-                },
-                "response": [
-                  {
-                    "id": "07ccc64a-8d2a-4da6-a250-0e2e3d2b428c",
-                    "name": "OK",
-                    "originalRequest": {
-                      "url": {
-                        "path": [
-                          "user",
-                          "communities",
-                          "suggested"
-                        ],
-                        "host": [
-                          "{{baseUrl}}"
-                        ],
-                        "query": [],
-                        "variable": []
-                      },
-                      "method": "GET",
-                      "body": {}
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": "[\n {\n  \"_id\": \"exercitation nostrud ullam\",\n  \"name\": \"enim deserunt eiusmod\",\n  \"image\": \"exercitation consectetur\"\n },\n {\n  \"_id\": \"ex Ut minim dolore\",\n  \"name\": \"dolor ad culpa mollit\",\n  \"image\": \"nisi cillum in do\"\n }\n]",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                  },
-                  {
-                    "id": "21129f7b-ba9e-40d8-9f28-8c064e44cb7d",
-                    "name": "Bad Request",
-                    "originalRequest": {
-                      "url": {
-                        "path": [
-                          "user",
-                          "communities",
-                          "suggested"
-                        ],
-                        "host": [
-                          "{{baseUrl}}"
-                        ],
-                        "query": [],
-                        "variable": []
-                      },
-                      "method": "GET",
-                      "body": {}
-                    },
-                    "status": "Internal Server Error",
-                    "code": 500,
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                  }
-                ],
-                "event": []
-              }
-            ],
-            "event": []
-          },
-          {
-            "id": "b9a61194-da7f-42ff-9177-f5af104f35dc",
-            "name": "{user Id}",
-            "item": [
-              {
-                "id": "b50a6324-4d27-48c0-863d-5ecf929deb4b",
-                "name": "Get posts by UserId",
-                "request": {
-                  "name": "Get posts by UserId",
-                  "description": {
-                    "content": "Get Array of posts by UserId",
-                    "type": "text/plain"
-                  },
-                  "url": {
-                    "path": [
-                      "user",
-                      ":userId",
-                      "posts"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": [
-                      {
-                        "disabled": false,
-                        "type": "any",
-                        "value": "<string>",
-                        "key": "userId",
-                        "description": "(Required) "
-                      }
-                    ]
-                  },
-                  "method": "GET",
-                  "auth": null
-                },
-                "response": [
-                  {
-                    "id": "d8de9e0f-ce95-4d7f-9b34-dfc5929b9cee",
-                    "name": "OK",
-                    "originalRequest": {
-                      "url": {
-                        "path": [
-                          "user",
-                          ":userId",
-                          "posts"
-                        ],
-                        "host": [
-                          "{{baseUrl}}"
-                        ],
-                        "query": [],
-                        "variable": [
-                          {
-                            "type": "any",
-                            "key": "userId"
-                          }
-                        ]
-                      },
-                      "method": "GET",
-                      "body": {}
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": "[\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"username\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"username\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"username\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ]\n },\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"username\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"username\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"username\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ]\n }\n]",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                  },
-                  {
-                    "id": "7a5e620a-3ee3-41c0-80f1-95a563e67b05",
-                    "name": "Bad Request",
-                    "originalRequest": {
-                      "url": {
-                        "path": [
-                          "user",
-                          ":userId",
-                          "posts"
-                        ],
-                        "host": [
-                          "{{baseUrl}}"
-                        ],
-                        "query": [],
-                        "variable": [
-                          {
-                            "type": "any",
-                            "key": "userId"
-                          }
-                        ]
-                      },
-                      "method": "GET",
-                      "body": {}
-                    },
-                    "status": "Internal Server Error",
-                    "code": 500,
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                  }
-                ],
-                "event": []
-              },
-              {
-                "id": "c65cd7a4-a3c1-4af3-a602-29fecda183d1",
-                "name": "Get comments by UserId",
-                "request": {
-                  "name": "Get comments by UserId",
-                  "description": {
-                    "content": "Get Array of comments by UserId",
-                    "type": "text/plain"
-                  },
-                  "url": {
-                    "path": [
-                      "user",
-                      ":userId",
-                      "comments"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": [
-                      {
-                        "disabled": false,
-                        "type": "any",
-                        "value": "<string>",
-                        "key": "userId",
-                        "description": "(Required) "
-                      }
-                    ]
-                  },
-                  "method": "GET",
-                  "auth": null
-                },
-                "response": [
-                  {
-                    "id": "1832d50b-6c29-492c-9919-f6ec22a96080",
-                    "name": "OK",
-                    "originalRequest": {
-                      "url": {
-                        "path": [
-                          "user",
-                          ":userId",
-                          "comments"
-                        ],
-                        "host": [
-                          "{{baseUrl}}"
-                        ],
-                        "query": [],
-                        "variable": [
-                          {
-                            "type": "any",
-                            "key": "userId"
-                          }
-                        ]
-                      },
-                      "method": "GET",
-                      "body": {}
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": "[\n {\n  \"_id\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"voteCount\": \"<string>\",\n  \"replyCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"username\": \"<string>\",\n   \"avatar\": \"<string>\",\n   \"rank\": \"<number>\"\n  },\n  \"parentPost\": {\n   \"_id\": \"<string>\",\n   \"title\": \"<string>\"\n  },\n  \"repliedTo\": \"<string>\"\n },\n {\n  \"_id\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"voteCount\": \"<string>\",\n  \"replyCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"username\": \"<string>\",\n   \"avatar\": \"<string>\",\n   \"rank\": \"<number>\"\n  },\n  \"parentPost\": {\n   \"_id\": \"<string>\",\n   \"title\": \"<string>\"\n  },\n  \"repliedTo\": \"<string>\"\n }\n]",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                  },
-                  {
-                    "id": "f614671f-b54d-4a58-b4a2-defd8186c4ec",
-                    "name": "Bad Request",
-                    "originalRequest": {
-                      "url": {
-                        "path": [
-                          "user",
-                          ":userId",
-                          "comments"
-                        ],
-                        "host": [
-                          "{{baseUrl}}"
-                        ],
-                        "query": [],
-                        "variable": [
-                          {
-                            "type": "any",
-                            "key": "userId"
-                          }
-                        ]
-                      },
-                      "method": "GET",
-                      "body": {}
-                    },
-                    "status": "Internal Server Error",
-                    "code": 500,
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                    "cookie": [],
-                    "_postman_previewlanguage": "json"
-                  }
-                ],
-                "event": []
-              }
-            ],
-            "event": []
-          },
-          {
-            "id": "d1bb2447-4826-46d9-b78c-d039f945ec94",
-            "name": "Join a user to a community",
-            "request": {
-              "name": "Join a user to a community",
-              "description": {
-                "content": "Join a user to a community given the community id",
-                "type": "text/plain"
-              },
-              "url": {
-                "path": [
-                  "user",
-                  "community",
-                  ":communityId",
-                  "join"
-                ],
-                "host": [
-                  "{{baseUrl}}"
-                ],
-                "query": [],
-                "variable": [
-                  {
-                    "disabled": false,
-                    "type": "any",
-                    "value": "<string>",
-                    "key": "communityId",
-                    "description": "(Required) "
-                  }
-                ]
-              },
-              "method": "GET",
-              "auth": null
-            },
-            "response": [
-              {
-                "id": "47a15452-85b7-4caf-8b6d-9e2ce2065637",
-                "name": "OK",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "community",
-                      ":communityId",
-                      "join"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": [
-                      {
-                        "type": "any",
-                        "key": "communityId"
-                      }
-                    ]
-                  },
-                  "method": "GET",
-                  "body": {}
-                },
-                "status": "OK",
-                "code": 200,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              },
-              {
-                "id": "601f258c-3c08-44be-b510-d42454dbfab2",
-                "name": "Bad Request",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "community",
-                      ":communityId",
-                      "join"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": [
-                      {
-                        "type": "any",
-                        "key": "communityId"
-                      }
-                    ]
-                  },
-                  "method": "GET",
-                  "body": {}
-                },
-                "status": "Internal Server Error",
-                "code": 500,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              }
-            ],
-            "event": []
-          },
-          {
-            "id": "3a5cac20-482b-420e-9878-502f5cce10e2",
-            "name": "Get saved posts of an user",
-            "request": {
-              "name": "Get saved posts of an user",
-              "description": {
-                "content": "Get the saved posts of a logged in user",
-                "type": "text/plain"
-              },
-              "url": {
-                "path": [
-                  "user",
-                  "savedPosts"
-                ],
-                "host": [
-                  "{{baseUrl}}"
-                ],
-                "query": [],
-                "variable": []
-              },
-              "method": "GET",
-              "auth": null
-            },
-            "response": [
-              {
-                "id": "9698bce7-a5a4-41b3-bb52-f996d6bad728",
-                "name": "OK",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "savedPosts"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "GET",
-                  "body": {}
-                },
-                "status": "OK",
-                "code": 200,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "[\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"username\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"username\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"username\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ]\n },\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"username\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"username\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"username\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ]\n }\n]",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              },
-              {
-                "id": "cf829f2c-5a93-4156-a805-81d9138b6f93",
-                "name": "Bad Request",
-                "originalRequest": {
-                  "url": {
-                    "path": [
-                      "user",
-                      "savedPosts"
-                    ],
-                    "host": [
-                      "{{baseUrl}}"
-                    ],
-                    "query": [],
-                    "variable": []
-                  },
-                  "method": "GET",
-                  "body": {}
-                },
-                "status": "Internal Server Error",
-                "code": 500,
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
-                "cookie": [],
-                "_postman_previewlanguage": "json"
-              }
-            ],
-            "event": []
-          }
-        ],
-        "event": []
-      },
-      {
-        "id": "f89df430-83da-4d83-946c-498eb5471732",
+        "id": "d08f59be-733a-4ddd-bddd-e79af35fd7a6",
         "name": "community/{community Id}",
         "item": [
           {
-            "id": "c3c654dc-ab3c-4ea0-b863-ac690a75cfde",
+            "id": "1fcf7753-bd7a-46e7-8d5b-90f636af508d",
             "name": "Get community information",
             "request": {
               "name": "Get community information",
@@ -1986,7 +1974,7 @@
             },
             "response": [
               {
-                "id": "6e12cd7f-2630-4ba0-ba1d-ea551e2858be",
+                "id": "3e1f1ee8-2e1d-4dfa-a56b-a9413c67d460",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -2017,12 +2005,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"eiusmod in deserunt non Excepteur\",\n \"name\": \"tempor commodo aliqua sunt\",\n \"description\": \"aliquip minim est \",\n \"image\": \"ipsum deserunt\",\n \"members\": -50806599.9701635,\n \"hasJoined\": false,\n \"tags\": [\n  \"ex\",\n  \"sit commodo ad consectetur\"\n ]\n}",
+                "body": "{\n \"_id\": \"deserunt pariatu\",\n \"name\": \"reprehenderit ipsum\",\n \"description\": \"in Ut Excepteur ipsum laborum\",\n \"image\": \"minim aute fugiat\",\n \"members\": 70410260.18842295,\n \"hasJoined\": true,\n \"tags\": [\n  \"velit enim\",\n  \"et velit cupidatat\"\n ]\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "2206c81a-afe7-489c-a4b8-b8e209f78cc3",
+                "id": "d93f7541-1f13-468b-9c17-9b884c9e9cbd",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -2053,7 +2041,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                "body": "{\n \"message\": \"conseq\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -2061,7 +2049,7 @@
             "event": []
           },
           {
-            "id": "d6c83315-f9e7-4894-93e4-1ff5ac98d32e",
+            "id": "2e7b5929-4c43-4e4c-9e43-57ab8d80aa69",
             "name": "Get feed of a community",
             "request": {
               "name": "Get feed of a community",
@@ -2100,7 +2088,7 @@
             },
             "response": [
               {
-                "id": "cc3d88ed-b857-4f05-b01d-979acb27d318",
+                "id": "9fbf6654-b92f-44c1-9744-84534ce9049d",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -2141,7 +2129,7 @@
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "f821e127-13f3-442c-86b7-16a21ff32f9a",
+                "id": "d65e8639-cd7a-4b92-9dfb-f39b2bdca397",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -2177,7 +2165,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                "body": "{\n \"message\": \"conseq\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -2185,7 +2173,7 @@
             "event": []
           },
           {
-            "id": "7fe26658-7fc6-4b2e-802c-99c9a07cb9cc",
+            "id": "e8b483b7-42fd-4b19-8e4b-db0071f574d3",
             "name": "Get detailed community information",
             "request": {
               "name": "Get detailed community information",
@@ -2218,7 +2206,7 @@
             },
             "response": [
               {
-                "id": "226c8ef1-48ff-4c67-9da1-5cbbae76a90b",
+                "id": "568f4a38-f270-4df7-9c43-68e3756f74e7",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -2249,12 +2237,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"sint aliquip veniam consequat amet\",\n \"name\": \"aliqua irure anim sit\",\n \"detailedDescription\": \"voluptate exercitation sed adipisicing dolore\",\n \"links\": [\n  {\n   \"link\": \"et anim nisi\",\n   \"title\": \"sunt officia exercitation\"\n  },\n  {\n   \"link\": \"in cillum aute\",\n   \"title\": \"ea commodo\"\n  }\n ]\n}",
+                "body": "{\n \"_id\": \"occaecat laborum amet veniam\",\n \"name\": \"ad dolore aute\",\n \"detailedDescription\": \"v\",\n \"links\": [\n  {\n   \"link\": \"in cupidatat\",\n   \"title\": \"do voluptate ut ad\"\n  },\n  {\n   \"link\": \"cupidatat aliquip nostrud\",\n   \"title\": \"anim culpa\"\n  }\n ]\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "eef6407a-34c5-4d6b-bfd9-1b9bc461f4a1",
+                "id": "f7b6302a-d649-495d-8538-fad8f7dec8f8",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -2285,12 +2273,613 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"ad commodo consectetur fugiat\"\n}",
+                "body": "{\n \"message\": \"conseq\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
             ],
             "event": []
+          }
+        ],
+        "event": []
+      },
+      {
+        "id": "9151fc7a-b12f-47fa-8346-8d4c1db4a573",
+        "name": "test",
+        "item": [
+          {
+            "id": "ec5a71f2-46fe-4db0-89bb-00e21e38b93e",
+            "name": "Create a Test",
+            "request": {
+              "name": "Create a Test",
+              "description": {
+                "content": "N/A",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "test",
+                  "create"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "auth": null,
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"<string>\",\n    \"anxietyQuestions\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"depressionQuestions\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"stressQuestions\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+              }
+            },
+            "response": [
+              {
+                "id": "0902c3bf-3150-4435-9d7f-6bd299ade2a1",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "test",
+                      "create"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {}
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"_id\": \"do mollit culpa\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "6650fe1b-c245-4dc1-8de6-2f77f5349cfc",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "test",
+                      "create"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "POST",
+                  "body": {}
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "eb5d8208-3258-42c5-ab41-61e452defb94",
+            "name": "{test Id}",
+            "item": [
+              {
+                "id": "609aa3a6-8a38-47fd-9f45-556f615314ba",
+                "name": "Get a Test",
+                "request": {
+                  "name": "Get a Test",
+                  "description": {
+                    "content": "N/A",
+                    "type": "text/plain"
+                  },
+                  "url": {
+                    "path": [
+                      "test",
+                      ":testId"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                      {
+                        "disabled": false,
+                        "type": "any",
+                        "value": "<string>",
+                        "key": "testId",
+                        "description": "(Required) "
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "auth": null
+                },
+                "response": [
+                  {
+                    "id": "fb87e868-240b-4dd3-9cb0-abbc75c3376d",
+                    "name": "OK",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "test",
+                          ":testId"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": [
+                          {
+                            "type": "any",
+                            "key": "testId"
+                          }
+                        ]
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "{\n \"_id\": \"do mollit culpa\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  },
+                  {
+                    "id": "e0391789-f3ff-44a0-8537-4fc89da91152",
+                    "name": "Bad Request",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "test",
+                          ":testId"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": [
+                          {
+                            "type": "any",
+                            "key": "testId"
+                          }
+                        ]
+                      },
+                      "method": "GET",
+                      "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "{\n \"message\": \"conseq\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  }
+                ],
+                "event": []
+              },
+              {
+                "id": "8b51d999-9103-401a-814c-143d63c1039a",
+                "name": "Submit a test",
+                "request": {
+                  "name": "Submit a test",
+                  "description": {
+                    "content": "N/A",
+                    "type": "text/plain"
+                  },
+                  "url": {
+                    "path": [
+                      "test",
+                      ":testId",
+                      "submit"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                      {
+                        "disabled": false,
+                        "type": "any",
+                        "value": "<string>",
+                        "key": "testId",
+                        "description": "(Required) "
+                      }
+                    ]
+                  },
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "method": "POST",
+                  "auth": null,
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"anxiety\": \"<number>\",\n    \"depression\": \"<number>\",\n    \"stress\": \"<number>\"\n}"
+                  }
+                },
+                "response": [
+                  {
+                    "id": "2f04b35b-8726-432a-a185-4c15b3264f36",
+                    "name": "OK",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "test",
+                          ":testId",
+                          "submit"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": [
+                          {
+                            "type": "any",
+                            "key": "testId"
+                          }
+                        ]
+                      },
+                      "method": "POST",
+                      "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "{\n \"_id\": \"ex consequat\",\n \"anxietyAdvice\": {\n  \"testId\": \"magna culpa laboris do\",\n  \"disease\": \"stress\",\n  \"messages\": [\n   \"ad commodo ut la\",\n   \"dolor ad Duis velit\"\n  ],\n  \"advice\": [\n   [],\n   []\n  ],\n  \"range\": {\n   \"min\": -19183587.50260043,\n   \"max\": 49745518.84478822\n  }\n },\n \"depressionAdvice\": {\n  \"testId\": \"sunt anim sit mollit\",\n  \"disease\": \"stress\",\n  \"messages\": [\n   \"Duis eiusmod aliquip ad\",\n   \"aute velit laborum dolore\"\n  ],\n  \"advice\": [\n   [],\n   []\n  ],\n  \"range\": {\n   \"min\": -11444977.68222022,\n   \"max\": -72553781.80179676\n  }\n },\n \"stressAdvice\": {\n  \"testId\": \"dolor consectetur aliqua sunt\",\n  \"disease\": \"stress\",\n  \"messages\": [\n   \"U\",\n   \"nulla amet magna sint\"\n  ],\n  \"advice\": [\n   [],\n   []\n  ],\n  \"range\": {\n   \"min\": 56364775.680107474,\n   \"max\": 94523149.40701756\n  }\n }\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  },
+                  {
+                    "id": "58978cce-42ec-4c09-9a8f-2716b405a6ab",
+                    "name": "Bad Request",
+                    "originalRequest": {
+                      "url": {
+                        "path": [
+                          "test",
+                          ":testId",
+                          "submit"
+                        ],
+                        "host": [
+                          "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": [
+                          {
+                            "type": "any",
+                            "key": "testId"
+                          }
+                        ]
+                      },
+                      "method": "POST",
+                      "body": {}
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": "{\n \"message\": \"conseq\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                  }
+                ],
+                "event": []
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "5162ff4d-001b-4cbd-9e92-ddbab07afcb0",
+            "name": "Get a random Test",
+            "request": {
+              "name": "Get a random Test",
+              "description": {
+                "content": "N/A",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "test",
+                  "random"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET",
+              "auth": null
+            },
+            "response": [
+              {
+                "id": "aa30cbf3-f63a-4f39-bddc-043bb4868a67",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "test",
+                      "random"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "GET",
+                  "body": {}
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"_id\": \"do mollit culpa\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "1969ca62-bfa9-4a70-9a19-c4345f8d5bc0",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "test",
+                      "random"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "GET",
+                  "body": {}
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          },
+          {
+            "id": "a239ace7-9b09-4ae9-b6fe-1bb43f584bec",
+            "name": "Get suggested commmunities",
+            "request": {
+              "name": "Get suggested commmunities",
+              "description": {
+                "content": "Get suggested commmunities based on test score",
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "test",
+                  "advice",
+                  "communities",
+                  "suggested"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET",
+              "auth": null
+            },
+            "response": [
+              {
+                "id": "d5a9ef1c-9e94-438d-ab86-c62c1a6e03a8",
+                "name": "OK",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "test",
+                      "advice",
+                      "communities",
+                      "suggested"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "GET",
+                  "body": {}
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"_id\": \"anim\",\n \"name\": \"incididunt pariatur\",\n \"description\": \"veniam ea aliquip adipisicing\",\n \"image\": \"id elit laboris\",\n \"members\": 537526.1041110903,\n \"hasJoined\": false,\n \"tags\": [\n  \"veniam Ut\",\n  \"id pariatur aliqua dolore\"\n ]\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              },
+              {
+                "id": "840e605b-71ea-4638-bc2d-7787dc7dba5c",
+                "name": "Bad Request",
+                "originalRequest": {
+                  "url": {
+                    "path": [
+                      "test",
+                      "advice",
+                      "communities",
+                      "suggested"
+                    ],
+                    "host": [
+                      "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                  },
+                  "method": "GET",
+                  "body": {}
+                },
+                "status": "Internal Server Error",
+                "code": 500,
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": "{\n \"message\": \"conseq\"\n}",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+              }
+            ],
+            "event": []
+          }
+        ],
+        "event": []
+      },
+      {
+        "id": "3e170d40-55d5-4351-be45-e8d652c9048b",
+        "name": "Create an advice",
+        "request": {
+          "name": "Create an advice",
+          "description": {
+            "content": "N/A",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "advice",
+              "create"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST",
+          "auth": null
+        },
+        "response": [
+          {
+            "id": "044b36dc-b9d7-4f0b-a427-784825a6d0b2",
+            "name": "OK",
+            "originalRequest": {
+              "url": {
+                "path": [
+                  "advice",
+                  "create"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "POST",
+              "body": {}
+            },
+            "status": "OK",
+            "code": 200,
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": "{\n \"testId\": \"ipsum\",\n \"disease\": \"depression\",\n \"messages\": [\n  \"sit in\",\n  \"ullamco elit\"\n ],\n \"advice\": [\n  [],\n  []\n ],\n \"range\": {\n  \"min\": -93242835.65317927,\n  \"max\": 90707253.83763573\n }\n}",
+            "cookie": [],
+            "_postman_previewlanguage": "json"
+          },
+          {
+            "id": "719fe78b-7a84-477d-869b-3ffda990a9ee",
+            "name": "Bad Request",
+            "originalRequest": {
+              "url": {
+                "path": [
+                  "advice",
+                  "create"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "POST",
+              "body": {}
+            },
+            "status": "Internal Server Error",
+            "code": 500,
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": "{\n \"message\": \"conseq\"\n}",
+            "cookie": [],
+            "_postman_previewlanguage": "json"
           }
         ],
         "event": []
@@ -2300,7 +2889,7 @@
     "variable": [
       {
         "type": "string",
-        "value": "http://localhost:8000/api/v1",
+        "value": "http://localhost:9000/api/v1",
         "key": "baseUrl"
       }
     ],
