@@ -140,7 +140,7 @@ export interface IKAApiClent {
      */
     getCommunityFeed(communityId: string, feedSortedBy?: FeedSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]>;
     /**
-     * Get community information
+     * Get detailed community information
      * @return OK
      */
     getCommunityAbout(communityId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityAbout>;
@@ -1321,7 +1321,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     /**
-     * Get community information
+     * Get detailed community information
      * @return OK
      */
     getCommunityAbout(communityId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityAbout> {
