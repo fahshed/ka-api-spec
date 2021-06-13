@@ -724,7 +724,7 @@ components:
         advice:
           type: array
           items:
-            type: array
+            type: string
         range:
           type: object
           properties:

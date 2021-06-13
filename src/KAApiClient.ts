@@ -1886,7 +1886,7 @@ export interface CreateAdvice {
     testId?: string;
     disease?: CreateAdviceDisease;
     messages?: string[];
-    advice?: any[][];
+    advice?: string[];
     range?: Range;
 }
 
