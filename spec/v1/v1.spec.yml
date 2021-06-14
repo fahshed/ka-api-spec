@@ -610,6 +610,18 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Links"
+        images:
+          type: array
+          items:
+            type: string
+        symptoms:
+          type: array
+          items:
+            type: string
+        toDo:
+          type: array
+          items:
+            type: string
 
     Links:
       type: object
