@@ -329,10 +329,6 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Comment"
-        likedByUsersId:
-          type: array
-          items:
-            type: string
         isLikedByCurrentUser:
           type: boolean
 
@@ -477,12 +473,6 @@ components:
         message:
           type: string
 
-    PostCreatedMessage:
-      type: object
-      properties:
-        message:
-          type: string
-
     Replies:
       type: array
       items:
@@ -611,7 +601,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/PostCreatedMessage"
+            $ref: "#/components/schemas/Post"
     OKComment:
       description: OK
       content:
