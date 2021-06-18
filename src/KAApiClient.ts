@@ -98,7 +98,7 @@ export interface IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    createPost(body?: Post | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<PostCreatedMessage>;
+    createPost(body?: Post | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post>;
     /**
      * Create a comment
      * @param body (optional) 
@@ -852,7 +852,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    createPost(body?: Post | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<PostCreatedMessage> {
+    createPost(body?: Post | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post> {
         let url_ = this.baseUrl + "/post/create";
         url_ = url_.replace(/[?&]$/, "");
 
@@ -884,7 +884,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
         });
     }
 
-    protected processCreatePost(response: AxiosResponse): Promise<PostCreatedMessage> {
+    protected processCreatePost(response: AxiosResponse): Promise<Post> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -1779,6 +1779,7 @@ export interface Post {
     community?: Community;
     postedBy?: PostedBy;
     comments?: Comment[];
+    isLikedByCurrentUser?: boolean;
 }
 
 export interface Comment {
@@ -1870,10 +1871,6 @@ export interface LikePostMessage {
     message?: string;
 }
 
-export interface PostCreatedMessage {
-    message?: string;
-}
-
 export interface CreateTest {
     name?: string;
     anxietyQuestions?: string[];
@@ -1922,13 +1919,13 @@ export interface Community {
 
 export interface PostedBy {
     _id?: string;
-    username?: string;
+    name?: string;
     image?: string;
 }
 
 export interface PostedBy2 {
     _id?: string;
-    username?: string;
+    name?: string;
     avatar?: string;
     rank?: number;
 }
