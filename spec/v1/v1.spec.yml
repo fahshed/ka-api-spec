@@ -162,6 +162,36 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/professional/{userId}/info:
+    get:
+      tags:
+        - user
+      summary: Get general information of a professional
+      description: Get the general information of a professional user
+      operationId: getProfessionalInfo
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKProfessionalInformation"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/professional/{userId}/chamber:
+    get:
+      tags:
+        - user
+      summary: Get detailed information of a professional
+      description: Get the detailed information of a professional user
+      operationId: getProfessionalChamber
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKProfessionalInformation"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /post/{postId}/save:
     get:
       tags:
@@ -470,7 +500,7 @@ components:
           properties:
             _id:
               type: string
-            username:
+            name:
               type: string
             image:
               type: string
@@ -502,7 +532,7 @@ components:
           properties:
             _id:
               type: string
-            username:
+            name:
               type: string
             avatar:
               type: string
@@ -763,6 +793,39 @@ components:
         stress:
           type: number
 
+    ProfessionalUserInfo:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        rank:
+          type: number
+        phone:
+          type: string
+        email:
+          type: string
+        image:
+          type: string
+        about:
+          type: string
+        address:
+          type: string
+        license:
+          type: string
+        licenseIssued:
+          type: string
+          format: date-time
+        specializations:
+          type: array
+          items:
+            type: string
+        qualifications:
+          type: array
+          items:
+            type: string
+
   parameters:
     postId:
       in: path
@@ -982,3 +1045,10 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Score"
+
+    OKProfessionalInformation:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ProfessionalUserInfo"

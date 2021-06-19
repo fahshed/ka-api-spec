@@ -83,6 +83,16 @@ export interface IKAApiClent {
      */
     getSavedPosts(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]>;
     /**
+     * Get general information of a professional
+     * @return OK
+     */
+    getProfessionalInfo(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo>;
+    /**
+     * Get detailed information of a professional
+     * @return OK
+     */
+    getProfessionalChamber(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo>;
+    /**
      * Save a post by user
      * @param saveOptions (optional) 
      * @return OK
@@ -98,7 +108,7 @@ export interface IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    createPost(body?: Post | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<PostCreatedMessage>;
+    createPost(body?: Post | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post>;
     /**
      * Create a comment
      * @param body (optional) 
@@ -721,6 +731,124 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     /**
+     * Get general information of a professional
+     * @return OK
+     */
+    getProfessionalInfo(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo> {
+        let url_ = this.baseUrl + "/user/professional/{userId}/info";
+        if (userId === undefined || userId === null)
+            throw new Error("The parameter 'userId' must be defined.");
+        url_ = url_.replace("{userId}", encodeURIComponent("" + userId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetProfessionalInfo(_response);
+        });
+    }
+
+    protected processGetProfessionalInfo(response: AxiosResponse): Promise<ProfessionalUserInfo> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Get detailed information of a professional
+     * @return OK
+     */
+    getProfessionalChamber(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo> {
+        let url_ = this.baseUrl + "/user/professional/{userId}/chamber";
+        if (userId === undefined || userId === null)
+            throw new Error("The parameter 'userId' must be defined.");
+        url_ = url_.replace("{userId}", encodeURIComponent("" + userId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetProfessionalChamber(_response);
+        });
+    }
+
+    protected processGetProfessionalChamber(response: AxiosResponse): Promise<ProfessionalUserInfo> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
      * Save a post by user
      * @param saveOptions (optional) 
      * @return OK
@@ -852,7 +980,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
      * @param body (optional) 
      * @return OK
      */
-    createPost(body?: Post | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<PostCreatedMessage> {
+    createPost(body?: Post | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post> {
         let url_ = this.baseUrl + "/post/create";
         url_ = url_.replace(/[?&]$/, "");
 
@@ -884,7 +1012,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
         });
     }
 
-    protected processCreatePost(response: AxiosResponse): Promise<PostCreatedMessage> {
+    protected processCreatePost(response: AxiosResponse): Promise<Post> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -1779,6 +1907,7 @@ export interface Post {
     community?: Community;
     postedBy?: PostedBy;
     comments?: Comment[];
+    isLikedByCurrentUser?: boolean;
 }
 
 export interface Comment {
@@ -1870,10 +1999,6 @@ export interface LikePostMessage {
     message?: string;
 }
 
-export interface PostCreatedMessage {
-    message?: string;
-}
-
 export interface CreateTest {
     name?: string;
     anxietyQuestions?: string[];
@@ -1906,6 +2031,21 @@ export interface Score {
     stress?: number;
 }
 
+export interface ProfessionalUserInfo {
+    _id?: string;
+    name?: string;
+    rank?: number;
+    phone?: string;
+    email?: string;
+    image?: string;
+    about?: string;
+    address?: string;
+    license?: string;
+    licenseIssued?: Date;
+    specializations?: string[];
+    qualifications?: string[];
+}
+
 export type SaveOptions = "save" | "unsave";
 
 export type LikeOptions = "like" | "unlike";
@@ -1922,13 +2062,13 @@ export interface Community {
 
 export interface PostedBy {
     _id?: string;
-    username?: string;
+    name?: string;
     image?: string;
 }
 
 export interface PostedBy2 {
     _id?: string;
-    username?: string;
+    name?: string;
     avatar?: string;
     rank?: number;
 }
