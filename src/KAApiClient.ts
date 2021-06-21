@@ -183,9 +183,10 @@ export interface IKAApiClent {
     getCommunitiesByScore(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityInfo>;
     /**
      * Create an advice
+     * @param body (optional) 
      * @return OK
      */
-    createAdvice(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CreateAdvice>;
+    createAdvice(body?: any | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Advice>;
 }
 
 export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
@@ -1839,16 +1840,21 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
 
     /**
      * Create an advice
+     * @param body (optional) 
      * @return OK
      */
-    createAdvice(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CreateAdvice> {
+    createAdvice(body?: any | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Advice> {
         let url_ = this.baseUrl + "/test/advice/create";
         url_ = url_.replace(/[?&]$/, "");
 
+        const content_ = JSON.stringify(body);
+
         let options_ = <AxiosRequestConfig>{
+            data: content_,
             method: "POST",
             url: url_,
             headers: {
+                "Content-Type": "application/json",
                 "Accept": "application/json"
             },
             cancelToken,
@@ -1869,7 +1875,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
         });
     }
 
-    protected processCreateAdvice(response: AxiosResponse): Promise<CreateAdvice> {
+    protected processCreateAdvice(response: AxiosResponse): Promise<Advice> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -2006,16 +2012,20 @@ export interface CreateTest {
     stressQuestions?: string[];
 }
 
-export interface Test extends CreateTest {
-    _id: string;
-}
-
 export interface CreateAdvice {
     testId?: string;
     disease?: CreateAdviceDisease;
     messages?: string[];
     advice?: string[];
     range?: Range;
+}
+
+export interface Advice extends CreateAdvice {
+    _id: string;
+}
+
+export interface Test extends CreateTest {
+    _id: string;
 }
 
 export interface SubmitTestResponse {

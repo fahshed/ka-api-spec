@@ -456,9 +456,11 @@ paths:
       summary: Create an advice
       description: N/A
       operationId: createAdvice
+      requestBody:
+        $ref: "#/components/responses/OKCreateAdvice"
       responses:
         "200":
-          $ref: "#/components/responses/OKCreateAdvice"
+          $ref: "#/components/responses/OKAdvice"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -733,6 +735,16 @@ components:
           type: array
           items:
             type: string
+
+    Advice:
+      allOf:
+        - $ref: "#/components/schemas/CreateAdvice"
+        - type: object
+          required:
+            - _id
+          properties:
+            _id:
+              type: string
 
     Test:
       allOf:
@@ -1010,6 +1022,13 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/CommunityAbout"
+
+    OKAdvice:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Advice"
 
     OKTest:
       description: OK
