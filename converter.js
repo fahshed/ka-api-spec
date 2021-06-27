@@ -71,7 +71,7 @@ function updateCollection(newFileName) {
   const newFile = {};
   newFile.collection = file; // wrap JSON object in new "collection" property
 
-  let newArr = newFile.collection.item[1].item;
+  let newArr = newFile.collection.item[0].item;
   for (let i = 0; i < newArr.length; i++) {
     const req = newArr[i];
     if (req.name === "Logs in a user") {
