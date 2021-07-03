@@ -134,6 +134,19 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/tests/history:
+    get:
+      tags:
+        - user
+      summary: Get tests by UserId
+      description: Get Array of testInfo by UserId
+      operationId: getUserTestsHistory
+      responses:
+        "200":
+          $ref: "#/components/responses/OKUserTestHistory"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /user/community/{communityId}/join:
     get:
       tags:
@@ -838,6 +851,23 @@ components:
           items:
             type: string
 
+    UserTestHistory:
+      type: object
+      properties:
+        _id:
+          type: string
+        testname:
+          type: string
+        status:
+          type: string
+        scoreArray:
+          type: array
+          items:
+            type: number
+        createdAt:
+          type: string
+          format: date-time
+
   parameters:
     postId:
       in: path
@@ -1071,3 +1101,10 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/ProfessionalUserInfo"
+
+    OKUserTestHistory:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/UserTestHistory"
