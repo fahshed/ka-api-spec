@@ -76,7 +76,7 @@ export interface IKAApiClent {
      * Get tests by UserId
      * @return OK
      */
-    getUserTestsHistory(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<UserTestHistory>;
+    getUserTestsHistory(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<TestHistory[]>;
     /**
      * Join a user to a community
      * @return OK
@@ -625,7 +625,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
      * Get tests by UserId
      * @return OK
      */
-    getUserTestsHistory(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<UserTestHistory> {
+    getUserTestsHistory(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<TestHistory[]> {
         let url_ = this.baseUrl + "/user/tests/history";
         url_ = url_.replace(/[?&]$/, "");
 
@@ -652,7 +652,7 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
         });
     }
 
-    protected processGetUserTestsHistory(response: AxiosResponse): Promise<UserTestHistory> {
+    protected processGetUserTestsHistory(response: AxiosResponse): Promise<TestHistory[]> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -2089,6 +2089,14 @@ export interface Test extends CreateTest {
     _id: string;
 }
 
+export interface TestHistory {
+    _id?: string;
+    testname?: string;
+    status?: string;
+    scoreArray?: number[];
+    createdAt?: Date;
+}
+
 export interface SubmitTestResponse {
     _id?: string;
     anxietyAdvice?: CreateAdvice;
@@ -2115,14 +2123,6 @@ export interface ProfessionalUserInfo {
     licenseIssued?: Date;
     specializations?: string[];
     qualifications?: string[];
-}
-
-export interface UserTestHistory {
-    _id?: string;
-    testname?: string;
-    status?: string;
-    scoreArray?: number[];
-    createdAt?: Date;
 }
 
 export type SaveOptions = "save" | "unsave";

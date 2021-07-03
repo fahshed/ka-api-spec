@@ -769,6 +769,23 @@ components:
             _id:
               type: string
 
+    TestHistory:
+      type: object
+      properties:
+        _id:
+          type: string
+        testname:
+          type: string
+        status:
+          type: string
+        scoreArray:
+          type: array
+          items:
+            type: number
+        createdAt:
+          type: string
+          format: date-time
+
     CreateAdvice:
       type: object
       properties:
@@ -852,21 +869,9 @@ components:
             type: string
 
     UserTestHistory:
-      type: object
-      properties:
-        _id:
-          type: string
-        testname:
-          type: string
-        status:
-          type: string
-        scoreArray:
-          type: array
-          items:
-            type: number
-        createdAt:
-          type: string
-          format: date-time
+      type: array
+      items:
+        $ref: "#/components/schemas/TestHistory"
 
   parameters:
     postId:
