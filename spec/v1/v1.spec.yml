@@ -205,6 +205,21 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/suggesetedProfessionals:
+    get:
+      tags:
+        - user
+      summary: Get suggested professionals
+      description: Get professional suggestion based on the community/location
+      operationId: getSuggestedProfessionals
+      parameters:
+        - $ref: "#/components/parameters/professionalSortedBy"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKProfessionalList"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /post/{postId}/save:
     get:
       tags:
@@ -474,21 +489,6 @@ paths:
       responses:
         "200":
           $ref: "#/components/responses/OKAdvice"
-        default:
-          $ref: "#/components/responses/BadRequest"
-
-  /user/suggesetedProfessionals:
-    get:
-      tags:
-        - user
-      summary: Get suggested professionals
-      description: Get professional suggestion based on the community/location
-      operationId: getSuggestedProfessionals
-      parameters:
-        - $ref: "#/components/parameters/professionalSortedBy"
-      responses:
-        "200":
-          $ref: "#/components/responses/OKProfessionalList"
         default:
           $ref: "#/components/responses/BadRequest"
 
