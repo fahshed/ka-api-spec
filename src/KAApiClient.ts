@@ -98,6 +98,12 @@ export interface IKAApiClent {
      */
     getProfessionalChamber(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo>;
     /**
+     * Get suggested professionals
+     * @param professionalSortedBy (optional) 
+     * @return OK
+     */
+    getSuggestedProfessionals(professionalSortedBy?: ProfessionalSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo[]>;
+    /**
      * Save a post by user
      * @param saveOptions (optional) 
      * @return OK
@@ -886,6 +892,67 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     protected processGetProfessionalChamber(response: AxiosResponse): Promise<ProfessionalUserInfo> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Get suggested professionals
+     * @param professionalSortedBy (optional) 
+     * @return OK
+     */
+    getSuggestedProfessionals(professionalSortedBy?: ProfessionalSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo[]> {
+        let url_ = this.baseUrl + "/user/suggesetedProfessionals?";
+        if (professionalSortedBy === null)
+            throw new Error("The parameter 'professionalSortedBy' cannot be null.");
+        else if (professionalSortedBy !== undefined)
+            url_ += "professionalSortedBy=" + encodeURIComponent("" + professionalSortedBy) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetSuggestedProfessionals(_response);
+        });
+    }
+
+    protected processGetSuggestedProfessionals(response: AxiosResponse): Promise<ProfessionalUserInfo[]> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -2123,7 +2190,10 @@ export interface ProfessionalUserInfo {
     licenseIssued?: Date;
     specializations?: string[];
     qualifications?: string[];
+    location?: string;
 }
+
+export type ProfessionalSortedBy = "rank" | "location";
 
 export type SaveOptions = "save" | "unsave";
 
