@@ -2190,7 +2190,6 @@ export interface ProfessionalUserInfo {
     licenseIssued?: Date;
     specializations?: string[];
     qualifications?: string[];
-    location?: string;
 }
 
 export type ProfessionalSortedBy = "rank" | "location";
