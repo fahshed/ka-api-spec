@@ -781,6 +781,11 @@ components:
       items:
         $ref: "#/components/schemas/Post"
 
+    SuggestedProfessionalList:
+      type: array
+      items:
+        $ref: "#/components/schemas/ProfessionalUserInfo"
+
     CreateTest:
       type: object
       properties:
@@ -988,6 +993,13 @@ components:
         type: string
         enum: ["time", "votes", "professional", "commentCount"]
 
+    professionalSortedBy:
+      in: query
+      name: professionalSortedBy
+      schema:
+        type: string
+        enum: ["rank", "location"]
+
   responses:
     BadRequest:
       description: Bad Request
@@ -1177,3 +1189,10 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/UserTestHistory"
+
+    OKProfessionalList:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/SuggestedProfessionalList"
