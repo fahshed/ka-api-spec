@@ -581,11 +581,15 @@ components:
     RegularUserCredentials:
       type: object
       properties:
-        role:
+        name:
           type: string
         email:
           type: string
         password:
+          type: string
+        pseudonym:
+          type: string
+        image:
           type: string
 
     ProfessionalUserCredentials:
