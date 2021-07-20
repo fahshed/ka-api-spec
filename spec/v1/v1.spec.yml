@@ -249,6 +249,19 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/notifications:
+    get:
+      tags:
+        - user
+      summary: get notifications
+      description: user notifications fetch
+      operationId: getNotifications
+      responses:
+        "200":
+          $ref: "#/components/responses/OKNotifications"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /post/{postId}/save:
     get:
       tags:
@@ -575,6 +588,22 @@ components:
             $ref: "#/components/schemas/Comment"
         isLikedByCurrentUser:
           type: boolean
+
+    Notification:
+      type: object
+      properties:
+        message:
+          type: string
+        content:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+    Notifications:
+      type: array
+      items:
+        $ref: "#/components/schemas/Notification"
 
     Comment:
       type: object
@@ -1009,7 +1038,7 @@ components:
             $ref: "#/components/schemas/ErrorMessage"
 
     LogOutSuccess:
-      description: Logout Successful
+      description: OK
       content:
         application/json:
           schema:
@@ -1021,6 +1050,13 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Post"
+
+    OKNotifications:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Notifications"
 
     OKPushToken:
       description: OK
