@@ -78,6 +78,19 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/logout:
+    post:
+      tags:
+        - user
+      summary: Logs outs a user
+      description: Logs out an user and clear away push token array
+      operationId: logOutUser
+      responses:
+        "200":
+          $ref: "#/components/responses/LogOutSuccess"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /user/communities:
     get:
       tags:
@@ -202,6 +215,37 @@ paths:
       responses:
         "200":
           $ref: "#/components/responses/OKProfessionalInformation"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/advice/latest:
+    get:
+      tags:
+        - user
+      summary: Get latest advice of an user from test info
+      description: Get the notofications advice info
+      operationId: getLatestAdvice
+      responses:
+        "200":
+          $ref: "#/components/responses/OKSubmitTest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/pushToken/register:
+    post:
+      tags:
+        - user
+      summary: Register a push notification
+      description: save a push notification in the backned
+      operationId: registerPushNotificationToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PushToken"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKPushToken"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -479,6 +523,12 @@ paths:
 
 components:
   schemas:
+    PushToken:
+      type: object
+      properties:
+        pushToken:
+          type: string
+
     Post:
       type: object
       properties:
@@ -946,12 +996,26 @@ components:
           schema:
             $ref: "#/components/schemas/ErrorMessage"
 
+    LogOutSuccess:
+      description: Logout Successful
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorMessage"
+
     OKPost:
       description: OK
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Post"
+
+    OKPushToken:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PushToken"
 
     OKAuthentication:
       description: OK
