@@ -262,6 +262,21 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/suggesetedProfessionals:
+    get:
+      tags:
+        - user
+      summary: Get suggested professionals
+      description: Get professional suggestion based on the community/location
+      operationId: getSuggestedProfessionals
+      parameters:
+        - $ref: "#/components/parameters/professionalSortedBy"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKProfessionalList"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /post/{postId}/save:
     get:
       tags:
@@ -443,6 +458,22 @@ paths:
       responses:
         "200":
           $ref: "#/components/responses/OKCommunityAbout"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /community/{communityId}/postSearch:
+    get:
+      tags:
+        - community
+      summary: Get community posts by searching
+      description: Searches and returns a specific community for posts with certain keyword
+      operationId: searchCommunityPosts
+      parameters:
+        - $ref: "#/components/parameters/communityId"
+        - $ref: "#/components/parameters/communityPostSearchKeyword"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunityFeed"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -1028,6 +1059,12 @@ components:
       schema:
         type: string
         enum: ["rank", "location"]
+
+    communityPostSearchKeyword:
+      in: query
+      name: searchKeyword
+      schema:
+        type: string
 
   responses:
     BadRequest:
