@@ -2368,6 +2368,7 @@ export interface Post {
     postedBy?: PostedBy;
     comments?: Comment[];
     isLikedByCurrentUser?: boolean;
+    postType?: string;
 }
 
 export interface Notification {

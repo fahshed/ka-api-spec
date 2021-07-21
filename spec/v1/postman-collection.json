@@ -2,11 +2,11 @@
   "collection": {
     "item": [
       {
-        "id": "2b15e406-1d20-4fc7-b361-87e1d35f8b58",
+        "id": "72b228d6-d779-474e-9db6-45cb48a0e0c6",
         "name": "user",
         "item": [
           {
-            "id": "002e0009-8062-4110-8417-2800b9611cf9",
+            "id": "cf67382f-bda0-45cd-85bb-bdd2cb3de0c8",
             "name": "Create a regular user",
             "request": {
               "name": "Create a regular user",
@@ -41,7 +41,7 @@
             },
             "response": [
               {
-                "id": "0aedac73-180d-447f-8d7a-63519ad449d4",
+                "id": "51f7dd30-8c2d-4c6f-931b-62c620dff121",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -70,12 +70,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"labore\",\n \"name\": \"proident enim quis\",\n \"message\": \"cillum commodo mollit qui\",\n \"jwt\": \"do sit\",\n \"role\": \"ut aute\",\n \"image\": \"occaecat reprehenderit ut sint Duis\"\n}",
+                "body": "{\n \"_id\": \"nulla reprehenderit eu ea exerci\",\n \"name\": \"Excepteur fugiat sit Lorem aliqua\",\n \"message\": \"irure sed Duis\",\n \"jwt\": \"\",\n \"role\": \"deserunt sit Lorem\",\n \"image\": \"proident consectetur\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "2da5b324-935c-4d8b-8537-40e3885ab83c",
+                "id": "97540826-1aad-4e9e-84b9-32cd352b633c",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -104,7 +104,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -112,11 +112,11 @@
             "event": []
           },
           {
-            "id": "22bc26fd-e938-41fe-928b-d49b6f67eb1d",
+            "id": "3397eb84-7f97-4b37-b2ff-31e117b27151",
             "name": "professional",
             "item": [
               {
-                "id": "98caed66-cd8d-4911-8844-dc0f780a6593",
+                "id": "e619a963-9a6f-45a7-8414-4a7572684ead",
                 "name": "Create a professional user",
                 "request": {
                   "name": "Create a professional user",
@@ -151,7 +151,7 @@
                 },
                 "response": [
                   {
-                    "id": "da20438d-6c50-4e27-b0c5-f26f3c3270dc",
+                    "id": "56d067d3-0b00-416e-85e1-f20992339b33",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -180,12 +180,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"_id\": \"labore\",\n \"name\": \"proident enim quis\",\n \"message\": \"cillum commodo mollit qui\",\n \"jwt\": \"do sit\",\n \"role\": \"ut aute\",\n \"image\": \"occaecat reprehenderit ut sint Duis\"\n}",
+                    "body": "{\n \"_id\": \"nulla reprehenderit eu ea exerci\",\n \"name\": \"Excepteur fugiat sit Lorem aliqua\",\n \"message\": \"irure sed Duis\",\n \"jwt\": \"\",\n \"role\": \"deserunt sit Lorem\",\n \"image\": \"proident consectetur\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "eb2bc556-2e20-400d-97e9-df33ad5f83d0",
+                    "id": "82f89d96-e34e-4cbd-9255-82a39f4c8f93",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -214,7 +214,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -222,11 +222,11 @@
                 "event": []
               },
               {
-                "id": "fc364f9a-5f11-42f4-884e-a0c8caccc69b",
+                "id": "3aa6a96f-14b7-4a8a-802b-0c497cda10af",
                 "name": "{user Id}",
                 "item": [
                   {
-                    "id": "45f0faf8-c39c-4d0e-a6e3-e67742fb6376",
+                    "id": "129ceb80-05c9-40ed-a9b5-11b2a5caa456",
                     "name": "Get general information of a professional",
                     "request": {
                       "name": "Get general information of a professional",
@@ -260,7 +260,7 @@
                     },
                     "response": [
                       {
-                        "id": "f188dce2-a270-4279-b2e5-51a80b37b54a",
+                        "id": "101e44e8-7604-40c6-b92d-d13ea1a4dfb6",
                         "name": "OK",
                         "originalRequest": {
                           "url": {
@@ -292,12 +292,12 @@
                             "value": "application/json"
                           }
                         ],
-                        "body": "{\n \"_id\": \"velit sint laborum labore ullamco\",\n \"name\": \"id\",\n \"rank\": -92479236.67086741,\n \"phone\": \"dolore dolor ut in\",\n \"email\": \"tempor sit ani\",\n \"image\": \"laboris do\",\n \"about\": \"et laborum\",\n \"address\": \"nisi consectetur amet repre\",\n \"license\": \"pa\",\n \"licenseIssued\": \"1947-08-05T17:26:41.122Z\",\n \"specializations\": [\n  \"adipi\",\n  \"elit eiusmod do dolore consequat\"\n ],\n \"qualifications\": [\n  \"tempor laboris commodo irure\",\n  \"ut co\"\n ]\n}",
+                        "body": "{\n \"_id\": \"irure minim\",\n \"name\": \"Lorem consectetur laboris\",\n \"rank\": -10437431.498007178,\n \"phone\": \"velit enim mollit proident\",\n \"email\": \"enim\",\n \"image\": \"reprehenderit Excepteur\",\n \"about\": \"sed aliquip \",\n \"address\": \"eiusmod in pariatur voluptate\",\n \"license\": \"dolor non qui eu\",\n \"licenseIssued\": \"1966-11-04T12:10:46.013Z\",\n \"specializations\": [\n  \"tempor in do\",\n  \"sint cillum\"\n ],\n \"qualifications\": [\n  \"veniam pariatur commodo nisi\",\n  \"et eiusmod Excepteur\"\n ]\n}",
                         "cookie": [],
                         "_postman_previewlanguage": "json"
                       },
                       {
-                        "id": "489fa46b-40ac-46f0-adab-1df7afdefdfa",
+                        "id": "85abdd88-aa88-4ad8-9dfd-2168d0473737",
                         "name": "Bad Request",
                         "originalRequest": {
                           "url": {
@@ -329,7 +329,7 @@
                             "value": "application/json"
                           }
                         ],
-                        "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                        "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                         "cookie": [],
                         "_postman_previewlanguage": "json"
                       }
@@ -337,7 +337,7 @@
                     "event": []
                   },
                   {
-                    "id": "30b300a2-a144-4e3a-adcf-3491d2e40447",
+                    "id": "a7fa6e52-66fb-4912-a05e-1ade72218f2a",
                     "name": "Get detailed information of a professional",
                     "request": {
                       "name": "Get detailed information of a professional",
@@ -371,7 +371,7 @@
                     },
                     "response": [
                       {
-                        "id": "0ba0e9bc-48f9-48e6-85c7-7d02cfe941e3",
+                        "id": "6fb6ccc5-bb71-4820-8dfe-a73e3b2c4064",
                         "name": "OK",
                         "originalRequest": {
                           "url": {
@@ -403,12 +403,12 @@
                             "value": "application/json"
                           }
                         ],
-                        "body": "{\n \"_id\": \"voluptate Excepteur qui sit\",\n \"name\": \"cupidatat labore voluptate commodo\",\n \"rank\": -49866499.6219532,\n \"phone\": \"dolor laborum ipsum enim deserunt\",\n \"email\": \"tempor\",\n \"image\": \"consectetur\",\n \"about\": \"ad nostrud dolore in\",\n \"address\": \"ipsum\",\n \"license\": \"elit dolor\",\n \"licenseIssued\": \"1959-11-22T17:33:22.218Z\",\n \"specializations\": [\n  \"Duis nostrud velit\",\n  \"consectetur magna\"\n ],\n \"qualifications\": [\n  \"ea sunt do l\",\n  \"nisi labore\"\n ]\n}",
+                        "body": "{\n \"_id\": \"qui dolore ad\",\n \"name\": \"proident consectetur in minim\",\n \"rank\": -58701984.07586113,\n \"phone\": \"officia amet minim incididunt qui\",\n \"email\": \"est ut\",\n \"image\": \"deserunt labore magna quis\",\n \"about\": \"adipisicing culpa laboris qui dolor\",\n \"address\": \"dolor ea anim cupidatat\",\n \"license\": \"ex irure aute\",\n \"licenseIssued\": \"1961-06-11T13:13:51.162Z\",\n \"specializations\": [\n  \"et aliquip officia\",\n  \"Lorem consectetur Excepteur\"\n ],\n \"qualifications\": [\n  \"enim Duis cupidatat dolor\",\n  \"Duis ullamco minim non\"\n ]\n}",
                         "cookie": [],
                         "_postman_previewlanguage": "json"
                       },
                       {
-                        "id": "7d866734-d9f1-4b3a-bcff-e29d135fcf4c",
+                        "id": "ff107777-5f2b-4a04-a192-0024394c1a97",
                         "name": "Bad Request",
                         "originalRequest": {
                           "url": {
@@ -440,7 +440,7 @@
                             "value": "application/json"
                           }
                         ],
-                        "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                        "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                         "cookie": [],
                         "_postman_previewlanguage": "json"
                       }
@@ -454,7 +454,7 @@
             "event": []
           },
           {
-            "id": "1b834fa5-d8ca-4829-a9c8-b227d5fc1358",
+            "id": "81890be7-7300-4917-9639-8a3b1e50b066",
             "name": "Logs in a user",
             "request": {
               "name": "Logs in a user",
@@ -488,7 +488,7 @@
             },
             "response": [
               {
-                "id": "edede103-74be-4c31-b2b5-878c8d0d19bd",
+                "id": "d1dba559-1c4e-40c4-acb5-0c8a4b989d9d",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -516,12 +516,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"labore\",\n \"name\": \"proident enim quis\",\n \"message\": \"cillum commodo mollit qui\",\n \"jwt\": \"do sit\",\n \"role\": \"ut aute\",\n \"image\": \"occaecat reprehenderit ut sint Duis\"\n}",
+                "body": "{\n \"_id\": \"nulla reprehenderit eu ea exerci\",\n \"name\": \"Excepteur fugiat sit Lorem aliqua\",\n \"message\": \"irure sed Duis\",\n \"jwt\": \"\",\n \"role\": \"deserunt sit Lorem\",\n \"image\": \"proident consectetur\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "c0f55df3-ca09-4139-92f7-d47a8631bcbc",
+                "id": "4c99f2dc-1248-467a-be23-599ce8570edf",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -549,7 +549,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -557,7 +557,7 @@
             "event": []
           },
           {
-            "id": "b5a5e143-b280-4e58-8be9-77050aff5a6f",
+            "id": "d9cc9243-39a2-4ebf-8ce8-f04c3134d991",
             "name": "Logs outs a user",
             "request": {
               "name": "Logs outs a user",
@@ -581,7 +581,7 @@
             },
             "response": [
               {
-                "id": "4939a01a-268d-49d4-be26-2c9a8d7d3558",
+                "id": "dcf8e7e5-22c2-424a-95ac-8c333e241905",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -606,12 +606,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "3febba03-a03a-4270-a9c2-8502a05a6242",
+                "id": "7b0d5470-066d-4c77-a5c2-b47ca1022d0b",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -636,7 +636,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -644,11 +644,11 @@
             "event": []
           },
           {
-            "id": "fad0ec5a-5ee5-486a-91d9-b7c311f2e417",
+            "id": "601e08d5-a16f-4185-9933-f320d235f58d",
             "name": "communities",
             "item": [
               {
-                "id": "cd98abae-dfc6-4753-a70f-22270077ba39",
+                "id": "5a9310aa-4b2f-4bfb-b26f-b69a8b2212c1",
                 "name": "Get communities of a user",
                 "request": {
                   "name": "Get communities of a user",
@@ -672,7 +672,7 @@
                 },
                 "response": [
                   {
-                    "id": "8eadae71-16ab-441a-9be7-c82bf1bd52a3",
+                    "id": "3fe6f552-dc53-4ce9-acf5-a1c9110c5463",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -697,12 +697,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "[\n {\n  \"_id\": \"consectetur eiusmod\",\n  \"name\": \"veniam ipsum\",\n  \"image\": \"irure in et\"\n },\n {\n  \"_id\": \"tempor sunt anim Duis aliqua\",\n  \"name\": \"et do irure co\",\n  \"image\": \"consequat mollit est\"\n }\n]",
+                    "body": "[\n {\n  \"_id\": \"ad occaecat cillum velit qui\",\n  \"name\": \"reprehenderit\",\n  \"image\": \"exercitation velit adipisicing\"\n },\n {\n  \"_id\": \"dolor\",\n  \"name\": \"nulla ut veniam\",\n  \"image\": \"nisi\"\n }\n]",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "7f047376-196c-4fc2-b10f-fabe058006fb",
+                    "id": "8df7aff0-3e2b-45d8-974e-f9c1f543ce45",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -727,7 +727,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -735,7 +735,7 @@
                 "event": []
               },
               {
-                "id": "12c60a97-76d7-4564-ac3f-29d5005486e2",
+                "id": "115c2fa8-c9c0-443a-87a3-b72555217699",
                 "name": "Get suggested communities of a user",
                 "request": {
                   "name": "Get suggested communities of a user",
@@ -760,7 +760,7 @@
                 },
                 "response": [
                   {
-                    "id": "8705fd4a-9545-4961-80c0-8da61199a580",
+                    "id": "440b8644-ac93-4332-9bb2-973dbe8ea9bf",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -786,12 +786,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "[\n {\n  \"_id\": \"laboris dolore\",\n  \"name\": \"do cillum Excepteur quis\",\n  \"image\": \"reprehenderit qui commodo pariatur\"\n },\n {\n  \"_id\": \"laboris\",\n  \"name\": \"officia aliquip occaecat minim cillum\",\n  \"image\": \"consequat ea culpa labore\"\n }\n]",
+                    "body": "[\n {\n  \"_id\": \"dolor aliquip magna\",\n  \"name\": \"velit dolor consequat in\",\n  \"image\": \"nostrud irure c\"\n },\n {\n  \"_id\": \"consectetur\",\n  \"name\": \"ut sunt in\",\n  \"image\": \"dolore deserunt commodo tempor\"\n }\n]",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "bf3d2b1a-917a-4978-b4c9-715e0e5bdcaf",
+                    "id": "ac942dd1-56d2-4b9c-b432-683f07fd169d",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -817,7 +817,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -828,11 +828,11 @@
             "event": []
           },
           {
-            "id": "42048b4a-b703-4c69-a3cb-f81acf3cd6e6",
+            "id": "666a4773-a620-41fd-b33f-d727524f0b45",
             "name": "{user Id}",
             "item": [
               {
-                "id": "fcf6b6b8-2a15-4fa2-b6af-199e8444ef86",
+                "id": "8051f8b4-ac25-4ebe-83be-0532a52fde84",
                 "name": "Get posts by UserId",
                 "request": {
                   "name": "Get posts by UserId",
@@ -865,7 +865,7 @@
                 },
                 "response": [
                   {
-                    "id": "d2c75a70-1b63-4301-9007-ac5bd9c0330e",
+                    "id": "674bff6b-d213-4629-a099-6f04339e907d",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -896,12 +896,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "[\n {\n  \"_id\": \"tempor quis consequat cillu\",\n  \"title\": \"amet anim qui\",\n  \"content\": \"in dolor\",\n  \"asPseudo\": false,\n  \"tags\": [\n   \"et\",\n   \"aliquip ut exercitation in sint\"\n  ],\n  \"voteCount\": 96337575.71246293,\n  \"commentCount\": 25205877.171504557,\n  \"createdAt\": \"1980-12-11T05:08:21.969Z\",\n  \"community\": {\n   \"_id\": \"nostrud consequat deserunt ut non\",\n   \"name\": \"ad adipisicing deserunt ut\",\n   \"image\": \"ea\"\n  },\n  \"postedBy\": {\n   \"_id\": \"magna sed\",\n   \"name\": \"minim\",\n   \"image\": \"eiusmod sit id commodo in\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"dolore veniam tempor incididunt laborum\",\n    \"content\": \"ut occaecat dolore incididunt\",\n    \"asPseudo\": false,\n    \"voteCount\": \"irure dolore consectetur\",\n    \"replyCount\": -72667010.8418324,\n    \"createdAt\": \"1984-03-03T13:47:45.237Z\",\n    \"postedBy\": {\n     \"_id\": \"occaecat laboris sed\",\n     \"name\": \"sint\",\n     \"avatar\": \"amet ea enim\",\n     \"rank\": -20489333.762119606\n    },\n    \"parentPost\": {\n     \"_id\": \"incididunt aliqua ut id\",\n     \"title\": \"fugiat irure et\"\n    },\n    \"repliedTo\": \"esse\"\n   },\n   {\n    \"_id\": \"sunt nulla\",\n    \"content\": \"dolor ad cupidatat sed\",\n    \"asPseudo\": false,\n    \"voteCount\": \"cillum incididunt magna qui\",\n    \"replyCount\": -40390280.09357657,\n    \"createdAt\": \"1969-04-28T15:16:17.202Z\",\n    \"postedBy\": {\n     \"_id\": \"nostrud in enim exercitation tempor\",\n     \"name\": \"ut sit\",\n     \"avatar\": \"amet pariatur tempor\",\n     \"rank\": 9049311.07854034\n    },\n    \"parentPost\": {\n     \"_id\": \"eiusmod cillum\",\n     \"title\": \"nostrud\"\n    },\n    \"repliedTo\": \"ullamco in ut \"\n   }\n  ],\n  \"isLikedByCurrentUser\": true\n },\n {\n  \"_id\": \"ad dolor id\",\n  \"title\": \"eu officia consequat labore\",\n  \"content\": \"eu non ut adipisicing aliquip\",\n  \"asPseudo\": true,\n  \"tags\": [\n   \"sed cupidatat qui\",\n   \"ea Duis dolor aliqua\"\n  ],\n  \"voteCount\": -87719285.72263978,\n  \"commentCount\": 3285207.1320058405,\n  \"createdAt\": \"1986-03-04T18:54:02.458Z\",\n  \"community\": {\n   \"_id\": \"ullamco qui Excepteur dolore\",\n   \"name\": \"in ipsum aute\",\n   \"image\": \"sint ullamco\"\n  },\n  \"postedBy\": {\n   \"_id\": \"exe\",\n   \"name\": \"ipsum anim\",\n   \"image\": \"sint cupidatat\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"ipsum et eu in Lorem\",\n    \"content\": \"eu ex\",\n    \"asPseudo\": false,\n    \"voteCount\": \"tempor dolor Ut\",\n    \"replyCount\": -18511781.80098349,\n    \"createdAt\": \"2021-02-02T07:37:29.124Z\",\n    \"postedBy\": {\n     \"_id\": \"cillum irure nulla velit\",\n     \"name\": \"tempor pariatur\",\n     \"avatar\": \"mollit cillum\",\n     \"rank\": 3151159.6591195613\n    },\n    \"parentPost\": {\n     \"_id\": \"et amet\",\n     \"title\": \"et tempor enim irure\"\n    },\n    \"repliedTo\": \"in in\"\n   },\n   {\n    \"_id\": \"sed ullamco\",\n    \"content\": \"sunt esse\",\n    \"asPseudo\": true,\n    \"voteCount\": \"eiusmod Lorem enim dolor ullamco\",\n    \"replyCount\": 70291121.100045,\n    \"createdAt\": \"1984-08-08T15:25:58.098Z\",\n    \"postedBy\": {\n     \"_id\": \"mollit ipsum laboris sed\",\n     \"name\": \"ut culpa aliqua anim officia\",\n     \"avatar\": \"Excepteur sunt ullamco magna\",\n     \"rank\": -92112606.74888381\n    },\n    \"parentPost\": {\n     \"_id\": \"minim aute sint eiusmod\",\n     \"title\": \"eiusmod incididunt voluptate\"\n    },\n    \"repliedTo\": \"ullamco labore est\"\n   }\n  ],\n  \"isLikedByCurrentUser\": false\n }\n]",
+                    "body": "[\n {\n  \"_id\": \"aute\",\n  \"title\": \"Excepteur exercitation ea ullamco elit\",\n  \"content\": \"Lorem commodo\",\n  \"asPseudo\": true,\n  \"tags\": [\n   \"sunt\",\n   \"ad officia nostrud\"\n  ],\n  \"voteCount\": 38767511.05241233,\n  \"commentCount\": -2866155.9590646327,\n  \"createdAt\": \"1974-07-30T01:56:35.369Z\",\n  \"community\": {\n   \"_id\": \"mollit\",\n   \"name\": \"irure in sit exercitation\",\n   \"image\": \"consectetur\"\n  },\n  \"postedBy\": {\n   \"_id\": \"Excepteur labore nostrud laborum\",\n   \"name\": \"consequat in Excepteur\",\n   \"image\": \"mini\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"commodo voluptate Excepteur\",\n    \"content\": \"cupidatat Lorem\",\n    \"asPseudo\": false,\n    \"voteCount\": \"consectetur cupidatat veniam\",\n    \"replyCount\": 89604459.59745759,\n    \"createdAt\": \"2013-11-23T23:07:45.359Z\",\n    \"postedBy\": {\n     \"_id\": \"laboris commodo eu dolor\",\n     \"name\": \"incididunt elit tempor ea irure\",\n     \"avatar\": \"ex id\",\n     \"rank\": -12677226.058035448\n    },\n    \"parentPost\": {\n     \"_id\": \"tempor adipisicing do\",\n     \"title\": \"eiusmod occaecat anim officia\"\n    },\n    \"repliedTo\": \"non cillum ut\"\n   },\n   {\n    \"_id\": \"id exercitation proident eiusmod\",\n    \"content\": \"Lorem in minim\",\n    \"asPseudo\": true,\n    \"voteCount\": \"elit velit qui Lorem\",\n    \"replyCount\": -97120717.11776224,\n    \"createdAt\": \"1994-04-07T01:04:35.358Z\",\n    \"postedBy\": {\n     \"_id\": \"laboris\",\n     \"name\": \"adipisicing amet ea\",\n     \"avatar\": \"laboris aliqua cillum\",\n     \"rank\": -81459070.33060333\n    },\n    \"parentPost\": {\n     \"_id\": \"proident dolor in\",\n     \"title\": \"ut id Ut\"\n    },\n    \"repliedTo\": \"dolore ex velit Ut\"\n   }\n  ],\n  \"isLikedByCurrentUser\": true,\n  \"postType\": \"ullamco\"\n },\n {\n  \"_id\": \"ut proident voluptate Lorem mollit\",\n  \"title\": \"ad\",\n  \"content\": \"et deserunt\",\n  \"asPseudo\": false,\n  \"tags\": [\n   \"consectetur ad sed veniam\",\n   \"in commodo consectetur\"\n  ],\n  \"voteCount\": -81660061.02013226,\n  \"commentCount\": -1156550.357349053,\n  \"createdAt\": \"1995-11-13T16:11:09.966Z\",\n  \"community\": {\n   \"_id\": \"ipsum dolore incidi\",\n   \"name\": \"tempor eiusmod\",\n   \"image\": \"esse aliqua\"\n  },\n  \"postedBy\": {\n   \"_id\": \"aliquip\",\n   \"name\": \"veniam non sit\",\n   \"image\": \"ex dolor\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"in\",\n    \"content\": \"in ullamco\",\n    \"asPseudo\": true,\n    \"voteCount\": \"voluptate quis ea et\",\n    \"replyCount\": 69186873.82987297,\n    \"createdAt\": \"1988-11-26T20:14:01.502Z\",\n    \"postedBy\": {\n     \"_id\": \"ad irure\",\n     \"name\": \"id aliquip commodo laboris\",\n     \"avatar\": \"ex Lorem\",\n     \"rank\": 91043111.97383118\n    },\n    \"parentPost\": {\n     \"_id\": \"anim\",\n     \"title\": \"deserunt velit id\"\n    },\n    \"repliedTo\": \"Lorem ut\"\n   },\n   {\n    \"_id\": \"commodo Excepteur reprehenderit\",\n    \"content\": \"nisi dolor aliquip Lorem voluptate\",\n    \"asPseudo\": true,\n    \"voteCount\": \"est\",\n    \"replyCount\": -16066504.821790501,\n    \"createdAt\": \"2001-10-26T09:32:45.420Z\",\n    \"postedBy\": {\n     \"_id\": \"sunt mollit in sit anim\",\n     \"name\": \"elit\",\n     \"avatar\": \"cupidatat consectetur\",\n     \"rank\": -39710019.425503515\n    },\n    \"parentPost\": {\n     \"_id\": \"sunt proident quis amet\",\n     \"title\": \"adipisicing et\"\n    },\n    \"repliedTo\": \"consequat eiusmod et quis\"\n   }\n  ],\n  \"isLikedByCurrentUser\": true,\n  \"postType\": \"est sint fugiat Duis\"\n }\n]",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "bd1ac2cb-80ca-4651-a0ee-8385d0a817c9",
+                    "id": "3a433617-9f6f-4732-a8ec-0395e609d8b5",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -932,7 +932,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -940,7 +940,7 @@
                 "event": []
               },
               {
-                "id": "75efcc14-5574-4359-8c06-fa277228eb2b",
+                "id": "142b6831-6bef-4bfb-9673-725d2cfd9da1",
                 "name": "Get comments by UserId",
                 "request": {
                   "name": "Get comments by UserId",
@@ -973,7 +973,7 @@
                 },
                 "response": [
                   {
-                    "id": "0f0dd056-de7b-4eeb-b35c-6242b79c6efa",
+                    "id": "b20a5ba6-08fa-4f62-adff-680c5c159cd1",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -1004,12 +1004,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "[\n {\n  \"_id\": \"Ut id in deserunt\",\n  \"content\": \"in Lorem nulla\",\n  \"asPseudo\": true,\n  \"voteCount\": \"Excepteur non proident\",\n  \"replyCount\": -12359033.369460091,\n  \"createdAt\": \"1948-11-02T20:08:59.647Z\",\n  \"postedBy\": {\n   \"_id\": \"ad Ut ullamco\",\n   \"name\": \"cillum aliquip Ut\",\n   \"avatar\": \"qui\",\n   \"rank\": -19721842.91764374\n  },\n  \"parentPost\": {\n   \"_id\": \"sunt velit\",\n   \"title\": \"aliqua aliquip deserunt anim\"\n  },\n  \"repliedTo\": \"dolore labore mollit amet ex\"\n },\n {\n  \"_id\": \"cupidatat\",\n  \"content\": \"minim nisi\",\n  \"asPseudo\": true,\n  \"voteCount\": \"ea occaecat elit\",\n  \"replyCount\": 73404758.75715458,\n  \"createdAt\": \"2006-10-09T02:50:53.533Z\",\n  \"postedBy\": {\n   \"_id\": \"in cup\",\n   \"name\": \"sunt eu tempor\",\n   \"avatar\": \"proident enim\",\n   \"rank\": -82868898.50505759\n  },\n  \"parentPost\": {\n   \"_id\": \"incididunt sunt nulla id\",\n   \"title\": \"laborum magna\"\n  },\n  \"repliedTo\": \"commodo fugiat enim ut mollit\"\n }\n]",
+                    "body": "[\n {\n  \"_id\": \"dolor dolor\",\n  \"content\": \"in laboris sed\",\n  \"asPseudo\": false,\n  \"voteCount\": \"voluptate esse ea enim fugiat\",\n  \"replyCount\": 54544833.92281246,\n  \"createdAt\": \"1963-02-23T15:09:29.290Z\",\n  \"postedBy\": {\n   \"_id\": \"in\",\n   \"name\": \"commodo ips\",\n   \"avatar\": \"sed occaecat aliquip ipsum\",\n   \"rank\": 44519596.83252573\n  },\n  \"parentPost\": {\n   \"_id\": \"qui et\",\n   \"title\": \"eiusmod proident aliqua\"\n  },\n  \"repliedTo\": \"commodo laboris in dolor aute\"\n },\n {\n  \"_id\": \"reprehenderit adipisicing dolor dolor\",\n  \"content\": \"magna nostrud in\",\n  \"asPseudo\": false,\n  \"voteCount\": \"dolore sit in\",\n  \"replyCount\": 79686187.82205105,\n  \"createdAt\": \"1991-06-11T02:22:58.751Z\",\n  \"postedBy\": {\n   \"_id\": \"officia occaecat eu\",\n   \"name\": \"in\",\n   \"avatar\": \"ullamco exercitation\",\n   \"rank\": 1584162.1010762304\n  },\n  \"parentPost\": {\n   \"_id\": \"cillum quis\",\n   \"title\": \"Lorem sunt ad\"\n  },\n  \"repliedTo\": \"minim reprehenderit ad est ea\"\n }\n]",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "13c25b78-1e4a-4663-a8be-eb7419efab55",
+                    "id": "2f3e1095-f548-47ab-b5c2-38d2e983a262",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -1040,7 +1040,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -1051,7 +1051,7 @@
             "event": []
           },
           {
-            "id": "e7e9d5ca-5ac4-417c-8d4f-4f2bfe30efad",
+            "id": "f4d21114-18c5-47a8-88e0-7a2c64ac6779",
             "name": "Get tests by UserId",
             "request": {
               "name": "Get tests by UserId",
@@ -1076,7 +1076,7 @@
             },
             "response": [
               {
-                "id": "7c869a13-6856-4909-b2ab-373ae782445c",
+                "id": "86027035-2834-402f-b542-9922fe11dc27",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -1102,12 +1102,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "[\n {\n  \"_id\": \"aute veniam nulla commodo\",\n  \"testname\": \"cupidatat Ut est\",\n  \"status\": \"sit pariatur\",\n  \"scoreArray\": [\n   -83749393.95139557,\n   -54173764.09853345\n  ],\n  \"createdAt\": \"1969-10-14T18:22:36.021Z\"\n },\n {\n  \"_id\": \"ullamco ad\",\n  \"testname\": \"consectetur laboris consequat reprehenderit\",\n  \"status\": \"quis\",\n  \"scoreArray\": [\n   -45181393.74415986,\n   -32562960.85357371\n  ],\n  \"createdAt\": \"1973-07-08T23:47:05.373Z\"\n }\n]",
+                "body": "[\n {\n  \"_id\": \"do incididunt ipsum\",\n  \"testname\": \"laboris\",\n  \"status\": \"adipisicing\",\n  \"scoreArray\": [\n   24024082.075933203,\n   -8990586.454300553\n  ],\n  \"createdAt\": \"2012-04-13T14:58:01.684Z\"\n },\n {\n  \"_id\": \"sunt mollit incididunt sed in\",\n  \"testname\": \"in consequat amet quis labore\",\n  \"status\": \"veniam reprehenderit mollit sunt\",\n  \"scoreArray\": [\n   43393114.74337247,\n   -51866353.389868625\n  ],\n  \"createdAt\": \"1986-09-05T14:01:36.976Z\"\n }\n]",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "5a02ba56-a346-4a71-b261-8e83142dccd9",
+                "id": "eba22d67-0640-46ab-a851-c6a81b2f3273",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -1133,7 +1133,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -1141,7 +1141,7 @@
             "event": []
           },
           {
-            "id": "8b5a887e-8eab-4e78-b3a7-4572eca125fd",
+            "id": "4b1f52ad-38d8-4afd-9141-6e769463c63c",
             "name": "Join a user to a community",
             "request": {
               "name": "Join a user to a community",
@@ -1175,7 +1175,7 @@
             },
             "response": [
               {
-                "id": "16d39a8d-2e39-42ec-936f-7fc396008827",
+                "id": "39195fc6-76e3-4f6d-af51-2332038e77df",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -1207,12 +1207,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "f3a9dbb1-2a21-4c2e-9205-dc3246ea3de1",
+                "id": "dd30269a-e738-48f7-a112-f46cafa5d9fc",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -1244,7 +1244,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -1252,7 +1252,7 @@
             "event": []
           },
           {
-            "id": "4e548a86-a069-445c-96b3-8131f4bde492",
+            "id": "fda7f94e-78d5-4694-9337-b116bedbf20e",
             "name": "Get saved posts of an user",
             "request": {
               "name": "Get saved posts of an user",
@@ -1276,7 +1276,7 @@
             },
             "response": [
               {
-                "id": "b3c44459-a51c-403a-9b9e-8fb5972690f9",
+                "id": "77812bd5-e3fa-49ff-9e2e-81839792ea39",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -1301,12 +1301,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "[\n {\n  \"_id\": \"tempor quis consequat cillu\",\n  \"title\": \"amet anim qui\",\n  \"content\": \"in dolor\",\n  \"asPseudo\": false,\n  \"tags\": [\n   \"et\",\n   \"aliquip ut exercitation in sint\"\n  ],\n  \"voteCount\": 96337575.71246293,\n  \"commentCount\": 25205877.171504557,\n  \"createdAt\": \"1980-12-11T05:08:21.969Z\",\n  \"community\": {\n   \"_id\": \"nostrud consequat deserunt ut non\",\n   \"name\": \"ad adipisicing deserunt ut\",\n   \"image\": \"ea\"\n  },\n  \"postedBy\": {\n   \"_id\": \"magna sed\",\n   \"name\": \"minim\",\n   \"image\": \"eiusmod sit id commodo in\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"dolore veniam tempor incididunt laborum\",\n    \"content\": \"ut occaecat dolore incididunt\",\n    \"asPseudo\": false,\n    \"voteCount\": \"irure dolore consectetur\",\n    \"replyCount\": -72667010.8418324,\n    \"createdAt\": \"1984-03-03T13:47:45.237Z\",\n    \"postedBy\": {\n     \"_id\": \"occaecat laboris sed\",\n     \"name\": \"sint\",\n     \"avatar\": \"amet ea enim\",\n     \"rank\": -20489333.762119606\n    },\n    \"parentPost\": {\n     \"_id\": \"incididunt aliqua ut id\",\n     \"title\": \"fugiat irure et\"\n    },\n    \"repliedTo\": \"esse\"\n   },\n   {\n    \"_id\": \"sunt nulla\",\n    \"content\": \"dolor ad cupidatat sed\",\n    \"asPseudo\": false,\n    \"voteCount\": \"cillum incididunt magna qui\",\n    \"replyCount\": -40390280.09357657,\n    \"createdAt\": \"1969-04-28T15:16:17.202Z\",\n    \"postedBy\": {\n     \"_id\": \"nostrud in enim exercitation tempor\",\n     \"name\": \"ut sit\",\n     \"avatar\": \"amet pariatur tempor\",\n     \"rank\": 9049311.07854034\n    },\n    \"parentPost\": {\n     \"_id\": \"eiusmod cillum\",\n     \"title\": \"nostrud\"\n    },\n    \"repliedTo\": \"ullamco in ut \"\n   }\n  ],\n  \"isLikedByCurrentUser\": true\n },\n {\n  \"_id\": \"ad dolor id\",\n  \"title\": \"eu officia consequat labore\",\n  \"content\": \"eu non ut adipisicing aliquip\",\n  \"asPseudo\": true,\n  \"tags\": [\n   \"sed cupidatat qui\",\n   \"ea Duis dolor aliqua\"\n  ],\n  \"voteCount\": -87719285.72263978,\n  \"commentCount\": 3285207.1320058405,\n  \"createdAt\": \"1986-03-04T18:54:02.458Z\",\n  \"community\": {\n   \"_id\": \"ullamco qui Excepteur dolore\",\n   \"name\": \"in ipsum aute\",\n   \"image\": \"sint ullamco\"\n  },\n  \"postedBy\": {\n   \"_id\": \"exe\",\n   \"name\": \"ipsum anim\",\n   \"image\": \"sint cupidatat\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"ipsum et eu in Lorem\",\n    \"content\": \"eu ex\",\n    \"asPseudo\": false,\n    \"voteCount\": \"tempor dolor Ut\",\n    \"replyCount\": -18511781.80098349,\n    \"createdAt\": \"2021-02-02T07:37:29.124Z\",\n    \"postedBy\": {\n     \"_id\": \"cillum irure nulla velit\",\n     \"name\": \"tempor pariatur\",\n     \"avatar\": \"mollit cillum\",\n     \"rank\": 3151159.6591195613\n    },\n    \"parentPost\": {\n     \"_id\": \"et amet\",\n     \"title\": \"et tempor enim irure\"\n    },\n    \"repliedTo\": \"in in\"\n   },\n   {\n    \"_id\": \"sed ullamco\",\n    \"content\": \"sunt esse\",\n    \"asPseudo\": true,\n    \"voteCount\": \"eiusmod Lorem enim dolor ullamco\",\n    \"replyCount\": 70291121.100045,\n    \"createdAt\": \"1984-08-08T15:25:58.098Z\",\n    \"postedBy\": {\n     \"_id\": \"mollit ipsum laboris sed\",\n     \"name\": \"ut culpa aliqua anim officia\",\n     \"avatar\": \"Excepteur sunt ullamco magna\",\n     \"rank\": -92112606.74888381\n    },\n    \"parentPost\": {\n     \"_id\": \"minim aute sint eiusmod\",\n     \"title\": \"eiusmod incididunt voluptate\"\n    },\n    \"repliedTo\": \"ullamco labore est\"\n   }\n  ],\n  \"isLikedByCurrentUser\": false\n }\n]",
+                "body": "[\n {\n  \"_id\": \"aute\",\n  \"title\": \"Excepteur exercitation ea ullamco elit\",\n  \"content\": \"Lorem commodo\",\n  \"asPseudo\": true,\n  \"tags\": [\n   \"sunt\",\n   \"ad officia nostrud\"\n  ],\n  \"voteCount\": 38767511.05241233,\n  \"commentCount\": -2866155.9590646327,\n  \"createdAt\": \"1974-07-30T01:56:35.369Z\",\n  \"community\": {\n   \"_id\": \"mollit\",\n   \"name\": \"irure in sit exercitation\",\n   \"image\": \"consectetur\"\n  },\n  \"postedBy\": {\n   \"_id\": \"Excepteur labore nostrud laborum\",\n   \"name\": \"consequat in Excepteur\",\n   \"image\": \"mini\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"commodo voluptate Excepteur\",\n    \"content\": \"cupidatat Lorem\",\n    \"asPseudo\": false,\n    \"voteCount\": \"consectetur cupidatat veniam\",\n    \"replyCount\": 89604459.59745759,\n    \"createdAt\": \"2013-11-23T23:07:45.359Z\",\n    \"postedBy\": {\n     \"_id\": \"laboris commodo eu dolor\",\n     \"name\": \"incididunt elit tempor ea irure\",\n     \"avatar\": \"ex id\",\n     \"rank\": -12677226.058035448\n    },\n    \"parentPost\": {\n     \"_id\": \"tempor adipisicing do\",\n     \"title\": \"eiusmod occaecat anim officia\"\n    },\n    \"repliedTo\": \"non cillum ut\"\n   },\n   {\n    \"_id\": \"id exercitation proident eiusmod\",\n    \"content\": \"Lorem in minim\",\n    \"asPseudo\": true,\n    \"voteCount\": \"elit velit qui Lorem\",\n    \"replyCount\": -97120717.11776224,\n    \"createdAt\": \"1994-04-07T01:04:35.358Z\",\n    \"postedBy\": {\n     \"_id\": \"laboris\",\n     \"name\": \"adipisicing amet ea\",\n     \"avatar\": \"laboris aliqua cillum\",\n     \"rank\": -81459070.33060333\n    },\n    \"parentPost\": {\n     \"_id\": \"proident dolor in\",\n     \"title\": \"ut id Ut\"\n    },\n    \"repliedTo\": \"dolore ex velit Ut\"\n   }\n  ],\n  \"isLikedByCurrentUser\": true,\n  \"postType\": \"ullamco\"\n },\n {\n  \"_id\": \"ut proident voluptate Lorem mollit\",\n  \"title\": \"ad\",\n  \"content\": \"et deserunt\",\n  \"asPseudo\": false,\n  \"tags\": [\n   \"consectetur ad sed veniam\",\n   \"in commodo consectetur\"\n  ],\n  \"voteCount\": -81660061.02013226,\n  \"commentCount\": -1156550.357349053,\n  \"createdAt\": \"1995-11-13T16:11:09.966Z\",\n  \"community\": {\n   \"_id\": \"ipsum dolore incidi\",\n   \"name\": \"tempor eiusmod\",\n   \"image\": \"esse aliqua\"\n  },\n  \"postedBy\": {\n   \"_id\": \"aliquip\",\n   \"name\": \"veniam non sit\",\n   \"image\": \"ex dolor\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"in\",\n    \"content\": \"in ullamco\",\n    \"asPseudo\": true,\n    \"voteCount\": \"voluptate quis ea et\",\n    \"replyCount\": 69186873.82987297,\n    \"createdAt\": \"1988-11-26T20:14:01.502Z\",\n    \"postedBy\": {\n     \"_id\": \"ad irure\",\n     \"name\": \"id aliquip commodo laboris\",\n     \"avatar\": \"ex Lorem\",\n     \"rank\": 91043111.97383118\n    },\n    \"parentPost\": {\n     \"_id\": \"anim\",\n     \"title\": \"deserunt velit id\"\n    },\n    \"repliedTo\": \"Lorem ut\"\n   },\n   {\n    \"_id\": \"commodo Excepteur reprehenderit\",\n    \"content\": \"nisi dolor aliquip Lorem voluptate\",\n    \"asPseudo\": true,\n    \"voteCount\": \"est\",\n    \"replyCount\": -16066504.821790501,\n    \"createdAt\": \"2001-10-26T09:32:45.420Z\",\n    \"postedBy\": {\n     \"_id\": \"sunt mollit in sit anim\",\n     \"name\": \"elit\",\n     \"avatar\": \"cupidatat consectetur\",\n     \"rank\": -39710019.425503515\n    },\n    \"parentPost\": {\n     \"_id\": \"sunt proident quis amet\",\n     \"title\": \"adipisicing et\"\n    },\n    \"repliedTo\": \"consequat eiusmod et quis\"\n   }\n  ],\n  \"isLikedByCurrentUser\": true,\n  \"postType\": \"est sint fugiat Duis\"\n }\n]",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "9a42b61b-fdd5-44af-8559-429c15284824",
+                "id": "ae3ed2e7-a42d-4211-a634-ee2ebcb9fc0d",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -1331,7 +1331,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -1339,7 +1339,7 @@
             "event": []
           },
           {
-            "id": "946a6950-e0a2-4ed7-a056-945e9ecc9bcc",
+            "id": "3993976a-fa41-4bb9-83bd-c8f6f5781616",
             "name": "Get latest advice of an user from test info",
             "request": {
               "name": "Get latest advice of an user from test info",
@@ -1364,7 +1364,7 @@
             },
             "response": [
               {
-                "id": "82da1edc-1ac8-4938-8638-78ec34c74fd2",
+                "id": "c28a3a16-79ee-4417-a8e9-41cb762517a7",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -1390,12 +1390,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"aliquip culpa incididunt ut\",\n \"anxietyAdvice\": {\n  \"testId\": \"dolore officia\",\n  \"disease\": \"depression\",\n  \"messages\": [\n   \"esse minim ea aute\",\n   \"Excepteur minim reprehenderi\"\n  ],\n  \"advice\": [\n   \"adipisicing\",\n   \"est aliquip in Ut\"\n  ],\n  \"range\": {\n   \"min\": 23944553.460959822,\n   \"max\": 41288079.09312537\n  }\n },\n \"depressionAdvice\": {\n  \"testId\": \"sunt elit et cupidatat\",\n  \"disease\": \"stress\",\n  \"messages\": [\n   \"sed sint labore\",\n   \"Duis officia\"\n  ],\n  \"advice\": [\n   \"exercitation eu dolor\",\n   \"sit\"\n  ],\n  \"range\": {\n   \"min\": -24346321.982035458,\n   \"max\": -37590327.468333885\n  }\n },\n \"stressAdvice\": {\n  \"testId\": \"eu\",\n  \"disease\": \"depression\",\n  \"messages\": [\n   \"anim proident\",\n   \"lab\"\n  ],\n  \"advice\": [\n   \"laborum et irure\",\n   \"ul\"\n  ],\n  \"range\": {\n   \"min\": -10506259.494112104,\n   \"max\": -99506111.77862644\n  }\n }\n}",
+                "body": "{\n \"_id\": \"cillum quis ut culpa nulla\",\n \"anxietyAdvice\": {\n  \"testId\": \"velit dolore elit enim eiusmod\",\n  \"disease\": \"depression\",\n  \"messages\": [\n   \"esse dolore laborum\",\n   \"eu officia\"\n  ],\n  \"advice\": [\n   \"cillum\",\n   \"aliqua reprehenderit ullamco sed\"\n  ],\n  \"range\": {\n   \"min\": 22709171.470245555,\n   \"max\": 92276217.74715185\n  }\n },\n \"depressionAdvice\": {\n  \"testId\": \"id laboris deserunt\",\n  \"disease\": \"stress\",\n  \"messages\": [\n   \"pariatur cillum\",\n   \"sit laboris sunt minim reprehenderit\"\n  ],\n  \"advice\": [\n   \"pariatur consequat\",\n   \"eiusmod sed\"\n  ],\n  \"range\": {\n   \"min\": 90355345.85713485,\n   \"max\": 44534026.22830564\n  }\n },\n \"stressAdvice\": {\n  \"testId\": \"ad dolor ullamco consectetur sit\",\n  \"disease\": \"anxiety\",\n  \"messages\": [\n   \"culpa\",\n   \"dolor anim deserunt\"\n  ],\n  \"advice\": [\n   \"aute nostrud\",\n   \"occaecat nostrud labore\"\n  ],\n  \"range\": {\n   \"min\": -23665418.72682117,\n   \"max\": 55202271.80398196\n  }\n }\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "bd95edc1-cce6-400e-b7ad-fbb0fb532c77",
+                "id": "5aba918b-aff9-4e7c-b77b-c7718dc33c1e",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -1421,7 +1421,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -1429,7 +1429,7 @@
             "event": []
           },
           {
-            "id": "8928639e-f242-4162-b1a2-9709ff8755f4",
+            "id": "b82b714e-dfb5-4cd7-baf5-6edaa9fdefc9",
             "name": "Register a push notification",
             "request": {
               "name": "Register a push notification",
@@ -1464,7 +1464,7 @@
             },
             "response": [
               {
-                "id": "b68d13f9-3387-4d78-990d-373e54eca51c",
+                "id": "5011284d-3445-4b19-a34e-c357530e7a6e",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -1498,7 +1498,7 @@
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "60be8c57-e686-4fd5-b5ce-deffbec49169",
+                "id": "6470a440-c034-479f-bb1a-61e311daadb8",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -1527,7 +1527,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -1535,7 +1535,7 @@
             "event": []
           },
           {
-            "id": "66226716-9389-4428-ad90-5419fd96deaa",
+            "id": "c77e50c4-e80c-4eac-aece-b144fba6f16e",
             "name": "get notifications",
             "request": {
               "name": "get notifications",
@@ -1559,7 +1559,7 @@
             },
             "response": [
               {
-                "id": "a52279ff-8b43-4a88-82db-2d6a11b25c47",
+                "id": "44102e4d-a53b-4f07-a749-3ab1c657da04",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -1584,12 +1584,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "[\n {\n  \"message\": \"non nostrud cillum\",\n  \"content\": \"minim in ut qui\",\n  \"createdAt\": \"1987-03-19T04:26:46.719Z\"\n },\n {\n  \"message\": \"commodo officia sint ipsum\",\n  \"content\": \"elit\",\n  \"createdAt\": \"1978-01-19T22:32:22.420Z\"\n }\n]",
+                "body": "[\n {\n  \"message\": \"nisi Duis dolor cupidatat laboris\",\n  \"content\": \"irure\",\n  \"createdAt\": \"1943-09-17T18:49:57.517Z\"\n },\n {\n  \"message\": \"id consectetur sunt\",\n  \"content\": \"commodo\",\n  \"createdAt\": \"2011-02-08T16:13:38.008Z\"\n }\n]",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "4f9d6f6d-432a-44c2-9246-cc9605d6afc6",
+                "id": "dd561b4d-9799-489d-ba10-be6a3ec595e2",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -1614,7 +1614,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -1622,7 +1622,7 @@
             "event": []
           },
           {
-            "id": "739f0f9b-ca04-48ba-8205-acd4f84c16bf",
+            "id": "39d3f1d6-acc3-4881-956a-d3daf5dcdb50",
             "name": "Get suggested professionals",
             "request": {
               "name": "Get suggested professionals",
@@ -1652,7 +1652,7 @@
             },
             "response": [
               {
-                "id": "7bf10ead-fa3d-4a16-a16b-62496e90f38b",
+                "id": "f763a54e-90c0-46e8-863a-529fb6e4f6f7",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -1682,12 +1682,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "[\n {\n  \"_id\": \"Ut in\",\n  \"name\": \"amet Lorem anim ipsum\",\n  \"rank\": -11527388.268464461,\n  \"phone\": \"qui laborum ea\",\n  \"email\": \"exercitation quis qui laboris\",\n  \"image\": \"dolore Excepteur sint ea\",\n  \"about\": \"voluptate sit laborum\",\n  \"address\": \"Ut sint ipsum est\",\n  \"license\": \"in tempor ex ipsum Duis\",\n  \"licenseIssued\": \"1982-09-28T08:45:57.231Z\",\n  \"specializations\": [\n   \"exercitation\",\n   \"occaecat\"\n  ],\n  \"qualifications\": [\n   \"dolor proident\",\n   \"aliqua aliquip\"\n  ]\n },\n {\n  \"_id\": \"Ut nulla nostrud\",\n  \"name\": \"nisi et\",\n  \"rank\": 10739288.872379094,\n  \"phone\": \"proident tempor\",\n  \"email\": \"cillum tempor ut\",\n  \"image\": \"qui ut occaecat\",\n  \"about\": \"fugiat pariatur non ea do\",\n  \"address\": \"cupidatat\",\n  \"license\": \"ut\",\n  \"licenseIssued\": \"1962-03-11T16:14:13.756Z\",\n  \"specializations\": [\n   \"est elit Lorem\",\n   \"enim commodo quis veniam sed\"\n  ],\n  \"qualifications\": [\n   \"pariatur ad commodo deserunt\",\n   \"consectetur aliquip irure\"\n  ]\n }\n]",
+                "body": "[\n {\n  \"_id\": \"ad est aliquip\",\n  \"name\": \"sint est elit\",\n  \"rank\": -94988374.05213468,\n  \"phone\": \"officia aute nostrud ea\",\n  \"email\": \"ex ut enim\",\n  \"image\": \"consectetur sunt\",\n  \"about\": \"consectetur sed ut Lorem exercitation\",\n  \"address\": \"occaecat\",\n  \"license\": \"ea ullamco\",\n  \"licenseIssued\": \"2012-08-29T13:40:23.717Z\",\n  \"specializations\": [\n   \"enim et\",\n   \"ullamco eu\"\n  ],\n  \"qualifications\": [\n   \"laboris aute irure dolor\",\n   \"non\"\n  ]\n },\n {\n  \"_id\": \"eiusmod sit fugiat\",\n  \"name\": \"irure aliquip et nulla\",\n  \"rank\": 61920848.71460649,\n  \"phone\": \"laborum cupidatat non Duis aliquip\",\n  \"email\": \"non dolore\",\n  \"image\": \"est Excepteur\",\n  \"about\": \"\",\n  \"address\": \"cupidatat\",\n  \"license\": \"sunt esse dolor Lorem\",\n  \"licenseIssued\": \"1958-04-24T13:47:55.117Z\",\n  \"specializations\": [\n   \"Duis sint\",\n   \"cupidatat velit\"\n  ],\n  \"qualifications\": [\n   \"incididunt eu\",\n   \"reprehenderit\"\n  ]\n }\n]",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "92889242-1665-4d86-b116-d504a416c1d0",
+                "id": "23542f78-8fa5-4bd1-a835-5eaec5d68b45",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -1717,7 +1717,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -1728,15 +1728,15 @@
         "event": []
       },
       {
-        "id": "39764477-f71f-462a-a4ba-a07f1ddd5828",
+        "id": "0655a1da-39ae-4be0-8dcb-a49898fc805f",
         "name": "post",
         "item": [
           {
-            "id": "27b5e4dc-0122-4caa-935a-9998f3787a75",
+            "id": "a144e765-8216-4e4b-8cc0-c52e52a7256a",
             "name": "{post Id}",
             "item": [
               {
-                "id": "90a47118-103d-4d8b-a1fb-dd39853dde47",
+                "id": "e6a99d9e-d26d-492a-9d74-5c9397298548",
                 "name": "Get post by Id",
                 "request": {
                   "name": "Get post by Id",
@@ -1774,7 +1774,7 @@
                 },
                 "response": [
                   {
-                    "id": "5768f6fe-1740-42d4-8f5b-580873ff4973",
+                    "id": "57927b5a-b1e7-4ebe-8630-86ca0fea3084",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -1809,12 +1809,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"_id\": \"dolor consectetur sunt laboris\",\n \"title\": \"sed aliquip aliqua Duis\",\n \"content\": \"dolore qui Ut ea\",\n \"asPseudo\": false,\n \"tags\": [\n  \"et Ut exercitation Lorem enim\",\n  \"minim qui dolor deserunt\"\n ],\n \"voteCount\": -38396510.96605188,\n \"commentCount\": -42174272.892944,\n \"createdAt\": \"1964-12-07T13:12:46.348Z\",\n \"community\": {\n  \"_id\": \"ea sit voluptate\",\n  \"name\": \"incididunt esse\",\n  \"image\": \"reprehenderit\"\n },\n \"postedBy\": {\n  \"_id\": \"quis laboris\",\n  \"name\": \"irure in Duis\",\n  \"image\": \"eiusmod laborum\"\n },\n \"comments\": [\n  {\n   \"_id\": \"minim nisi proident\",\n   \"content\": \"ullamco sed voluptate id\",\n   \"asPseudo\": true,\n   \"voteCount\": \"eiusmod\",\n   \"replyCount\": -17956361.9411287,\n   \"createdAt\": \"1996-03-29T05:58:00.401Z\",\n   \"postedBy\": {\n    \"_id\": \"dolor\",\n    \"name\": \"magna ea mollit\",\n    \"avatar\": \"aute cupidatat proid\",\n    \"rank\": -24603886.287130013\n   },\n   \"parentPost\": {\n    \"_id\": \"dolor nostrud dolore\",\n    \"title\": \"nostrud in tempor dolore\"\n   },\n   \"repliedTo\": \"in\"\n  },\n  {\n   \"_id\": \"minim occaecat adipisicing\",\n   \"content\": \"dolore qui anim\",\n   \"asPseudo\": false,\n   \"voteCount\": \"laboris sunt qui\",\n   \"replyCount\": 63245692.80766031,\n   \"createdAt\": \"1994-11-12T10:30:06.361Z\",\n   \"postedBy\": {\n    \"_id\": \"dolore ad magna Lorem\",\n    \"name\": \"Excepteur qui\",\n    \"avatar\": \"ipsum eu reprehenderit\",\n    \"rank\": -83464729.94062681\n   },\n   \"parentPost\": {\n    \"_id\": \"eiusmod tempor in nostrud ullamco\",\n    \"title\": \"cillum sit anim voluptate\"\n   },\n   \"repliedTo\": \"Ut sed laborum nulla culpa\"\n  }\n ],\n \"isLikedByCurrentUser\": true\n}",
+                    "body": "{\n \"_id\": \"labore minim dolore aliquip\",\n \"title\": \"Excepteur incididunt Ut exercitation irure\",\n \"content\": \"veniam culpa quis\",\n \"asPseudo\": true,\n \"tags\": [\n  \"incidid\",\n  \"consectetur velit\"\n ],\n \"voteCount\": 14984527.789712891,\n \"commentCount\": -20780389.214648306,\n \"createdAt\": \"1984-06-09T00:53:47.047Z\",\n \"community\": {\n  \"_id\": \"sit deserunt proident labori\",\n  \"name\": \"nisi id\",\n  \"image\": \"amet laboris\"\n },\n \"postedBy\": {\n  \"_id\": \"esse officia in\",\n  \"name\": \"quis\",\n  \"image\": \"sed dolore tempor\"\n },\n \"comments\": [\n  {\n   \"_id\": \"consectetur Lorem ipsum adipisicing\",\n   \"content\": \"cupidatat magna irure fugiat dolor\",\n   \"asPseudo\": false,\n   \"voteCount\": \"velit enim ipsum\",\n   \"replyCount\": -33579792.96513305,\n   \"createdAt\": \"1958-04-12T19:34:45.414Z\",\n   \"postedBy\": {\n    \"_id\": \"do molli\",\n    \"name\": \"occaecat\",\n    \"avatar\": \"Ut et\",\n    \"rank\": -89551642.05810298\n   },\n   \"parentPost\": {\n    \"_id\": \"amet sunt ani\",\n    \"title\": \"culpa dolor deserunt\"\n   },\n   \"repliedTo\": \"eu consequat\"\n  },\n  {\n   \"_id\": \"do aliquip\",\n   \"content\": \"cupidatat reprehenderit sunt et voluptate\",\n   \"asPseudo\": false,\n   \"voteCount\": \"sed sit\",\n   \"replyCount\": -33725104.49004413,\n   \"createdAt\": \"1975-11-05T05:23:16.965Z\",\n   \"postedBy\": {\n    \"_id\": \"ut esse deserunt minim amet\",\n    \"name\": \"Ut amet tempor est\",\n    \"avatar\": \"mollit aliquip ut consequat\",\n    \"rank\": 92770075.58001876\n   },\n   \"parentPost\": {\n    \"_id\": \"aliquip\",\n    \"title\": \"adipis\"\n   },\n   \"repliedTo\": \"U\"\n  }\n ],\n \"isLikedByCurrentUser\": true,\n \"postType\": \"in aute tempor elit consectetur\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "1af73383-608c-42a0-8e24-1f50c5b135ab",
+                    "id": "8e790c65-1d82-4a9a-bfe9-d449e7b73465",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -1849,7 +1849,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -1857,7 +1857,7 @@
                 "event": []
               },
               {
-                "id": "76d5eebc-b573-4818-8441-ef040d2a0938",
+                "id": "11b32192-d145-46c3-9dfe-1cde09ce4f0c",
                 "name": "Save a post by user",
                 "request": {
                   "name": "Save a post by user",
@@ -1896,7 +1896,7 @@
                 },
                 "response": [
                   {
-                    "id": "29539292-d659-4b68-9100-3238def298fc",
+                    "id": "851e9893-6144-4f31-9f6e-7965d21051d9",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -1932,12 +1932,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "2d448e1e-32b1-4772-a351-66f87b17396d",
+                    "id": "9f93fa4c-1dd5-4c5a-8658-ecd6b0b94f55",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -1973,7 +1973,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -1981,7 +1981,7 @@
                 "event": []
               },
               {
-                "id": "f291b762-906f-4e73-8646-9934468565f5",
+                "id": "ecfd65c0-9f2e-41a8-9d98-7245d5a1bfbf",
                 "name": "Like a post by user",
                 "request": {
                   "name": "Like a post by user",
@@ -2021,7 +2021,7 @@
                 },
                 "response": [
                   {
-                    "id": "d0da1685-1f04-49df-91d5-600a05d5e744",
+                    "id": "4863a874-6ab4-46e8-9c9e-385b0950da1b",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -2057,12 +2057,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "fa89b866-1eab-4919-8361-bf0a755ed5c4",
+                    "id": "9b6fc1b7-85e5-4393-a374-03583c5be6f1",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -2098,7 +2098,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -2106,11 +2106,11 @@
                 "event": []
               },
               {
-                "id": "f477b123-c06c-4545-b4ac-b5747ea247ca",
+                "id": "053d7d6c-dd31-4d42-bf9a-5e3de62ff5ba",
                 "name": "comment",
                 "item": [
                   {
-                    "id": "dcb57027-d779-42b0-be88-8965849f1ba4",
+                    "id": "f0af30bb-e73a-4b28-9913-15a021278019",
                     "name": "Create a comment",
                     "request": {
                       "name": "Create a comment",
@@ -2154,7 +2154,7 @@
                     },
                     "response": [
                       {
-                        "id": "a9066bf7-42f5-4c71-90d7-196173bf6fc5",
+                        "id": "f53de82f-48de-4173-9943-bb269dd14b45",
                         "name": "OK",
                         "originalRequest": {
                           "url": {
@@ -2194,7 +2194,7 @@
                         "_postman_previewlanguage": "json"
                       },
                       {
-                        "id": "d009e4be-071c-4159-9351-ea024e07dd10",
+                        "id": "53deb303-6ff3-46ed-a3b5-0eebe7b3aae4",
                         "name": "Bad Request",
                         "originalRequest": {
                           "url": {
@@ -2229,7 +2229,7 @@
                             "value": "application/json"
                           }
                         ],
-                        "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                        "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                         "cookie": [],
                         "_postman_previewlanguage": "json"
                       }
@@ -2237,11 +2237,11 @@
                     "event": []
                   },
                   {
-                    "id": "06ea15c0-3b2b-4705-a202-11db04ff6470",
+                    "id": "fba815b2-c161-4a7f-9c48-ef123da73a65",
                     "name": "{comment Id}",
                     "item": [
                       {
-                        "id": "aa290f4b-cb3a-4ad8-83ba-67e96ff90567",
+                        "id": "dfeb731b-2134-4fa4-b808-31f15c39a310",
                         "name": "Create a reply",
                         "request": {
                           "name": "Create a reply",
@@ -2294,7 +2294,7 @@
                         },
                         "response": [
                           {
-                            "id": "cdd5310e-60d1-4782-88c4-1a32942c33a9",
+                            "id": "2bda80a8-2776-479e-840c-5eeebdc5a30f",
                             "name": "OK",
                             "originalRequest": {
                               "url": {
@@ -2340,7 +2340,7 @@
                             "_postman_previewlanguage": "json"
                           },
                           {
-                            "id": "796c81b6-0cd9-48b6-b1cd-4d5e7f5422fe",
+                            "id": "76e77cd1-d682-46ef-840c-737f0d8e5bbf",
                             "name": "Bad Request",
                             "originalRequest": {
                               "url": {
@@ -2381,7 +2381,7 @@
                                 "value": "application/json"
                               }
                             ],
-                            "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                            "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                           }
@@ -2389,7 +2389,7 @@
                         "event": []
                       },
                       {
-                        "id": "74a9e2d7-0a6f-41e2-8528-0a4745b983bf",
+                        "id": "68819baa-51c5-444c-bdc3-c05dee36ec3e",
                         "name": "Get replies of a comment",
                         "request": {
                           "name": "Get replies of a comment",
@@ -2431,7 +2431,7 @@
                         },
                         "response": [
                           {
-                            "id": "cbf66ec9-21bf-4def-95cc-ac1ff250221f",
+                            "id": "930abd32-a5ba-4d18-a17b-98259017acce",
                             "name": "OK",
                             "originalRequest": {
                               "url": {
@@ -2473,7 +2473,7 @@
                             "_postman_previewlanguage": "json"
                           },
                           {
-                            "id": "febb5fbe-23cd-4590-9054-2a203a08dc85",
+                            "id": "76417728-71f8-4714-a5a4-74604f81f6e9",
                             "name": "Bad Request",
                             "originalRequest": {
                               "url": {
@@ -2510,7 +2510,7 @@
                                 "value": "application/json"
                               }
                             ],
-                            "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                            "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                           }
@@ -2527,7 +2527,7 @@
             "event": []
           },
           {
-            "id": "3043b4ca-aa3a-49c4-b8ad-65de2aa13037",
+            "id": "bcea39c4-c09a-45c8-ace2-6e1fe425282f",
             "name": "Create a post",
             "request": {
               "name": "Create a post",
@@ -2556,12 +2556,12 @@
               "auth": null,
               "body": {
                 "mode": "raw",
-                "raw": "{\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"tags\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"voteCount\": \"<number>\",\n    \"commentCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"community\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"postedBy\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"comments\": [\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        },\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        }\n    ],\n    \"isLikedByCurrentUser\": \"<boolean>\"\n}"
+                "raw": "{\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"tags\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"voteCount\": \"<number>\",\n    \"commentCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"community\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"postedBy\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"comments\": [\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        },\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        }\n    ],\n    \"isLikedByCurrentUser\": \"<boolean>\",\n    \"postType\": \"<string>\"\n}"
               }
             },
             "response": [
               {
-                "id": "5379b82d-24cc-4907-9cdf-5e3113de16d0",
+                "id": "0529e62f-4a3f-4714-914d-4dc09fe47149",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -2578,7 +2578,7 @@
                   "method": "POST",
                   "body": {
                     "mode": "raw",
-                    "raw": "{\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"tags\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"voteCount\": \"<number>\",\n    \"commentCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"community\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"postedBy\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"comments\": [\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        },\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        }\n    ],\n    \"isLikedByCurrentUser\": \"<boolean>\"\n}"
+                    "raw": "{\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"tags\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"voteCount\": \"<number>\",\n    \"commentCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"community\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"postedBy\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"comments\": [\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        },\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        }\n    ],\n    \"isLikedByCurrentUser\": \"<boolean>\",\n    \"postType\": \"<string>\"\n}"
                   }
                 },
                 "status": "OK",
@@ -2589,12 +2589,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"<string>\",\n \"title\": \"<string>\",\n \"content\": \"<string>\",\n \"asPseudo\": \"<boolean>\",\n \"tags\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"voteCount\": \"<number>\",\n \"commentCount\": \"<number>\",\n \"createdAt\": \"<dateTime>\",\n \"community\": {\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"image\": \"<string>\"\n },\n \"postedBy\": {\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"image\": \"<string>\"\n },\n \"comments\": [\n  {\n   \"_id\": \"<string>\",\n   \"content\": \"<string>\",\n   \"asPseudo\": \"<boolean>\",\n   \"voteCount\": \"<string>\",\n   \"replyCount\": \"<number>\",\n   \"createdAt\": \"<dateTime>\",\n   \"postedBy\": {\n    \"_id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"avatar\": \"<string>\",\n    \"rank\": \"<number>\"\n   },\n   \"parentPost\": {\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\"\n   },\n   \"repliedTo\": \"<string>\"\n  },\n  {\n   \"_id\": \"<string>\",\n   \"content\": \"<string>\",\n   \"asPseudo\": \"<boolean>\",\n   \"voteCount\": \"<string>\",\n   \"replyCount\": \"<number>\",\n   \"createdAt\": \"<dateTime>\",\n   \"postedBy\": {\n    \"_id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"avatar\": \"<string>\",\n    \"rank\": \"<number>\"\n   },\n   \"parentPost\": {\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\"\n   },\n   \"repliedTo\": \"<string>\"\n  }\n ],\n \"isLikedByCurrentUser\": \"<boolean>\"\n}",
+                "body": "{\n \"_id\": \"<string>\",\n \"title\": \"<string>\",\n \"content\": \"<string>\",\n \"asPseudo\": \"<boolean>\",\n \"tags\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"voteCount\": \"<number>\",\n \"commentCount\": \"<number>\",\n \"createdAt\": \"<dateTime>\",\n \"community\": {\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"image\": \"<string>\"\n },\n \"postedBy\": {\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"image\": \"<string>\"\n },\n \"comments\": [\n  {\n   \"_id\": \"<string>\",\n   \"content\": \"<string>\",\n   \"asPseudo\": \"<boolean>\",\n   \"voteCount\": \"<string>\",\n   \"replyCount\": \"<number>\",\n   \"createdAt\": \"<dateTime>\",\n   \"postedBy\": {\n    \"_id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"avatar\": \"<string>\",\n    \"rank\": \"<number>\"\n   },\n   \"parentPost\": {\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\"\n   },\n   \"repliedTo\": \"<string>\"\n  },\n  {\n   \"_id\": \"<string>\",\n   \"content\": \"<string>\",\n   \"asPseudo\": \"<boolean>\",\n   \"voteCount\": \"<string>\",\n   \"replyCount\": \"<number>\",\n   \"createdAt\": \"<dateTime>\",\n   \"postedBy\": {\n    \"_id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"avatar\": \"<string>\",\n    \"rank\": \"<number>\"\n   },\n   \"parentPost\": {\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\"\n   },\n   \"repliedTo\": \"<string>\"\n  }\n ],\n \"isLikedByCurrentUser\": \"<boolean>\",\n \"postType\": \"<string>\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "3fe39124-7f92-4d2b-822d-99bf4bbf4e37",
+                "id": "a3fd01f6-1a26-4c1b-a9dd-850f5abee525",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -2611,7 +2611,7 @@
                   "method": "POST",
                   "body": {
                     "mode": "raw",
-                    "raw": "{\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"tags\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"voteCount\": \"<number>\",\n    \"commentCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"community\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"postedBy\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"comments\": [\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        },\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        }\n    ],\n    \"isLikedByCurrentUser\": \"<boolean>\"\n}"
+                    "raw": "{\n    \"_id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"tags\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"voteCount\": \"<number>\",\n    \"commentCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"community\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"postedBy\": {\n        \"_id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"image\": \"<string>\"\n    },\n    \"comments\": [\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        },\n        {\n            \"_id\": \"<string>\",\n            \"content\": \"<string>\",\n            \"asPseudo\": \"<boolean>\",\n            \"voteCount\": \"<string>\",\n            \"replyCount\": \"<number>\",\n            \"createdAt\": \"<dateTime>\",\n            \"postedBy\": {\n                \"_id\": \"<string>\",\n                \"name\": \"<string>\",\n                \"avatar\": \"<string>\",\n                \"rank\": \"<number>\"\n            },\n            \"parentPost\": {\n                \"_id\": \"<string>\",\n                \"title\": \"<string>\"\n            },\n            \"repliedTo\": \"<string>\"\n        }\n    ],\n    \"isLikedByCurrentUser\": \"<boolean>\",\n    \"postType\": \"<string>\"\n}"
                   }
                 },
                 "status": "Internal Server Error",
@@ -2622,7 +2622,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -2630,7 +2630,7 @@
             "event": []
           },
           {
-            "id": "63fd343e-4343-408e-91b5-c87b5e1fcc38",
+            "id": "1b1e7d7a-21d4-49f2-ad4d-2f3e63e76094",
             "name": "Get feed of an user",
             "request": {
               "name": "Get feed of an user",
@@ -2660,7 +2660,7 @@
             },
             "response": [
               {
-                "id": "fef208bd-2ceb-4719-9bfa-5d107c4b97c1",
+                "id": "1863671d-ab56-40ea-8f12-3119cd6b7c5e",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -2690,12 +2690,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "[\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\"\n },\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\"\n }\n]",
+                "body": "[\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\",\n  \"postType\": \"<string>\"\n },\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\",\n  \"postType\": \"<string>\"\n }\n]",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "71c04fd8-78ba-4a79-a647-29f9ac674a58",
+                "id": "f3a306e2-6a75-4841-8c9c-55aecc3a930f",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -2725,7 +2725,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -2748,11 +2748,11 @@
         "event": []
       },
       {
-        "id": "ce4352f4-fd1f-48ab-96b6-92f592c79b0b",
+        "id": "1c8bad83-dfb1-44be-8462-f41038f91df9",
         "name": "community/{community Id}",
         "item": [
           {
-            "id": "6d1acf7e-6288-4b3f-a93f-0d27c6ad4681",
+            "id": "eb9a041f-b079-4048-ad02-ee18b40eab73",
             "name": "Get community information",
             "request": {
               "name": "Get community information",
@@ -2785,7 +2785,7 @@
             },
             "response": [
               {
-                "id": "241cf345-78ae-43c1-a553-3c70b3462e3a",
+                "id": "47418ea8-03c8-4572-ab16-b0a9cbfa7ab5",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -2816,12 +2816,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"ut labore\",\n \"name\": \"occaeca\",\n \"description\": \"in ut Ut Lorem\",\n \"image\": \"dolore amet\",\n \"members\": -50277281.811160535,\n \"hasJoined\": false,\n \"tags\": [\n  \"incididunt id\",\n  \"in aliquip est\"\n ]\n}",
+                "body": "{\n \"_id\": \"consectetur ut nulla\",\n \"name\": \"consequat sunt\",\n \"description\": \"velit exercitation officia\",\n \"image\": \"eu proident ut\",\n \"members\": 76580766.58100167,\n \"hasJoined\": false,\n \"tags\": [\n  \"dolor cillum do\",\n  \"nisi elit et\"\n ]\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "c4b27438-1276-404d-8d1a-6fa60bb703b0",
+                "id": "d8307eda-83e9-491b-b5b2-bcc3b8818a0d",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -2852,7 +2852,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -2860,7 +2860,7 @@
             "event": []
           },
           {
-            "id": "298ebd2f-1e6c-4cc3-8bb3-f6a842de7bae",
+            "id": "faa34caa-6753-4da8-b0ff-0026e36f5b20",
             "name": "Get feed of a community",
             "request": {
               "name": "Get feed of a community",
@@ -2899,7 +2899,7 @@
             },
             "response": [
               {
-                "id": "1408ded8-aab3-4704-94fd-083ab24ac6c6",
+                "id": "ca6533c2-2602-4ccb-844a-d1bc092c3e33",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -2935,12 +2935,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "[\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\"\n },\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\"\n }\n]",
+                "body": "[\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\",\n  \"postType\": \"<string>\"\n },\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\",\n  \"postType\": \"<string>\"\n }\n]",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "e4480cdb-2abd-410e-a9bb-e7ac3d843acf",
+                "id": "d8e4e070-4bc1-4ea8-988a-ee2f7d3319cf",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -2976,7 +2976,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -2984,7 +2984,7 @@
             "event": []
           },
           {
-            "id": "52d2ad23-f8c5-4835-ac95-04e2c0648424",
+            "id": "7a59f874-0e85-4871-b34f-cfb8adf8ec30",
             "name": "Get detailed community information",
             "request": {
               "name": "Get detailed community information",
@@ -3017,7 +3017,7 @@
             },
             "response": [
               {
-                "id": "3e7fd080-2708-4e54-b100-797322269ae0",
+                "id": "d86a6992-e77d-4c73-bd65-fd61fe690504",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -3048,12 +3048,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"commodo occaecat consequat deserunt\",\n \"name\": \"pariatur et veniam\",\n \"detailedDescription\": \"aliquip dolore esse labore\",\n \"links\": [\n  {\n   \"link\": \"in aliquip amet nisi sed\",\n   \"title\": \"fugiat\"\n  },\n  {\n   \"link\": \"est ad ex\",\n   \"title\": \"commodo enim Ut reprehenderit\"\n  }\n ],\n \"images\": [\n  \"consequ\",\n  \"velit commodo\"\n ],\n \"symptoms\": [\n  \"sint sed reprehenderit id aliqua\",\n  \"minim ea proident deserunt\"\n ],\n \"toDo\": [\n  \"anim mollit in\",\n  \"esse\"\n ]\n}",
+                "body": "{\n \"_id\": \"do reprehenderit nulla ex\",\n \"name\": \"aliqua sunt et esse\",\n \"detailedDescription\": \"officia veniam in\",\n \"links\": [\n  {\n   \"link\": \"incididunt\",\n   \"title\": \"anim proident\"\n  },\n  {\n   \"link\": \"u\",\n   \"title\": \"laboris occaecat\"\n  }\n ],\n \"images\": [\n  \"nisi\",\n  \"ut fugiat labore cupid\"\n ],\n \"symptoms\": [\n  \"nisi proident\",\n  \"deserunt\"\n ],\n \"toDo\": [\n  \"eu deserunt magna elit\",\n  \"ut adipisicing irure consectetur\"\n ]\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "354f351d-df16-4b20-991d-5f89604d3136",
+                "id": "873157b7-1d21-45ce-adb3-0594dc229247",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -3084,7 +3084,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -3092,7 +3092,7 @@
             "event": []
           },
           {
-            "id": "1904bc90-9e0c-4462-aafe-3f5c2d276bd0",
+            "id": "0da37838-2451-479f-8d05-218156dfe7f2",
             "name": "Get community posts by searching",
             "request": {
               "name": "Get community posts by searching",
@@ -3131,7 +3131,7 @@
             },
             "response": [
               {
-                "id": "65a5d981-0132-4218-ba8c-92246467b237",
+                "id": "aa157a48-f405-4cff-a34f-2f444935b4f4",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -3167,12 +3167,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "[\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\"\n },\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\"\n }\n]",
+                "body": "[\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\",\n  \"postType\": \"<string>\"\n },\n {\n  \"_id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"asPseudo\": \"<boolean>\",\n  \"tags\": [\n   \"<string>\",\n   \"<string>\"\n  ],\n  \"voteCount\": \"<number>\",\n  \"commentCount\": \"<number>\",\n  \"createdAt\": \"<dateTime>\",\n  \"community\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"postedBy\": {\n   \"_id\": \"<string>\",\n   \"name\": \"<string>\",\n   \"image\": \"<string>\"\n  },\n  \"comments\": [\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   },\n   {\n    \"_id\": \"<string>\",\n    \"content\": \"<string>\",\n    \"asPseudo\": \"<boolean>\",\n    \"voteCount\": \"<string>\",\n    \"replyCount\": \"<number>\",\n    \"createdAt\": \"<dateTime>\",\n    \"postedBy\": {\n     \"_id\": \"<string>\",\n     \"name\": \"<string>\",\n     \"avatar\": \"<string>\",\n     \"rank\": \"<number>\"\n    },\n    \"parentPost\": {\n     \"_id\": \"<string>\",\n     \"title\": \"<string>\"\n    },\n    \"repliedTo\": \"<string>\"\n   }\n  ],\n  \"isLikedByCurrentUser\": \"<boolean>\",\n  \"postType\": \"<string>\"\n }\n]",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "6d032968-cef9-4c29-8cda-29bab95b3284",
+                "id": "d6769506-136f-4e74-926b-f9036bcfb046",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -3208,7 +3208,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -3219,11 +3219,11 @@
         "event": []
       },
       {
-        "id": "6cd7be2f-4c23-48c8-a8ce-b1c56f78339e",
+        "id": "e113abd4-0ced-4116-a910-47aa68cc2995",
         "name": "test",
         "item": [
           {
-            "id": "899f586c-4174-45ef-9b95-ac66bf61222b",
+            "id": "997df212-87ab-483d-b4e7-9656a3cf4ae6",
             "name": "Create a Test",
             "request": {
               "name": "Create a Test",
@@ -3257,7 +3257,7 @@
             },
             "response": [
               {
-                "id": "17492134-dd85-4752-9d1e-ac3fda660c88",
+                "id": "0e4ca3f0-fad3-47b8-8d9f-d56660a1dbef",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -3282,12 +3282,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"Duis exercitation in sit voluptate\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
+                "body": "{\n \"_id\": \"cillum dolore\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "bee6ab68-8b83-4c07-9719-0eeb5fa9a2e6",
+                "id": "51207fad-d1ce-447f-838b-82d0259e4e7c",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -3312,7 +3312,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -3320,11 +3320,11 @@
             "event": []
           },
           {
-            "id": "b49ae344-477b-4572-9366-629ab0881bde",
+            "id": "9e88035d-ee95-42a4-bc43-e42cfadd97eb",
             "name": "{test Id}",
             "item": [
               {
-                "id": "2f817d6c-70bf-4b13-adf7-ae01a301bddc",
+                "id": "a013fc81-8ed8-48cd-99a5-2d6a8286215d",
                 "name": "Get a Test",
                 "request": {
                   "name": "Get a Test",
@@ -3356,7 +3356,7 @@
                 },
                 "response": [
                   {
-                    "id": "ed47b320-887e-4e46-baae-46e7e16e7380",
+                    "id": "48d254be-deb7-43d8-af36-1dfde5c0dfeb",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -3386,12 +3386,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"_id\": \"Duis exercitation in sit voluptate\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
+                    "body": "{\n \"_id\": \"cillum dolore\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "810f1d06-69f2-481f-92d3-8fcacee4ce17",
+                    "id": "14a13491-5eaa-4a31-82c1-c43b7b9cbec0",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -3421,7 +3421,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -3429,7 +3429,7 @@
                 "event": []
               },
               {
-                "id": "5d894f1e-7451-4728-8baf-f116c5844f1c",
+                "id": "5c11b899-f991-4fb2-b7e7-a6a199886121",
                 "name": "Submit a test",
                 "request": {
                   "name": "Submit a test",
@@ -3472,7 +3472,7 @@
                 },
                 "response": [
                   {
-                    "id": "5757e449-2ca8-4977-a053-de81101eae53",
+                    "id": "8fd13da8-3b3b-4546-a7ae-d4bcee90998b",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -3503,12 +3503,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"_id\": \"aliquip culpa incididunt ut\",\n \"anxietyAdvice\": {\n  \"testId\": \"dolore officia\",\n  \"disease\": \"depression\",\n  \"messages\": [\n   \"esse minim ea aute\",\n   \"Excepteur minim reprehenderi\"\n  ],\n  \"advice\": [\n   \"adipisicing\",\n   \"est aliquip in Ut\"\n  ],\n  \"range\": {\n   \"min\": 23944553.460959822,\n   \"max\": 41288079.09312537\n  }\n },\n \"depressionAdvice\": {\n  \"testId\": \"sunt elit et cupidatat\",\n  \"disease\": \"stress\",\n  \"messages\": [\n   \"sed sint labore\",\n   \"Duis officia\"\n  ],\n  \"advice\": [\n   \"exercitation eu dolor\",\n   \"sit\"\n  ],\n  \"range\": {\n   \"min\": -24346321.982035458,\n   \"max\": -37590327.468333885\n  }\n },\n \"stressAdvice\": {\n  \"testId\": \"eu\",\n  \"disease\": \"depression\",\n  \"messages\": [\n   \"anim proident\",\n   \"lab\"\n  ],\n  \"advice\": [\n   \"laborum et irure\",\n   \"ul\"\n  ],\n  \"range\": {\n   \"min\": -10506259.494112104,\n   \"max\": -99506111.77862644\n  }\n }\n}",
+                    "body": "{\n \"_id\": \"cillum quis ut culpa nulla\",\n \"anxietyAdvice\": {\n  \"testId\": \"velit dolore elit enim eiusmod\",\n  \"disease\": \"depression\",\n  \"messages\": [\n   \"esse dolore laborum\",\n   \"eu officia\"\n  ],\n  \"advice\": [\n   \"cillum\",\n   \"aliqua reprehenderit ullamco sed\"\n  ],\n  \"range\": {\n   \"min\": 22709171.470245555,\n   \"max\": 92276217.74715185\n  }\n },\n \"depressionAdvice\": {\n  \"testId\": \"id laboris deserunt\",\n  \"disease\": \"stress\",\n  \"messages\": [\n   \"pariatur cillum\",\n   \"sit laboris sunt minim reprehenderit\"\n  ],\n  \"advice\": [\n   \"pariatur consequat\",\n   \"eiusmod sed\"\n  ],\n  \"range\": {\n   \"min\": 90355345.85713485,\n   \"max\": 44534026.22830564\n  }\n },\n \"stressAdvice\": {\n  \"testId\": \"ad dolor ullamco consectetur sit\",\n  \"disease\": \"anxiety\",\n  \"messages\": [\n   \"culpa\",\n   \"dolor anim deserunt\"\n  ],\n  \"advice\": [\n   \"aute nostrud\",\n   \"occaecat nostrud labore\"\n  ],\n  \"range\": {\n   \"min\": -23665418.72682117,\n   \"max\": 55202271.80398196\n  }\n }\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "bbbe6fdc-c293-41b8-b2e5-776ac53ddc30",
+                    "id": "e7d4aa0c-80ac-40e3-a8f9-a5034d62c506",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -3539,7 +3539,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -3550,7 +3550,7 @@
             "event": []
           },
           {
-            "id": "a4e28ad2-d8fa-4429-8994-5749cc2ba359",
+            "id": "3e039e7b-bda3-465d-bdb5-e53fa667f84a",
             "name": "Get a random Test",
             "request": {
               "name": "Get a random Test",
@@ -3574,7 +3574,7 @@
             },
             "response": [
               {
-                "id": "d6988e0b-da1e-43ee-87b0-980bb7869332",
+                "id": "ceee2611-fde1-44c2-9853-8ccd01744f03",
                 "name": "OK",
                 "originalRequest": {
                   "url": {
@@ -3599,12 +3599,12 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"_id\": \"Duis exercitation in sit voluptate\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
+                "body": "{\n \"_id\": \"cillum dolore\",\n \"name\": \"<string>\",\n \"anxietyQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"depressionQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"stressQuestions\": [\n  \"<string>\",\n  \"<string>\"\n ]\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               },
               {
-                "id": "f1cfa6db-f34c-4b72-b8e7-420ac948f889",
+                "id": "c8eba0e1-9d04-440d-abeb-263abd188ea9",
                 "name": "Bad Request",
                 "originalRequest": {
                   "url": {
@@ -3629,7 +3629,7 @@
                     "value": "application/json"
                   }
                 ],
-                "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                 "cookie": [],
                 "_postman_previewlanguage": "json"
               }
@@ -3637,11 +3637,11 @@
             "event": []
           },
           {
-            "id": "d990fdef-3e02-4e05-9732-834f2611c325",
+            "id": "0ac8196c-8def-479a-9032-e2daec31a036",
             "name": "advice",
             "item": [
               {
-                "id": "aa1f9821-ff37-4170-add1-8c21947151f3",
+                "id": "3200fdb5-a607-48a9-9dda-bf9dea181729",
                 "name": "Get suggested commmunities",
                 "request": {
                   "name": "Get suggested commmunities",
@@ -3667,7 +3667,7 @@
                 },
                 "response": [
                   {
-                    "id": "671d0ff2-c601-4a0f-a392-10bafce444ec",
+                    "id": "211ee219-1efb-4038-a538-256d4d0d835c",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -3694,12 +3694,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"_id\": \"nisi\",\n \"name\": \"eiusmod in\",\n \"description\": \"deserunt eu nulla pariatur\",\n \"image\": \"fugiat voluptate\",\n \"members\": -52101372.84638483,\n \"hasJoined\": true,\n \"tags\": [\n  \"laboris sit ea do\",\n  \"magna aliqua non p\"\n ]\n}",
+                    "body": "{\n \"_id\": \"in fugiat et reprehenderit commodo\",\n \"name\": \"labore\",\n \"description\": \"proident est amet\",\n \"image\": \"dolore ut et\",\n \"members\": 86734910.74971652,\n \"hasJoined\": true,\n \"tags\": [\n  \"aliquip\",\n  \"in do ex\"\n ]\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "554a0698-7693-420d-8201-b5f005b63374",
+                    "id": "68be2f2c-08f5-423d-b5cc-90495ba72cc0",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -3726,7 +3726,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }
@@ -3734,7 +3734,7 @@
                 "event": []
               },
               {
-                "id": "ef90a028-d159-405b-bc20-a07f760c8b74",
+                "id": "9a78640d-3c1e-42f4-9017-d9e88ef7b19f",
                 "name": "Create an advice",
                 "request": {
                   "name": "Create an advice",
@@ -3769,7 +3769,7 @@
                 },
                 "response": [
                   {
-                    "id": "9e306b5d-b135-4511-ac6e-320dc1c49ad5",
+                    "id": "09f08003-63bb-428e-9647-d4652e6c8846",
                     "name": "OK",
                     "originalRequest": {
                       "url": {
@@ -3795,12 +3795,12 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"_id\": \"cillum deserunt sunt dolore ad\",\n \"testId\": \"<string>\",\n \"disease\": \"<string>\",\n \"messages\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"advice\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"range\": {\n  \"min\": \"<number>\",\n  \"max\": \"<number>\"\n }\n}",
+                    "body": "{\n \"_id\": \"consectetur reprehenderit\",\n \"testId\": \"<string>\",\n \"disease\": \"<string>\",\n \"messages\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"advice\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"range\": {\n  \"min\": \"<number>\",\n  \"max\": \"<number>\"\n }\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   },
                   {
-                    "id": "d46afb01-28e4-4739-b825-8d55728b7e30",
+                    "id": "cece8e13-3e29-4bea-95fe-e6e8d0247b74",
                     "name": "Bad Request",
                     "originalRequest": {
                       "url": {
@@ -3826,7 +3826,7 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": "{\n \"message\": \"fugiat occaecat\"\n}",
+                    "body": "{\n \"message\": \"ex exercitation laboris ut cupidatat\"\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                   }

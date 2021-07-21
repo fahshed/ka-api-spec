@@ -619,6 +619,8 @@ components:
             $ref: "#/components/schemas/Comment"
         isLikedByCurrentUser:
           type: boolean
+        postType:
+          type: string
 
     Notification:
       type: object
