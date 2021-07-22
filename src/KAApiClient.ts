@@ -2065,12 +2065,13 @@ export interface RegularUserCredentials {
 }
 
 export interface ProfessionalUserCredentials {
-    role?: string;
     email?: string;
     password?: string;
+    name?: string;
     verified?: boolean;
     license?: string;
     licenseIssued?: Date;
+    image?: string;
     specializations?: string[];
 }
 

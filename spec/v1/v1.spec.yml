@@ -595,11 +595,11 @@ components:
     ProfessionalUserCredentials:
       type: object
       properties:
-        role:
-          type: string
         email:
           type: string
         password:
+          type: string
+        name:
           type: string
         verified:
           type: boolean
@@ -608,6 +608,8 @@ components:
         licenseIssued:
           type: string
           format: date-time
+        image:
+          type: string
         specializations:
           type: array
           items:
