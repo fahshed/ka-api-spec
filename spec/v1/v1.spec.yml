@@ -393,6 +393,8 @@ paths:
       operationId: getFeed
       parameters:
         - $ref: "#/components/parameters/feedSortedBy"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/limit"
       responses:
         "200":
           $ref: "#/components/responses/OKFeed"
@@ -678,21 +680,25 @@ components:
     RegularUserCredentials:
       type: object
       properties:
-        role:
+        name:
           type: string
         email:
           type: string
         password:
+          type: string
+        pseudonym:
+          type: string
+        image:
           type: string
 
     ProfessionalUserCredentials:
       type: object
       properties:
-        role:
-          type: string
         email:
           type: string
         password:
+          type: string
+        name:
           type: string
         verified:
           type: boolean
@@ -701,6 +707,8 @@ components:
         licenseIssued:
           type: string
           format: date-time
+        image:
+          type: string
         specializations:
           type: array
           items:
@@ -1033,6 +1041,20 @@ components:
       schema:
         type: string
         enum: ["like", "unlike"]
+
+    page:
+      in: query
+      name: page
+      required: true
+      schema:
+        type: number
+
+    limit:
+      in: query
+      name: limit
+      required: true
+      schema:
+        type: number
 
     saveOptions:
       in: query
