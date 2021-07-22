@@ -74,9 +74,10 @@ function updateCollection(newFileName) {
   let newArr = newFile.collection.item[0].item;
   for (let i = 0; i < newArr.length; i++) {
     const req = newArr[i];
+    console.log(req.name);
     if (req.name === "Logs in a user") {
       console.log(`Token script added to request - ${req.name}`);
-      newFile.collection.item[1].item[i].event = token;
+      newFile.collection.item[0].item[i].event = token;
     }
   }
   // call function to update the local collection file

@@ -163,7 +163,7 @@ export interface IKAApiClent {
      * @param feedSortedBy (optional) 
      * @return OK
      */
-    getFeed(feedSortedBy?: FeedSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]>;
+    getFeed(page: number, limit: number, feedSortedBy?: FeedSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]>;
     /**
      * Get post by Id
      * @param commentsSortedBy (optional) 
@@ -1624,8 +1624,16 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
      * @param feedSortedBy (optional) 
      * @return OK
      */
-    getFeed(feedSortedBy?: FeedSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]> {
+    getFeed(page: number, limit: number, feedSortedBy?: FeedSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]> {
         let url_ = this.baseUrl + "/post/feed?";
+        if (page === undefined || page === null)
+            throw new Error("The parameter 'page' must be defined and cannot be null.");
+        else
+            url_ += "page=" + encodeURIComponent("" + page) + "&";
+        if (limit === undefined || limit === null)
+            throw new Error("The parameter 'limit' must be defined and cannot be null.");
+        else
+            url_ += "limit=" + encodeURIComponent("" + limit) + "&";
         if (feedSortedBy === null)
             throw new Error("The parameter 'feedSortedBy' cannot be null.");
         else if (feedSortedBy !== undefined)

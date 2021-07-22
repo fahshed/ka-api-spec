@@ -393,6 +393,8 @@ paths:
       operationId: getFeed
       parameters:
         - $ref: "#/components/parameters/feedSortedBy"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/limit"
       responses:
         "200":
           $ref: "#/components/responses/OKFeed"
@@ -1039,6 +1041,20 @@ components:
       schema:
         type: string
         enum: ["like", "unlike"]
+
+    page:
+      in: query
+      name: page
+      required: true
+      schema:
+        type: number
+
+    limit:
+      in: query
+      name: limit
+      required: true
+      schema:
+        type: number
 
     saveOptions:
       in: query
