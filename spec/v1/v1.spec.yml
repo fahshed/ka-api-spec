@@ -78,6 +78,19 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /user/logout:
+    post:
+      tags:
+        - user
+      summary: Logs outs a user
+      description: Logs out an user and clear away push token array
+      operationId: logOutUser
+      responses:
+        "200":
+          $ref: "#/components/responses/LogOutSuccess"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /user/communities:
     get:
       tags:
@@ -202,6 +215,50 @@ paths:
       responses:
         "200":
           $ref: "#/components/responses/OKProfessionalInformation"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/advice/latest:
+    get:
+      tags:
+        - user
+      summary: Get latest advice of an user from test info
+      description: Get the notofications advice info
+      operationId: getLatestAdvice
+      responses:
+        "200":
+          $ref: "#/components/responses/OKSubmitTest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/pushToken/register:
+    post:
+      tags:
+        - user
+      summary: Register a push notification
+      description: save a push notification in the backned
+      operationId: registerPushNotificationToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PushToken"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKPushToken"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/notifications:
+    get:
+      tags:
+        - user
+      summary: get notifications
+      description: user notifications fetch
+      operationId: getNotifications
+      responses:
+        "200":
+          $ref: "#/components/responses/OKNotifications"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -404,6 +461,22 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
 
+  /community/{communityId}/postSearch:
+    get:
+      tags:
+        - community
+      summary: Get community posts by searching
+      description: Searches and returns a specific community for posts with certain keyword
+      operationId: searchCommunityPosts
+      parameters:
+        - $ref: "#/components/parameters/communityId"
+        - $ref: "#/components/parameters/communityPostSearchKeyword"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKCommunityFeed"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
   /test/create:
     post:
       tags:
@@ -494,6 +567,12 @@ paths:
 
 components:
   schemas:
+    PushToken:
+      type: object
+      properties:
+        pushToken:
+          type: string
+
     Post:
       type: object
       properties:
@@ -540,6 +619,24 @@ components:
             $ref: "#/components/schemas/Comment"
         isLikedByCurrentUser:
           type: boolean
+        postType:
+          type: string
+
+    Notification:
+      type: object
+      properties:
+        message:
+          type: string
+        content:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+    Notifications:
+      type: array
+      items:
+        $ref: "#/components/schemas/Notification"
 
     Comment:
       type: object
@@ -893,8 +990,6 @@ components:
           type: array
           items:
             type: string
-        location:
-          type: string
 
     UserTestHistory:
       type: array
@@ -973,9 +1068,22 @@ components:
         type: string
         enum: ["rank", "location"]
 
+    communityPostSearchKeyword:
+      in: query
+      name: searchKeyword
+      schema:
+        type: string
+
   responses:
     BadRequest:
       description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorMessage"
+
+    LogOutSuccess:
+      description: OK
       content:
         application/json:
           schema:
@@ -987,6 +1095,20 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Post"
+
+    OKNotifications:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Notifications"
+
+    OKPushToken:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PushToken"
 
     OKAuthentication:
       description: OK

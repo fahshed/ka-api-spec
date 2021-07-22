@@ -53,6 +53,11 @@ export interface IKAApiClent {
      */
     loginUser(body?: UserLoginCredentials | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<AuthResponse>;
     /**
+     * Logs outs a user
+     * @return OK
+     */
+    logOutUser(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ErrorMessage>;
+    /**
      * Get communities of a user
      * @return OK
      */
@@ -97,6 +102,22 @@ export interface IKAApiClent {
      * @return OK
      */
     getProfessionalChamber(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo>;
+    /**
+     * Get latest advice of an user from test info
+     * @return OK
+     */
+    getLatestAdvice(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SubmitTestResponse>;
+    /**
+     * Register a push notification
+     * @param body (optional) 
+     * @return OK
+     */
+    registerPushNotificationToken(body?: PushToken | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<PushToken>;
+    /**
+     * get notifications
+     * @return OK
+     */
+    getNotifications(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Notification[]>;
     /**
      * Get suggested professionals
      * @param professionalSortedBy (optional) 
@@ -165,6 +186,12 @@ export interface IKAApiClent {
      * @return OK
      */
     getCommunityAbout(communityId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<CommunityAbout>;
+    /**
+     * Get community posts by searching
+     * @param searchKeyword (optional) 
+     * @return OK
+     */
+    searchCommunityPosts(communityId: string, searchKeyword?: string | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]>;
     /**
      * Create a Test
      * @param body (optional) 
@@ -373,6 +400,63 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     protected processLoginUser(response: AxiosResponse): Promise<AuthResponse> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Logs outs a user
+     * @return OK
+     */
+    logOutUser(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ErrorMessage> {
+        let url_ = this.baseUrl + "/user/logout";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "POST",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+            onUploadProgress
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processLogOutUser(_response);
+        });
+    }
+
+    protected processLogOutUser(response: AxiosResponse): Promise<ErrorMessage> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -892,6 +976,180 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     protected processGetProfessionalChamber(response: AxiosResponse): Promise<ProfessionalUserInfo> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Get latest advice of an user from test info
+     * @return OK
+     */
+    getLatestAdvice(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<SubmitTestResponse> {
+        let url_ = this.baseUrl + "/user/advice/latest";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetLatestAdvice(_response);
+        });
+    }
+
+    protected processGetLatestAdvice(response: AxiosResponse): Promise<SubmitTestResponse> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Register a push notification
+     * @param body (optional) 
+     * @return OK
+     */
+    registerPushNotificationToken(body?: PushToken | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void, onUploadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<PushToken> {
+        let url_ = this.baseUrl + "/user/pushToken/register";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ = <AxiosRequestConfig>{
+            data: content_,
+            method: "POST",
+            url: url_,
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+            onUploadProgress
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processRegisterPushNotificationToken(_response);
+        });
+    }
+
+    protected processRegisterPushNotificationToken(response: AxiosResponse): Promise<PushToken> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * get notifications
+     * @return OK
+     */
+    getNotifications(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Notification[]> {
+        let url_ = this.baseUrl + "/user/notifications";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetNotifications(_response);
+        });
+    }
+
+    protected processGetNotifications(response: AxiosResponse): Promise<Notification[]> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -1669,6 +1927,70 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     /**
+     * Get community posts by searching
+     * @param searchKeyword (optional) 
+     * @return OK
+     */
+    searchCommunityPosts(communityId: string, searchKeyword?: string | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<Post[]> {
+        let url_ = this.baseUrl + "/community/{communityId}/postSearch?";
+        if (communityId === undefined || communityId === null)
+            throw new Error("The parameter 'communityId' must be defined.");
+        url_ = url_.replace("{communityId}", encodeURIComponent("" + communityId));
+        if (searchKeyword === null)
+            throw new Error("The parameter 'searchKeyword' cannot be null.");
+        else if (searchKeyword !== undefined)
+            url_ += "searchKeyword=" + encodeURIComponent("" + searchKeyword) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processSearchCommunityPosts(_response);
+        });
+    }
+
+    protected processSearchCommunityPosts(response: AxiosResponse): Promise<Post[]> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
      * Create a Test
      * @param body (optional) 
      * @return OK
@@ -2029,6 +2351,10 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 }
 
+export interface PushToken {
+    pushToken?: string;
+}
+
 export interface Post {
     _id?: string;
     title?: string;
@@ -2042,6 +2368,13 @@ export interface Post {
     postedBy?: PostedBy;
     comments?: Comment[];
     isLikedByCurrentUser?: boolean;
+    postType?: string;
+}
+
+export interface Notification {
+    message?: string;
+    content?: string;
+    createdAt?: Date;
 }
 
 export interface Comment {
@@ -2193,7 +2526,6 @@ export interface ProfessionalUserInfo {
     licenseIssued?: Date;
     specializations?: string[];
     qualifications?: string[];
-    location?: string;
 }
 
 export type ProfessionalSortedBy = "rank" | "location";
