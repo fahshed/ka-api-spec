@@ -276,6 +276,22 @@ paths:
           $ref: "#/components/responses/OKProfessionalList"
         default:
           $ref: "#/components/responses/BadRequest"
+  
+  /user/professional/{userId}/statitics:
+    get:
+      tags:
+        - user
+      summary: Get statistics of professional
+      description: Get statistics of logged-in professional user
+      operationId: getProfessionalStat
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        "200":
+          $ref: "#/components/responses/OKProfessionalStat"
+        default:
+          $ref: "#/components/responses/BadRequest"
+    
 
   /post/{postId}/save:
     get:
@@ -998,6 +1014,25 @@ components:
       items:
         $ref: "#/components/schemas/TestHistory"
 
+    ProfessionalStat:
+      type: object
+      properties:
+        _id:
+          type: number
+        image:
+          type: number
+        rank:
+          type: number
+        voteCount:
+          type: number
+        postCount:
+          type: number
+        feedbackCount:
+          type: number
+        communityJoined:
+          type: number
+
+
   parameters:
     postId:
       in: path
@@ -1293,3 +1328,10 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/SuggestedProfessionalList"
+
+    OKProfessionalStat:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ProfessionalStat"
