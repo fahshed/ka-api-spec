@@ -2601,8 +2601,8 @@ export interface ProfessionalUserInfo {
 }
 
 export interface ProfessionalStat {
-    _id?: number;
-    image?: number;
+    _id?: string;
+    image?: string;
     rank?: number;
     voteCount?: number;
     postCount?: number;

@@ -1018,9 +1018,9 @@ components:
       type: object
       properties:
         _id:
-          type: number
+          type: string
         image:
-          type: number
+          type: string
         rank:
           type: number
         voteCount:
