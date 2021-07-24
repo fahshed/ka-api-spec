@@ -128,7 +128,7 @@ export interface IKAApiClent {
      * Get statistics of professional
      * @return OK
      */
-    getProfessionalStat(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalStat>;
+    getProfessionalStat(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalStat>;
     /**
      * Save a post by user
      * @param saveOptions (optional) 
@@ -1244,11 +1244,8 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
      * Get statistics of professional
      * @return OK
      */
-    getProfessionalStat(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalStat> {
-        let url_ = this.baseUrl + "/user/professional/{userId}/statitics";
-        if (userId === undefined || userId === null)
-            throw new Error("The parameter 'userId' must be defined.");
-        url_ = url_.replace("{userId}", encodeURIComponent("" + userId));
+    getProfessionalStat(cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalStat> {
+        let url_ = this.baseUrl + "/user/professional/statistics";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ = <AxiosRequestConfig>{

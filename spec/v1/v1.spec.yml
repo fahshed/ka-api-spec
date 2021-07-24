@@ -277,15 +277,13 @@ paths:
         default:
           $ref: "#/components/responses/BadRequest"
   
-  /user/professional/{userId}/statitics:
+  /user/professional/statistics:
     get:
       tags:
         - user
       summary: Get statistics of professional
       description: Get statistics of logged-in professional user
       operationId: getProfessionalStat
-      parameters:
-        - $ref: "#/components/parameters/userId"
       responses:
         "200":
           $ref: "#/components/responses/OKProfessionalStat"
