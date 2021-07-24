@@ -125,6 +125,11 @@ export interface IKAApiClent {
      */
     getSuggestedProfessionals(professionalSortedBy?: ProfessionalSortedBy | undefined, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalUserInfo[]>;
     /**
+     * Get statistics of professional
+     * @return OK
+     */
+    getProfessionalStat(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalStat>;
+    /**
      * Save a post by user
      * @param saveOptions (optional) 
      * @return OK
@@ -1211,6 +1216,65 @@ export class KAApiClent extends AuthorizedApiBase implements IKAApiClent {
     }
 
     protected processGetSuggestedProfessionals(response: AxiosResponse): Promise<ProfessionalUserInfo[]> {
+        const status = response.status;
+        let _headers: any = {};
+        if (response.headers && typeof response.headers === "object") {
+            for (let k in response.headers) {
+                if (response.headers.hasOwnProperty(k)) {
+                    _headers[k] = response.headers[k];
+                }
+            }
+        }
+        if (status === 200) {
+            const _responseText = response.data;
+            let result200: any = null;
+            let resultData200  = _responseText;
+            result200 = resultData200
+            return result200;
+        } else {
+            const _responseText = response.data;
+            let resultdefault: any = null;
+            let resultDatadefault  = _responseText;
+            resultdefault = resultDatadefault
+            return throwException("Bad Request", status, _responseText, _headers, resultdefault);
+        }
+    }
+
+    /**
+     * Get statistics of professional
+     * @return OK
+     */
+    getProfessionalStat(userId: string, cancelToken?: CancelToken | undefined, onDownloadProgress?: (progressEvent: ProgressEvent<EventTarget>) => void): Promise<ProfessionalStat> {
+        let url_ = this.baseUrl + "/user/professional/{userId}/statitics";
+        if (userId === undefined || userId === null)
+            throw new Error("The parameter 'userId' must be defined.");
+        url_ = url_.replace("{userId}", encodeURIComponent("" + userId));
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ = <AxiosRequestConfig>{
+            method: "GET",
+            url: url_,
+            headers: {
+                "Accept": "application/json"
+            },
+            cancelToken,
+            onDownloadProgress,
+        };
+
+        return this.transformOptions(options_).then(transformedOptions_ => {
+            return this.instance.request(transformedOptions_);
+        }).catch((_error: any) => {
+            if (isAxiosError(_error) && _error.response) {
+                return _error.response;
+            } else {
+                throw _error;
+            }
+        }).then((_response: AxiosResponse) => {
+            return this.processGetProfessionalStat(_response);
+        });
+    }
+
+    protected processGetProfessionalStat(response: AxiosResponse): Promise<ProfessionalStat> {
         const status = response.status;
         let _headers: any = {};
         if (response.headers && typeof response.headers === "object") {
@@ -2534,6 +2598,16 @@ export interface ProfessionalUserInfo {
     licenseIssued?: Date;
     specializations?: string[];
     qualifications?: string[];
+}
+
+export interface ProfessionalStat {
+    _id?: number;
+    image?: number;
+    rank?: number;
+    voteCount?: number;
+    postCount?: number;
+    feedbackCount?: number;
+    communityJoined?: number;
 }
 
 export type ProfessionalSortedBy = "rank" | "location";
