@@ -223,11 +223,24 @@ paths:
       tags:
         - user
       summary: Get latest advice of an user from test info
-      description: Get the notofications advice info
+      description: Get the notfications advice info
       operationId: getLatestAdvice
       responses:
         "200":
           $ref: "#/components/responses/OKSubmitTest"
+        default:
+          $ref: "#/components/responses/BadRequest"
+
+  /user/advice/followed:
+    get:
+      tags:
+        - user
+      summary: Notifying done
+      description: Notifying done
+      operationId: doneFollowAdvice
+      responses:
+        "200":
+          $ref: "#/components/responses/LogOutSuccess"
         default:
           $ref: "#/components/responses/BadRequest"
 
@@ -615,6 +628,8 @@ components:
               type: string
             image:
               type: string
+            pseudonym:
+              type: string
         comments:
           type: array
           items:
@@ -667,6 +682,8 @@ components:
               type: string
             rank:
               type: number
+            pseudonym:
+              type: string
         parentPost:
           type: object
           properties:
